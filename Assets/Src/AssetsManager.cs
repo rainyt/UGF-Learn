@@ -32,6 +32,8 @@ namespace Game
         private bool isLoading = false;
 
         private Dictionary<string, Texture2D> texture2ds = new Dictionary<string, Texture2D>();
+        private Dictionary<string, string> strings = new Dictionary<string, string>();
+        private Dictionary<string, byte[]> binaries = new Dictionary<string, byte[]>();
 
         /**
          * 获取加载的Texture2D资源，如果资源不存在，则返回null。
@@ -49,6 +51,32 @@ namespace Game
             }
         }
 
+        public string GetString(string assetName)
+        {
+            if (strings.ContainsKey(assetName))
+            {
+                return strings[assetName];
+            }
+            else
+            {
+                Debug.LogError($"AssetsManager GetString: {assetName} not found");
+                return null;
+            }
+        }
+
+        public byte[] GetBinary(string assetName)
+        {
+            if (binaries.ContainsKey(assetName))
+            {
+                return binaries[assetName];
+            }
+            else
+            {
+                Debug.LogError($"AssetsManager GetBinary: {assetName} not found");
+                return null;
+            }
+        }
+
         public AssetsManager()
         {
             Debug.Log("AssetsManager constructor?");
@@ -56,12 +84,29 @@ namespace Game
         }
 
         /**
-         * 加载文件
+         * 加载图片文件
          */
         public void LoadFile(string filePath)
         {
             Debug.Log("resource LoadAsset:" + filePath + " resource:" + (resource != null ? "true" : "false"));
             futures.Add(new ImageFuture(filePath));
+        }
+
+
+        /**
+         * 加载文本文件
+         */
+        public void LoadString(string filePath)
+        {
+            futures.Add(new StringFuture(filePath));
+        }
+
+        /**
+         * 加载二进制文件
+         */
+        public void LoadBinary(string filePath)
+        {
+            futures.Add(new BytesFuture(filePath));
         }
 
         /**
@@ -75,6 +120,14 @@ namespace Game
             {
                 Debug.Log($"AssetsManager OnNewObject: {assetName}, texture2D: {texture2D}");
                 texture2ds[assetName] = texture2D;
+            }
+            else if (asset is string str)
+            {
+                strings[assetName] = str;
+            }
+            else if (asset is byte[] bytes)
+            {
+                binaries[assetName] = bytes;
             }
             if (progressCallback != null)
             {
