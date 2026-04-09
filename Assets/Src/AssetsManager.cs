@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Futures;
+using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 
@@ -31,6 +32,22 @@ namespace Game
         private bool isLoading = false;
 
         private Dictionary<string, Texture2D> texture2ds = new Dictionary<string, Texture2D>();
+
+        /**
+         * 获取加载的Texture2D资源，如果资源不存在，则返回null。
+         */
+        public Texture2D GetTexture2D(string assetName)
+        {
+            if (texture2ds.ContainsKey(assetName))
+            {
+                return texture2ds[assetName];
+            }
+            else
+            {
+                Debug.LogError($"AssetsManager GetTexture2D: {assetName} not found");
+                return null;
+            }
+        }
 
         public AssetsManager()
         {

@@ -1,6 +1,6 @@
 namespace Game
 {
-
+    using Displays;
     using GameFramework.Fsm;
     using GameFramework.Procedure;
     using UnityEngine;
@@ -24,6 +24,9 @@ namespace Game
                 if (success)
                 {
                     Debug.Log("Assets loaded successfully: " + message);
+                    // 新增一张图片到舞台上
+                    GameObject imageObject = new GameObject("LoadingImage");
+                    imageObject.AddComponent<Image>().SetTexture(assetsManager.GetTexture2D("loading"));
                 }
                 else
                 {
