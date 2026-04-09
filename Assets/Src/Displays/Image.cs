@@ -5,20 +5,17 @@ namespace Displays
     using UnityGameFramework.Runtime;
     public class Image : EntityLogic
     {
-        private SpriteRenderer spriteRenderer;
 
         public void SetTexture(Texture2D texture)
         {
-            if (spriteRenderer == null)
-            {
-                spriteRenderer = gameObject.AddComponent<SpriteRenderer>();
-            }
+            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
             Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
             spriteRenderer.sprite = sprite;
         }
 
         protected override void OnShow(object userData)
         {
+            Debug.Log("Image OnShow");
             base.OnShow(userData);
             SetTexture(userData as Texture2D);
         }
@@ -26,7 +23,6 @@ namespace Displays
         protected override void OnRecycle()
         {
             base.OnRecycle();
-            spriteRenderer = null;
         }
     }
 }
