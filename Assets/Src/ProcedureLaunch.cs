@@ -25,8 +25,7 @@ namespace Game
                 {
                     Debug.Log("Assets loaded successfully: " + message);
                     // 新增一张图片到舞台上
-                    GameObject imageObject = new GameObject("LoadingImage");
-                    imageObject.AddComponent<Image>().SetTexture(assetsManager.GetTexture2D("loading"));
+                    GameEntry.Entity.ShowEntity<Image>(1, "test", "Stage", assetsManager.GetTexture2D("loading"));
                 }
                 else
                 {

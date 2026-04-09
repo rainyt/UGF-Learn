@@ -25,7 +25,7 @@ namespace Game
 
         private LoadAssetCallbacks loadAssetCallbacks;
 
-        private List<Future> futures = new List<Future>();
+        private List<IFuture> futures = new List<IFuture>();
 
         private int loadedCount = 0;
 

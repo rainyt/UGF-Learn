@@ -6,7 +6,7 @@ namespace Futures
     /**
      * 图片异步操作的结果，可以包含成功的结果数据或者失败的错误信息。
      */
-    public class ImageFuture : Future
+    public class ImageFuture : Future<Texture2D, string>
     {
         public ImageFuture(object requestData) : base(requestData)
         {

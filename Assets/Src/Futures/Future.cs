@@ -13,7 +13,7 @@ namespace Futures
     /**
      * Future类表示一个异步操作的结果，可以包含成功的结果数据或者失败的错误信息。
      */
-    public class Future
+    public class Future<T, DATA> : IFuture
     {
         /**
          * 资源组件，可以通过`resource`属性访问，用于加载资源等操作。
@@ -28,7 +28,7 @@ namespace Futures
         /**
          * 结果数据，当`isError`为false时，且`IsSuccess`为true时，表示表示请求成功，结果数据包含在`Result`中。
          */
-        public object Result { get; set; }
+        public T Result { get; set; }
 
         /**
          * 是否成功，当`isError`为false时，表示请求成功，结果数据包含在`Result`中。
@@ -43,7 +43,7 @@ namespace Futures
         /**
          * 请求数据，请求时传递的参数。
          */
-        protected object requestData;
+        protected DATA requestData;
 
         /**
          * 完成回调列表，当请求完成时，会依次调用这些回调函数，传递结果数据。
@@ -57,7 +57,7 @@ namespace Futures
 
         public Future(object requestData)
         {
-            this.requestData = requestData;
+            this.requestData = (DATA)requestData;
         }
 
         protected bool isPosting = false;
@@ -84,7 +84,7 @@ namespace Futures
          */
         protected void CompleteValue(object result)
         {
-            this.Result = result;
+            this.Result = (T)result;
             this.IsSuccess = true;
             onCompleteCallbacks.ForEach(callback =>
             {
@@ -107,7 +107,7 @@ namespace Futures
         /**
          * 添加完成回调函数，当请求完成时，会调用这些回调函数，传递结果数据。
          */
-        public Future OnComplete(FutureCompleteCallback onComplete)
+        public IFuture OnComplete(FutureCompleteCallback onComplete)
         {
             this.onCompleteCallbacks.Add(onComplete);
             return this;
@@ -116,7 +116,7 @@ namespace Futures
         /**
          * 添加错误回调函数，当请求发生错误时，会调用这些回调函数，传递错误信息。
          */
-        public Future OnError(FutureErrorCallback onError)
+        public IFuture OnError(FutureErrorCallback onError)
         {
             this.onErrorCallbacks.Add(onError);
             return this;

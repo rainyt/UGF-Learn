@@ -18,6 +18,10 @@ namespace UnityGameFramework.Runtime
     /// </summary>
     public static class GameEntry
     {
+
+        public static EntityComponent Entity => GetComponent<EntityComponent>();
+
+
         private static readonly GameFrameworkLinkedList<GameFrameworkComponent> s_GameFrameworkComponents = new GameFrameworkLinkedList<GameFrameworkComponent>();
 
         /// <summary>
