@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Game;
 using UnityGameFramework.Runtime;
 
 namespace Futures
@@ -13,6 +14,13 @@ namespace Futures
      */
     public class Future<T, DATA> : IFuture
     {
+
+        /**
+         * 资产管理器，用于加载资源。在触发`Post`方法时，`assetsManager`会被赋值为当前的资源管理器实例，可以通过它来加载资源等操作。
+         * 当`Post`方法调用结束后，`assetsManager`会被设置为null，表示请求已经完成，不再需要使用资源管理器。
+         */
+        public AssetsManager Manager { get; set; }
+
         /**
          * 资源组件，可以通过`resource`属性访问，用于加载资源等操作。
          */

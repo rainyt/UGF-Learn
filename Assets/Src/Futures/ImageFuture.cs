@@ -17,6 +17,33 @@ namespace Futures
         {
             base.Post();
             // 操作图片位图加载
+            // 需要检查一次YooPackage是否存在
+            Debug.Log($"[YooAsset] Ready load image asset: {this.requestData}");
+            foreach (var package in this.Manager.Packages)
+            {
+                var isExist = package.Value.CheckLocationValid(this.requestData);
+                if (isExist)
+                {
+                    Debug.Log($"[YooAsset] Load image asset from package: {package.Key}, asset name: {this.requestData}");
+                    var handle = package.Value.LoadAssetAsync<Texture2D>(this.requestData);
+                    handle.Completed += (result) =>
+                    {
+                        if (result.Status == YooAsset.EOperationStatus.Succeed)
+                        {
+                            this.CompleteValue(result.AssetObject);
+                        }
+                        else
+                        {
+                            this.ErrorValue($"加载图片资源{this.requestData}失败，错误信息：{result.ToString()}");
+                        }
+                    };
+                    return;
+                }
+                else
+                {
+                    Debug.Log($"[YooAsset] CheckLocationValid: {package.Key}, asset name: {this.requestData}, isExist: {isExist}");
+                }
+            }
             this.resource.LoadAsset(this.requestData.ToString(), new GameFramework.Resource.LoadAssetCallbacks(
                 (assetName, asset, duration, userData) =>
                 {

@@ -1,3 +1,5 @@
+using Game;
+
 namespace Futures
 {
     public interface IFuture
@@ -9,5 +11,7 @@ namespace Futures
         public IFuture OnError(FutureErrorCallback onError);
 
         public void Post();
+
+        public AssetsManager Manager { get; set; }
     }
 }
