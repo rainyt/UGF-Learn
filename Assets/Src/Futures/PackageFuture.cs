@@ -7,6 +7,9 @@ namespace Futures
      */
     public class PackageFuture : Future<ResourcePackage, string>
     {
+
+        public static bool IsInitialized = false;
+
         public PackageFuture(string packageName) : base(packageName)
         {
         }
@@ -14,11 +17,18 @@ namespace Futures
         public override void Post()
         {
             base.Post();
+            if (!IsInitialized)
+            {
+                IsInitialized = true;
+                YooAssets.Initialize();
+            }
             var package = YooAssets.CreatePackage(this.requestData);
 #if UNITY_EDITOR
             var initParameters = new EditorSimulateModeParameters();
+            initParameters.EditorFileSystemParameters = FileSystemParameters.CreateDefaultBuildinFileSystemParameters();
 #else
             var initParameters = new OfflinePlayModeParameters();
+            initParameters.BuildinFileSystemParameters = FileSystemParameters.CreateDefaultBuildinFileSystemParameters();
 #endif
             var handle = package.InitializeAsync(initParameters);
             handle.Completed += (result) =>

@@ -71,9 +71,11 @@ namespace Futures
         {
             string path = requestData.ToString();
             // 去掉路径
-            path = path.Substring(path.LastIndexOf('/') + 1, path.Length - path.LastIndexOf('/') - 1);
+            if (path.Contains("/"))
+                path = path.Substring(path.LastIndexOf('/') + 1, path.Length - path.LastIndexOf('/') - 1);
             // 去掉后缀
-            path = path.Substring(0, path.LastIndexOf('.'));
+            if (path.Contains('.'))
+                path = path.Substring(0, path.LastIndexOf('.'));
             return path;
         }
 
