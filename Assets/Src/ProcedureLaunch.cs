@@ -16,6 +16,7 @@ namespace Game
             AssetsManager assetsManager = new AssetsManager();
             assetsManager.LoadFile("Assets/Images/loading.jpeg");
             assetsManager.LoadFile("Assets/Images/logo.png");
+            assetsManager.LoadPackage("DefaultPackage");
             assetsManager.onProgress((progress) =>
             {
                 Debug.Log($"AssetsManager onProgress: {progress}");

@@ -110,6 +110,14 @@ namespace Game
         }
 
         /**
+         * 加载资源包
+         */
+        public void LoadPackage(string packageName)
+        {
+            futures.Add(new PackageFuture(packageName));
+        }
+
+        /**
          * 当加载成功新的资源时，会调用这个方法，传递资源的名称和资源对象。
          */
         protected void OnNewObject(string assetName, object asset)
@@ -157,6 +165,8 @@ namespace Game
             loadedCount = 0;
             isLoading = true;
             loadAssetCallbacks = callback;
+            // 对资源进行排序，优先先加载PackageFuture
+            futures.Sort((a, b) => a is PackageFuture ? -1 : 1);
             futures.ForEach(future =>
             {
                 future.RemoveCallbacks();
