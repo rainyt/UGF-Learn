@@ -244,6 +244,7 @@ namespace Game
             future.RemoveCallbacks();
             future.OnComplete((assetName, result) =>
             {
+                Debug.Log($"AssetsManager OnComplete: {assetName}, result: {result}");
                 OnNewObject(assetName, result);
             }).OnError((assetName, error) =>
             {
@@ -261,6 +262,7 @@ namespace Game
         /// </summary>
         private void loadNext()
         {
+            Debug.Log($"AssetsManager loadNext: {loadedCount}, {packageFutures.Count}, {otherFutures.Count}");
             if (packageFutures.Count > 0 && loadedCount < packageFutures.Count)
             {
                 packageFutures.ForEach(future =>

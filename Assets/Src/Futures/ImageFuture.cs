@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 
@@ -18,32 +19,39 @@ namespace Futures
             base.Post();
             // 操作图片位图加载
             // 需要检查一次YooPackage是否存在
-            Debug.Log($"[YooAsset] Ready load image asset: {this.requestData}");
             foreach (var package in this.Manager.Packages)
             {
-                var isExist = package.Value.CheckLocationValid(this.requestData);
-                if (isExist)
+                try
                 {
-                    Debug.Log($"[YooAsset] Load image asset from package: {package.Key}, asset name: {this.requestData}");
-                    var handle = package.Value.LoadAssetAsync<Texture2D>(this.requestData);
-                    handle.Completed += (result) =>
+                    var isExist = package.Value.CheckLocationValid(this.requestData);
+                    if (isExist)
                     {
-                        if (result.Status == YooAsset.EOperationStatus.Succeed)
+                        Debug.Log($"[YooAsset] Load image asset from package: {package.Key}, asset name: {this.requestData}");
+                        var handle = package.Value.LoadAssetAsync<Texture2D>(this.requestData);
+                        handle.Completed += (result) =>
                         {
-                            this.CompleteValue(result.AssetObject);
-                        }
-                        else
-                        {
-                            this.ErrorValue($"加载图片资源{this.requestData}失败，错误信息：{result.ToString()}");
-                        }
-                    };
-                    return;
+                            if (result.Status == YooAsset.EOperationStatus.Succeed)
+                            {
+                                this.CompleteValue(result.AssetObject);
+                            }
+                            else
+                            {
+                                this.ErrorValue($"加载图片资源{this.requestData}失败，错误信息：{result.ToString()}");
+                            }
+                        };
+                        return;
+                    }
+                    else
+                    {
+                        Debug.Log($"[YooAsset] CheckLocationValid: {package.Key}, asset name: {this.requestData}, isExist: {isExist}");
+                    }
                 }
-                else
+                catch (Exception e)
                 {
-                    Debug.Log($"[YooAsset] CheckLocationValid: {package.Key}, asset name: {this.requestData}, isExist: {isExist}");
+                    Debug.LogError($"[YooAsset] CheckLocationValid: {package.Key}, asset name: {this.requestData}, error: {e.Message}");
                 }
             }
+            Debug.Log($"Ready load image asset: {this.requestData}");
             this.resource.LoadAsset(this.requestData.ToString(), new GameFramework.Resource.LoadAssetCallbacks(
                 (assetName, asset, duration, userData) =>
                 {
