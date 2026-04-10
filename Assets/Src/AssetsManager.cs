@@ -150,7 +150,7 @@ namespace Game
             }
         }
 
-        public void onProgress(ProgressCallback callback)
+        public void OnProgress(ProgressCallback callback)
         {
             progressCallback = callback;
         }
