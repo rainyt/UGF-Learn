@@ -7,6 +7,7 @@
 
 using GameFramework.ObjectPool;
 using System.Collections.Generic;
+using YooAsset;
 
 namespace GameFramework.Resource
 {
@@ -14,11 +15,17 @@ namespace GameFramework.Resource
     {
         private sealed partial class ResourceLoader
         {
+
             /// <summary>
             /// 资源对象。
             /// </summary>
             private sealed class ResourceObject : ObjectBase
             {
+                /// <summary>
+                /// YooAsset 资源句柄，如果存在，则就是使用YooAssets加载的资源。
+                /// </summary>
+                public HandleBase YooHandle;
+
                 private List<object> m_DependencyResources;
                 private IResourceHelper m_ResourceHelper;
                 private ResourceLoader m_ResourceLoader;
@@ -40,7 +47,7 @@ namespace GameFramework.Resource
                     }
                 }
 
-                public static ResourceObject Create(string name, object target, IResourceHelper resourceHelper, ResourceLoader resourceLoader)
+                public static ResourceObject Create(string name, object target, IResourceHelper resourceHelper, ResourceLoader resourceLoader, HandleBase yooHandle = null)
                 {
                     if (resourceHelper == null)
                     {
@@ -56,6 +63,7 @@ namespace GameFramework.Resource
                     resourceObject.Initialize(name, target);
                     resourceObject.m_ResourceHelper = resourceHelper;
                     resourceObject.m_ResourceLoader = resourceLoader;
+                    resourceObject.YooHandle = yooHandle;
                     return resourceObject;
                 }
 
@@ -118,6 +126,11 @@ namespace GameFramework.Resource
 
                     m_ResourceLoader.m_ResourceDependencyCount.Remove(Target);
                     m_ResourceHelper.Release(Target);
+
+                    if (YooHandle != null)
+                    {
+                        YooHandle.Dispose();
+                    }
                 }
             }
         }

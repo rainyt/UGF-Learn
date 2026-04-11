@@ -164,6 +164,57 @@ namespace GameFramework.Resource
                         return StartTaskStatus.HasToWait;
                     }
 
+
+                    if (!YooAssets.Initialized)
+                    {
+                        bool isYooResourceExist = YooAssets.CheckLocationValid(m_Task.AssetName);
+                        if (isYooResourceExist)
+                        {
+                            // YooAssets资源，这里进行加载
+                            if (m_Task.IsScene)
+                            {
+                                var handle = YooAssets.LoadSceneAsync(m_Task.AssetName);
+                                handle.Completed += (result) =>
+                                {
+                                    if (result.Status == EOperationStatus.Succeed)
+                                    {
+                                        // TODO 等待实现场景加载逻辑
+                                        // 加载成功
+                                        // result.SceneObject;
+                                        // ResourceObject resourceObject = new ResourceObject(m_Task.AssetName, result.AssetObject, h, m_ResourceLoader.m_ResourceManager.m_ResourceHelper);
+                                        // OnResourceObjectReady(resourceObject);
+                                    }
+                                    else
+                                    {
+                                        // 加载失败
+                                        // TODO 加载失败的时候应该做点什么？
+                                    }
+                                };
+                                return StartTaskStatus.CanResume;
+                            }
+                            else
+                            {
+                                var handle = YooAssets.LoadAssetAsync(m_Task.AssetName);
+                                handle.Completed += (result) =>
+                                {
+                                    if (result.Status == EOperationStatus.Succeed)
+                                    {
+                                        // 加载成功
+                                        ResourceObject resourceObject = ResourceObject.Create(m_Task.AssetName, result.AssetObject, m_ResourceHelper, m_ResourceLoader, handle);
+                                        m_ResourceLoader.m_ResourcePool.Register(resourceObject, true);
+                                        OnResourceObjectReady(resourceObject);
+                                    }
+                                    else
+                                    {
+                                        // 加载失败
+                                        // TODO 加载失败的时候应该做点什么？
+                                    }
+                                };
+                                return StartTaskStatus.CanResume;
+                            }
+                        }
+                    }
+
                     if (!m_Task.IsScene)
                     {
                         AssetObject assetObject = m_ResourceLoader.m_AssetPool.Spawn(m_Task.AssetName);
