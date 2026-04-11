@@ -891,18 +891,21 @@ namespace GameFramework.Resource
 
                 if (string.IsNullOrEmpty(assetName))
                 {
+                    Debug.Log($"ResourceLoader.CheckAsset: {assetName} is empty");
                     return false;
                 }
 
                 AssetInfo assetInfo = m_ResourceManager.GetAssetInfo(assetName);
                 if (assetInfo == null)
                 {
+                    Debug.Log($"ResourceLoader.CheckAsset: {assetName} not found");
                     return false;
                 }
 
                 resourceInfo = m_ResourceManager.GetResourceInfo(assetInfo.ResourceName);
                 if (resourceInfo == null)
                 {
+                    Debug.Log($"ResourceLoader.CheckAsset: {assetName} not found in resource");
                     return false;
                 }
 
