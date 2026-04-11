@@ -10,6 +10,8 @@ using GameFramework.ObjectPool;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using UnityEngine;
+using YooAsset;
 
 namespace GameFramework.Resource
 {
@@ -305,10 +307,12 @@ namespace GameFramework.Resource
             /// <param name="userData">用户自定义数据。</param>
             public void LoadAsset(string assetName, Type assetType, int priority, LoadAssetCallbacks loadAssetCallbacks, object userData)
             {
+                Debug.Log($"ResourceLoader.LoadAsset: {assetName}, {assetType}, {priority}, {loadAssetCallbacks}, {userData}");
                 ResourceInfo resourceInfo = null;
                 string[] dependencyAssetNames = null;
                 if (!CheckAsset(assetName, out resourceInfo, out dependencyAssetNames))
                 {
+                    Debug.Log($"ResourceLoader.CheckAsset: {assetName} failed");
                     string errorMessage = Utility.Text.Format("Can not load asset '{0}'.", assetName);
                     if (loadAssetCallbacks.LoadAssetFailureCallback != null)
                     {
@@ -318,6 +322,8 @@ namespace GameFramework.Resource
 
                     throw new GameFrameworkException(errorMessage);
                 }
+
+                Debug.Log($"ResourceLoader.resourceInfo: {resourceInfo}, dependencyAssetNames: {dependencyAssetNames} success");
 
                 if (resourceInfo.IsLoadFromBinary)
                 {
@@ -858,8 +864,30 @@ namespace GameFramework.Resource
 
             private bool CheckAsset(string assetName, out ResourceInfo resourceInfo, out string[] dependencyAssetNames)
             {
+
                 resourceInfo = null;
                 dependencyAssetNames = null;
+
+                if (YooAssets.Initialized && YooAssets.CheckLocationValid(assetName))
+                {
+                    Debug.Log($"YooAssets.CheckAsset: {assetName} success");
+                    dependencyAssetNames = Array.Empty<string>();
+                    resourceInfo = new ResourceInfo(
+                        new ResourceName("YooAsset", "yoo", "dat"), // 物理名设为固定标记
+                        "YooAssets",
+                        LoadType.LoadFromFile, // 随便给个类型，只要不是 undefined
+                        0,          // 资源长度
+                        0,          // 资源哈希
+                        0,
+                        true,       // StorageInReadOnly (设为 true 避免去读写区找)
+                        true       // Ready (必须为 true，否则 Start 会等待)
+                    );
+                    return true;
+                }
+                else
+                {
+                    Debug.Log($"YooAssets.CheckAsset: {assetName} failed");
+                }
 
                 if (string.IsNullOrEmpty(assetName))
                 {

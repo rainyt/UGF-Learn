@@ -12,8 +12,11 @@ namespace Futures
 
         public static bool IsInitialized = false;
 
-        public PackageFuture(string packageName) : base(packageName)
+        private bool isDefault = false;
+
+        public PackageFuture(string packageName, bool isDefault = false) : base(packageName)
         {
+            this.isDefault = isDefault;
         }
 
         public override void Post()
@@ -52,6 +55,10 @@ namespace Futures
                                 if (result.Status == EOperationStatus.Succeed)
                                 {
                                     Debug.Log($"[YooAsset] UpdatePackageManifest: {this.requestData}, version: {result}");
+                                    if (isDefault)
+                                    {
+                                        YooAssets.SetDefaultPackage(package);
+                                    }
                                     this.CompleteValue(package);
                                 }
                                 else

@@ -7,6 +7,7 @@
 
 using System;
 using System.Collections.Generic;
+using YooAsset;
 
 namespace GameFramework.Resource
 {
@@ -142,7 +143,22 @@ namespace GameFramework.Resource
                 public void LoadMain(LoadResourceAgent agent, ResourceObject resourceObject)
                 {
                     m_ResourceObject = resourceObject;
-                    agent.Helper.LoadAsset(resourceObject.Target, AssetName, AssetType, IsScene);
+                    if (resourceObject.YooHandle == null)
+                    {
+                        agent.Helper.LoadAsset(resourceObject.Target, AssetName, AssetType, IsScene);
+                    }
+                    else
+                    {
+                        if (resourceObject.YooHandle is AssetHandle)
+                        {
+                            var assetHandle = (AssetHandle)resourceObject.YooHandle;
+                            OnLoadAssetSuccess(agent, assetHandle.AssetObject, 0);
+                        }
+                        else
+                        {
+                            OnLoadAssetSuccess(agent, resourceObject.YooHandle, 0);
+                        }
+                    }
                 }
 
                 public virtual void OnLoadAssetSuccess(LoadResourceAgent agent, object asset, float duration)

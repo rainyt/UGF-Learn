@@ -144,9 +144,10 @@ namespace Game
         /// 加载YooAsset资源包，传递资源包的名称。资源包会优先加载，当资源包加载完成后，才会继续加载其他资源包。
         /// </summary>
         /// <param name="packageName"></param>
-        public void LoadPackage(string packageName)
+        /// <param name="isDefault"></param>
+        public void LoadPackage(string packageName, bool isDefault = false)
         {
-            futures.Add(new PackageFuture(packageName));
+            futures.Add(new PackageFuture(packageName, isDefault));
         }
 
         /**

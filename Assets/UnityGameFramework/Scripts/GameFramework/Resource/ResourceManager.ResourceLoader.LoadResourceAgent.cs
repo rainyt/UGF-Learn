@@ -9,6 +9,7 @@ using GameFramework.FileSystem;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using UnityEngine;
 using YooAsset;
 
 namespace GameFramework.Resource
@@ -143,6 +144,7 @@ namespace GameFramework.Resource
                 /// <returns>开始处理任务的状态。</returns>
                 public StartTaskStatus Start(LoadResourceTaskBase task)
                 {
+                    Debug.Log($"StartTaskStatus.Start: {task.AssetName}");
                     if (task == null)
                     {
                         throw new GameFrameworkException("Task is invalid.");
@@ -164,15 +166,17 @@ namespace GameFramework.Resource
                         return StartTaskStatus.HasToWait;
                     }
 
-
-                    if (!YooAssets.Initialized)
+                    Debug.Log($"YooAssets.Initialized: {YooAssets.Initialized}");
+                    if (YooAssets.Initialized)
                     {
                         bool isYooResourceExist = YooAssets.CheckLocationValid(m_Task.AssetName);
+                        Debug.Log($"YooAssets.isYooResourceExist: {isYooResourceExist}");
                         if (isYooResourceExist)
                         {
                             // YooAssets资源，这里进行加载
                             if (m_Task.IsScene)
                             {
+                                Debug.Log($"Load scene {m_Task.AssetName} from YooAssets.");
                                 var handle = YooAssets.LoadSceneAsync(m_Task.AssetName);
                                 handle.Completed += (result) =>
                                 {
@@ -194,11 +198,13 @@ namespace GameFramework.Resource
                             }
                             else
                             {
+                                Debug.Log($"Load asset {m_Task.AssetName} from YooAssets.");
                                 var handle = YooAssets.LoadAssetAsync(m_Task.AssetName);
                                 handle.Completed += (result) =>
                                 {
                                     if (result.Status == EOperationStatus.Succeed)
                                     {
+                                        Debug.Log($"Load asset {m_Task.AssetName} from YooAssets success.");
                                         // 加载成功
                                         ResourceObject resourceObject = ResourceObject.Create(m_Task.AssetName, result.AssetObject, m_ResourceHelper, m_ResourceLoader, handle);
                                         m_ResourceLoader.m_ResourcePool.Register(resourceObject, true);
@@ -206,6 +212,7 @@ namespace GameFramework.Resource
                                     }
                                     else
                                     {
+                                        Debug.LogError($"Load asset {m_Task.AssetName} from YooAssets failure.");
                                         // 加载失败
                                         // TODO 加载失败的时候应该做点什么？
                                     }

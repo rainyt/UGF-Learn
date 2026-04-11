@@ -10,6 +10,7 @@ using GameFramework.FileSystem;
 using GameFramework.ObjectPool;
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 using System.IO;
 
 namespace GameFramework.Resource
@@ -1462,6 +1463,7 @@ namespace GameFramework.Resource
         /// <param name="loadAssetCallbacks">加载资源回调函数集。</param>
         public void LoadAsset(string assetName, LoadAssetCallbacks loadAssetCallbacks)
         {
+            Debug.Log($"ResourceManager.LoadAsset: {assetName}, {loadAssetCallbacks}");
             if (string.IsNullOrEmpty(assetName))
             {
                 throw new GameFrameworkException("Asset name is invalid.");
