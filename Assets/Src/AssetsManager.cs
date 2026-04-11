@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Futures;
+using Unity.VisualScripting;
 using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEngine;
 using UnityGameFramework.Runtime;
@@ -32,7 +33,7 @@ namespace Game
 
         private bool isLoading = false;
 
-        public Dictionary<string, Texture2D> Texture2ds = new Dictionary<string, Texture2D>();
+        public Dictionary<string, Texture2DData> Texture2ds = new Dictionary<string, Texture2DData>();
         public Dictionary<string, string> Strings = new Dictionary<string, string>();
         public Dictionary<string, byte[]> Binaries = new Dictionary<string, byte[]>();
         public Dictionary<string, ResourcePackage> Packages = new Dictionary<string, ResourcePackage>();
@@ -59,7 +60,7 @@ namespace Game
         {
             if (Texture2ds.ContainsKey(assetName))
             {
-                return Texture2ds[assetName];
+                return Texture2ds[assetName].Texture;
             }
             else
             {
@@ -155,7 +156,7 @@ namespace Game
         {
             loadedCount++;
             Debug.Log($"AssetsManager OnNewObject: {assetName}, asset: {asset}");
-            if (asset is Texture2D texture2D)
+            if (asset is Texture2DData texture2D)
             {
                 Debug.Log($"AssetsManager OnNewObject: {assetName}, texture2D: {texture2D}");
                 Texture2ds[assetName] = texture2D;
@@ -297,6 +298,23 @@ namespace Game
             }
         }
 
+        public void Dispose()
+        {
+            Stop();
+            loadAssetCallbacks = null;
+            progressCallback = null;
+            foreach (var texture in Texture2ds.Values)
+            {
+                texture.Dispose();
+            }
+            Texture2ds.Clear();
+            Strings.Clear();
+            foreach (var package in Packages.Values)
+            {
+                YooAssets.RemovePackage(package.PackageName);
+            }
+            packageFutures.Clear();
+        }
 
     }
 

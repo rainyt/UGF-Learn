@@ -7,7 +7,7 @@ namespace Futures
     /**
      * 图片异步操作的结果，可以包含成功的结果数据或者失败的错误信息。
      */
-    public class ImageFuture : Future<Texture2D, string>
+    public class ImageFuture : Future<Texture2DData, string>
     {
         public ImageFuture(object requestData) : base(requestData)
         {
@@ -32,7 +32,11 @@ namespace Futures
                         {
                             if (result.Status == YooAsset.EOperationStatus.Succeed)
                             {
-                                this.CompleteValue(result.AssetObject);
+                                var texture2DData = new HandleTexture2DData();
+                                texture2DData.Name = this.GetAssetName();
+                                texture2DData.Texture = result.AssetObject as Texture2D;
+                                texture2DData.Handle = handle;
+                                this.CompleteValue(texture2DData);
                             }
                             else
                             {
@@ -56,7 +60,10 @@ namespace Futures
                 (assetName, asset, duration, userData) =>
                 {
                     Debug.Log($"Load image asset success: {assetName}, duration: {duration}, asset: {asset}");
-                    this.CompleteValue(asset);
+                    var texture2DData = new Texture2DData();
+                    texture2DData.Name = this.GetAssetName();
+                    texture2DData.Texture = asset as Texture2D;
+                    this.CompleteValue(texture2DData);
                 },
                 (assetName, status, errorMessage, userData) =>
                 {
