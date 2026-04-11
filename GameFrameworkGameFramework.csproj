@@ -1,0 +1,1309 @@
+﻿<Project ToolsVersion="Current">
+  <!-- Generated file, do not modify, your changes will be overwritten (use AssetPostprocessor.OnGeneratedCSProject) -->
+  <PropertyGroup>
+    <BaseIntermediateOutputPath>Temp/obj/$(Configuration)/$(MSBuildProjectName)</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)</IntermediateOutputPath>
+  </PropertyGroup>
+  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+  <ItemGroup>
+    <ProjectCapability Include="Unity" />
+  </ItemGroup>
+  <PropertyGroup>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <LangVersion>9.0</LangVersion>
+    <Configurations>Debug;Release</Configurations>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <RootNamespace></RootNamespace>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>GameFrameworkGameFramework</AssemblyName>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <BaseDirectory>.</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp/bin/Debug/</OutputPath>
+    <DefineConstants>UNITY_2022_3_62;UNITY_2022_3;UNITY_2022;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;ENABLE_NAVIGATION_PACKAGE_DEBUG_VISUALIZATION;ENABLE_NAVIGATION_HEIGHTMESH_RUNTIME_SUPPORT;ENABLE_NAVIGATION_UI_REQUIRES_PACKAGE;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_OSX;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_SPATIALTRACKING;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169;USG0001</NoWarn>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp/bin/Release/</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169;USG0001</NoWarn>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoStandardLibraries>true</NoStandardLibraries>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+    <MSBuildWarningsAsMessages>MSB3277</MSBuildWarningsAsMessages>
+  </PropertyGroup>
+  <PropertyGroup>
+    <UnityProjectGenerator>Package</UnityProjectGenerator>
+    <UnityProjectGeneratorVersion>2.0.22</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorStyle>SDK</UnityProjectGeneratorStyle>
+    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityBuildTarget>StandaloneOSX:2</UnityBuildTarget>
+    <UnityVersion>2022.3.62f3c1</UnityVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Analyzer Include="/Users/rainy/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.2.1/Analyzers/Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll" />
+    <Analyzer Include="/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/WebRequest/Constant.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/IPacketHeader.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/ObjectPool/ObjectPoolManager.Object.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadAssetUpdateCallback.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LocalVersionList.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/DataNode/DataNodeManager.DataNode.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/ISoundGroupHelper.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/DataNode/DataNodeManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/UI/OpenUIFormSuccessEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/UI/UIManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/ObjectPool/IObjectPool.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/InitResourcesCompleteCallback.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ReadWriteResourceInfo.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Download/DownloadFailureEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/UI/IUIGroupHelper.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadResourceStatus.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/Log/GameFrameworkLog.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/ObjectPool/ObjectInfo.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/UI/UIManager.UIFormInstanceObject.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.VersionListProcessor.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceLoader.ResourceObject.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadBytesSuccessCallback.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/FileSystem/FileSystemStream.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ReadOnlyVersionListSerializer.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/GameFrameworkLinkedList.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadBytesCallbacks.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Fsm/FsmManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/ServiceType.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/HasAssetResult.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceApplySuccessEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceLoader.LoadBinaryInfo.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Download/DownloadManager.DownloadCounter.DownloadCounterNode.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/DataProvider/IDataProvider.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Scene/ISceneManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceLoader.LoadAssetTask.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceUpdater.UpdateInfo.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceVerifyFailureEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/Version/Version.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/IPacketHandler.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/WebRequest/WebRequestStartEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Download/DownloadManager.DownloadTask.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Config/ConfigManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/FileSystem/IFileSystemManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/VerifyResourcesCompleteCallback.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/NetworkManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Scene/SceneManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadSceneFailureCallback.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Fsm/IFsmManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Debugger/IDebuggerWindowGroup.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/AddressFamily.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LocalVersionList.FileSystem.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceNameComparer.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceChecker.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/PackageVersionList.ResourceGroup.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Scene/UnloadSceneFailureEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Procedure/ProcedureBase.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/UpdateVersionListCallbacks.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/NetworkErrorCode.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Utility/Utility.Verifier.Crc32.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/ISoundManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceLoader.AssetObject.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/UpdateVersionListFailureCallback.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadResourceAgentHelperUpdateEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/UpdateResourcesCompleteCallback.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/CheckResourcesCompleteCallback.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceChecker.CheckInfo.CheckStatus.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceVerifyStartEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Fsm/FsmState.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/FileSystem/IFileSystemHelper.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Utility/Utility.Marshal.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Entity/EntityManager.EntityStatus.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Utility/Utility.Json.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Scene/LoadSceneFailureEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/WebRequest/WebRequestManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Scene/LoadSceneSuccessEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Download/DownloadStartEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/WebRequest/WebRequestAgentHelperCompleteEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/WebRequest/WebRequestManager.WebRequestAgent.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/Constant.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Utility/Utility.Converter.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceVerifier.VerifyInfo.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadResourceAgentHelperReadBytesCompleteEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Fsm/IFsm.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/TaskPool/TaskPool.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadResourceProgress.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Debugger/IDebuggerWindow.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/DataProvider/ReadDataDependencyAssetEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/DataNode/IDataNode.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/ISoundGroup.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/NetworkCustomErrorEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadResourceAgentHelperLoadCompleteEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Setting/SettingManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Scene/LoadSceneDependencyAssetEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ILoadResourceAgentHelper.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/UI/OpenUIFormUpdateEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadResourceAgentHelperParseBytesCompleteEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/NetworkManager.TcpNetworkChannel.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceUpdateSuccessEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/GameFrameworkEntry.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceLoader.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/UnloadSceneFailureCallback.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/NetworkClosedEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Utility/Utility.Encryption.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/WebRequest/WebRequestAgentHelperErrorEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadBinarySuccessCallback.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/INetworkChannel.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Debugger/DebuggerManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/TaskPool/ITaskAgent.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/DecryptResourceCallback.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/DataTable/IDataTableHelper.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/NetworkManager.ConnectState.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/FileSystem/FileSystemAccess.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Entity/IEntityHelper.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/Constant.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/DataProvider/ReadDataSuccessEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/SoundManager.SoundGroup.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/Log/GameFrameworkLog.ILogHelper.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/NetworkConnectedEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadBinaryCallbacks.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadResourceAgentHelperErrorEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/FileSystem/CommonFileSystemStream.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/IResourceHelper.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Download/Constant.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/PlaySoundParams.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadSceneDependencyAssetCallback.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/GameFrameworkException.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceLoader.LoadResourceTaskBase.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Entity/EntityManager.EntityInfo.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Entity/EntityManager.EntityInstanceObject.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/UnloadSceneCallbacks.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/UI/UIManager.UIGroup.UIFormInfo.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadAssetSuccessCallback.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourcePackVersionList.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/UI/IUIManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/ObjectPool/ObjectPoolBase.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/FileSystem/FileSystem.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/PackageVersionList.Resource.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/FileSystem/FileSystem.HeaderData.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceLoader.LoadSceneTask.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Fsm/FsmBase.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/INetworkManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Download/DownloadAgentHelperUpdateLengthEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceLoader.LoadDependencyAssetTask.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/DataProvider/ReadDataFailureEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.LoadType.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/Variable/GenericVariable.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Download/DownloadManager.DownloadCounter.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Download/DownloadSuccessEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Download/DownloadAgentHelperCompleteEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourcePackVersionListSerializer.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.AssetInfo.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceInfo.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadSceneSuccessCallback.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceIniter.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/DataTable/DataTableBase.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/NetworkManager.TcpWithSyncReceiveNetworkChannel.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadAssetCallbacks.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Localization/LocalizationManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Download/DownloadUpdateEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceUpdateAllCompleteEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Debugger/IDebuggerManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/SoundManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/UnloadSceneSuccessCallback.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/UpdatableVersionList.ResourceGroup.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Utility/Utility.Path.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/TaskPool/TaskStatus.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/DataProvider/ReadDataUpdateEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Download/IDownloadManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/UI/IUIFormHelper.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/Version/Version.IVersionHelper.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Entity/IEntityGroupHelper.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Scene/LoadSceneUpdateEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceLoader.LoadResourceAgent.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ApplyResourcesCompleteCallback.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/UpdatableVersionList.Asset.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/SoundManager.SoundAgent.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/DataProvider/DataProviderCreator.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/DataTable/DataTableManager.DataTable.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadSceneUpdateCallback.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Utility/Utility.Random.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Event/EventManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Download/DownloadManager.DownloadTaskStatus.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/NetworkManager.HeartBeatState.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/ObjectPool/ReleaseObjectFilterCallback.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/UI/OpenUIFormDependencyAssetEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/PackageVersionList.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/FileSystem/IFileSystem.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Entity/ShowEntitySuccessEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/ObjectPool/ObjectBase.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Event/GameEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/UI/UIManager.OpenUIFormInfo.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/EventPool/BaseEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/DataProvider/IDataProviderHelper.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceChecker.CheckInfo.LocalVersionInfo.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceMode.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadAssetDependencyAssetCallback.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Config/IConfigHelper.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Entity/ShowEntityDependencyAssetEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/ResetSoundAgentEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/WebRequest/IWebRequestAgentHelper.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceApplyStartEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourcePackVersionList.Resource.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceVerifySuccessEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Entity/EntityManager.ShowEntityInfo.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/DataTable/DataTableManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/PlaySoundFailureEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/PackageVersionList.Asset.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Event/IEventManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceUpdateChangedEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/IResourceGroup.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/UpdatableVersionList.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Entity/ShowEntityFailureEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Entity/ShowEntityUpdateEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/UpdatableVersionList.FileSystem.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/DataNode/IDataNodeManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/Log/GameFrameworkLogLevel.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Localization/ILocalizationHelper.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Procedure/ProcedureManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadResourceAgentHelperReadFileCompleteEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/NetworkManager.NetworkChannelBase.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceUpdateStartEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/GameFrameworkModule.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/UI/UIManager.UIGroup.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/INetworkChannelHelper.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/GameFrameworkEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/ReferencePool/IReference.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceName.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Procedure/IProcedureManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/FileSystem/FileInfo.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/UI/CloseUIFormCompleteEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Entity/IEntityManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/UpdatableVersionListSerializer.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/UpdatableVersionList.Resource.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceGroupCollection.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/IResourceGroupCollection.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadBytesFailureCallback.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Download/DownloadAgentHelperUpdateBytesEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Download/DownloadAgentHelperErrorEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/EventPool/EventPool.Event.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/NetworkManager.SendState.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/PlaySoundSuccessEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/DataTable/IDataTableManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/ReferencePool/ReferencePool.ReferenceCollection.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ReadWriteVersionListSerializer.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Properties/AssemblyInfo.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/SoundManager.PlaySoundInfo.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceChecker.CheckInfo.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/UI/IUIGroup.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/NetworkErrorEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/UpdateVersionListSuccessCallback.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Entity/IEntity.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/UI/OpenUIFormFailureEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/DataProvider/DataProvider.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Download/DownloadManager.DownloadAgent.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Entity/IEntityGroup.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/FileSystem/FileSystem.StringData.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadSceneCallbacks.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Download/IDownloadAgentHelper.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceVerifier.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Utility/Utility.Text.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/EventPool/EventPool.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/TaskPool/TaskBase.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/PlaySoundUpdateEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Utility/Utility.Assembly.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Utility/Utility.Json.IJsonHelper.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/NetworkManager.ReceiveState.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/PlaySoundErrorCode.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/ISoundAgent.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Setting/ISettingManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/WebRequest/WebRequestSuccessEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Scene/UnloadSceneSuccessEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Entity/HideEntityCompleteEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Entity/EntityManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/PackageVersionList.FileSystem.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/GameFrameworkMultiDictionary.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/EventPool/EventPoolMode.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/TaskPool/StartTaskStatus.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/WebRequest/WebRequestManager.WebRequestTaskStatus.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/IResourceManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/ObjectPool/ObjectPoolManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/PlaySoundDependencyAssetEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/GameFrameworkAction.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/TaskPool/TaskInfo.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadAssetFailureCallback.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/ISoundAgentHelper.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/NetworkMissHeartBeatEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadBinaryFailureCallback.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Utility/Utility.Text.ITextHelper.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/GameFrameworkSerializer.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Utility/Utility.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Setting/ISettingHelper.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Config/IConfigManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/FileSystem/FileSystemManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Utility/Utility.Compression.ICompressionHelper.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceUpdater.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Config/ConfigManager.ConfigData.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/ObjectPool/ObjectPoolManager.ObjectPool.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LocalVersionList.Resource.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/ISoundHelper.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/WebRequest/WebRequestManager.WebRequestTask.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Fsm/Fsm.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Debugger/DebuggerManager.DebuggerWindowGroup.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceApplyFailureEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/ObjectPool/IObjectPoolManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/FileSystem/FileSystem.BlockData.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/DataTable/IDataTable.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/ReferencePool/ReferencePool.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/GameFrameworkFunc.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/CheckVersionListResult.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/ReferencePool/ReferencePoolInfo.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Download/DownloadManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceGroup.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Utility/Utility.Compression.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceUpdateFailureEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/DataTable/IDataRow.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/DataStruct/TypeNamePair.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceUpdater.ApplyInfo.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/WebRequest/IWebRequestManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/Variable/Variable.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/PackageVersionListSerializer.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Entity/EntityManager.EntityGroup.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Localization/ILocalizationManager.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Utility/Utility.Verifier.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceChecker.CheckInfo.RemoteVersionInfo.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/Packet.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/GameFrameworkLinkedListRange.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/WebRequest/WebRequestFailureEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/UI/IUIForm.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Localization/Language.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets/UnityGameFramework/Scripts/GameFramework/GameFrameworkGameFramework.asmdef" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="UnityEngine">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ARModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AndroidJNIModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AndroidJNIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AnimationModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AudioModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ContentLoadModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ContentLoadModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.DSPGraphModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.DSPGraphModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.DirectorModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.GIModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.GIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.GameCenterModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.GridModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.HotReloadModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.HotReloadModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.InputModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.LocalizationModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.LocalizationModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.PhysicsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.Physics2DModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ProfilerModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ProfilerModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PropertiesModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.PropertiesModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.StreamingModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.StreamingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SubstanceModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.SubstanceModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SubsystemsModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.SubsystemsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TLSModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TerrainModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreFontEngineModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreTextEngineModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TilemapModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UIElementsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UmbraModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsCommonModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityCurlModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityCurlModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityTestProtocolModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityTestProtocolModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.VFXModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.VRModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.VehiclesModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VirtualTexturingModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.VirtualTexturingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEditor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.CoreModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEditor.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.DeviceSimulatorModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.DiagnosticsModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEditor.DiagnosticsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.EditorToolbarModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEditor.EditorToolbarModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.GraphViewModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEditor.GraphViewModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.PresetsUIModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEditor.PresetsUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.QuickSearchModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEditor.QuickSearchModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.SceneTemplateModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEditor.SceneTemplateModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.SceneViewModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEditor.SceneViewModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.TextCoreFontEngineModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEditor.TextCoreFontEngineModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.TextCoreTextEngineModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEditor.TextCoreTextEngineModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.UIBuilderModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UIBuilderModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.UIElementsModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UIElementsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.UIElementsSamplesModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UIElementsSamplesModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.UnityConnectModule">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.Graphs">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.Graphs.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.OSXStandalone.Extensions">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TextMateSharpPlastic">
+      <HintPath>Library/PackageCache/com.unity.collab-proxy@2.12.4/Lib/Editor/TextMateSharp/TextMateSharpPlastic.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TextMateSharpPlastic.Grammars">
+      <HintPath>Library/PackageCache/com.unity.collab-proxy@2.12.4/Lib/Editor/TextMateSharp/TextMateSharpPlastic.Grammars.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.YamlDotNet">
+      <HintPath>Library/PackageCache/com.unity.visualscripting@1.9.4/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Collections.LowLevel.ILSupport">
+      <HintPath>Library/PackageCache/com.unity.collections@1.2.4/Unity.Collections.LowLevel.ILSupport/Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Plastic.Antlr3.Runtime">
+      <HintPath>Library/PackageCache/com.unity.collab-proxy@2.12.4/Lib/Editor/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="OnigwrapPlastic">
+      <HintPath>Library/PackageCache/com.unity.collab-proxy@2.12.4/Lib/Editor/TextMateSharp/Onigwrap/OnigwrapPlastic.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Plastic.Newtonsoft.Json">
+      <HintPath>Library/PackageCache/com.unity.collab-proxy@2.12.4/Lib/Editor/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="log4netPlastic">
+      <HintPath>Library/PackageCache/com.unity.collab-proxy@2.12.4/Lib/Editor/log4netPlastic.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.IonicZip">
+      <HintPath>Library/PackageCache/com.unity.visualscripting@1.9.4/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="unityplastic">
+      <HintPath>Library/PackageCache/com.unity.collab-proxy@2.12.4/Lib/Editor/unityplastic.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+      <HintPath>Library/PackageCache/com.unity.visualscripting@1.9.4/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.TextureAssets">
+      <HintPath>Library/PackageCache/com.unity.visualscripting@1.9.4/Editor/VisualScripting.Core/EditorAssetResources/Unity.VisualScripting.TextureAssets.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>Assets/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/ref/2.1.0/netstandard.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/Microsoft.Win32.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.AppContext">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.AppContext.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Buffers">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Buffers.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Collections.Concurrent">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Collections.Concurrent.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Collections.NonGeneric">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Collections.NonGeneric.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Collections.Specialized">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Collections.Specialized.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Collections">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Collections.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.EventBasedAsync">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.ComponentModel.EventBasedAsync.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Primitives">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.ComponentModel.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.TypeConverter">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.ComponentModel.TypeConverter.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.ComponentModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Console">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Console.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.Common">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Data.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.Contracts">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.Contracts.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.Debug">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.Debug.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.FileVersionInfo">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.FileVersionInfo.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.Process">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.Process.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.StackTrace">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.StackTrace.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.TextWriterTraceListener">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.TextWriterTraceListener.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tools">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.Tools.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.TraceSource">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.TraceSource.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tracing">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.Tracing.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing.Primitives">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Drawing.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Dynamic.Runtime">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Dynamic.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Globalization.Calendars">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Globalization.Calendars.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Globalization.Extensions">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Globalization.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Globalization">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Globalization.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression.ZipFile">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.Compression.ZipFile.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.Compression.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.DriveInfo">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.FileSystem.DriveInfo.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Watcher">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.FileSystem.Watcher.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.FileSystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.IsolatedStorage">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.IsolatedStorage.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.MemoryMappedFiles">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.MemoryMappedFiles.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.Pipes">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.Pipes.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.UnmanagedMemoryStream">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.UnmanagedMemoryStream.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Linq.Expressions">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Linq.Expressions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Linq.Parallel">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Linq.Parallel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Linq.Queryable">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Linq.Queryable.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Linq">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Linq.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Memory.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.Http.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.NameResolution">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.NameResolution.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.NetworkInformation">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.NetworkInformation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Ping">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.Ping.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Primitives">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Requests">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.Requests.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Security">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.Security.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Sockets">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.Sockets.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.WebHeaderCollection">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.WebHeaderCollection.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.WebSockets.Client">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.WebSockets.Client.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.WebSockets">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.WebSockets.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Numerics.Vectors">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Numerics.Vectors.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ObjectModel">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.ObjectModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.DispatchProxy">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.DispatchProxy.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Emit.ILGeneration">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.Emit.ILGeneration.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Emit.Lightweight">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.Emit.Lightweight.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Emit">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.Emit.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Extensions">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Primitives">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Resources.Reader">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Resources.Reader.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Resources.ResourceManager">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Resources.ResourceManager.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Resources.Writer">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Resources.Writer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.VisualC">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.CompilerServices.VisualC.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Extensions">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Handles">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Handles.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.InteropServices.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Numerics">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Numerics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Serialization.Formatters.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Json">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Serialization.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Primitives">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Serialization.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Xml">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Serialization.Xml.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Claims">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Claims.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Csp">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Cryptography.Csp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Principal">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Principal.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.SecureString">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Security.SecureString.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Text.Encoding.Extensions">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Text.Encoding.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Text.Encoding">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Text.Encoding.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Text.RegularExpressions">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Text.RegularExpressions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Overlapped">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Overlapped.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Parallel">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Tasks.Parallel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Tasks.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Thread">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Thread.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.ThreadPool">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.ThreadPool.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Timer">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Timer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ValueTuple">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.ValueTuple.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.ReaderWriter">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.ReaderWriter.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XDocument">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XDocument.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XPath.XDocument">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XPath.XDocument.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XPath">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XPath.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XmlDocument">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XmlDocument.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XmlSerializer">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XmlSerializer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.WindowsRuntime">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.ComponentModel.Composition.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Drawing.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.IO.Compression.FileSystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Net.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Numerics">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Numerics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Runtime.Serialization.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.ServiceModel.Web.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Transactions">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Transactions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Web.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Windows.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Xml.Linq.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Serialization">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Xml.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscorlib">
+      <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/mscorlib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+  <ItemGroup>
+    <ProjectCapability Remove="LaunchProfiles" />
+    <ProjectCapability Remove="SharedProjectReferences" />
+    <ProjectCapability Remove="ReferenceManagerSharedProjects" />
+    <ProjectCapability Remove="ProjectReferences" />
+    <ProjectCapability Remove="ReferenceManagerProjects" />
+    <ProjectCapability Remove="COMReferences" />
+    <ProjectCapability Remove="ReferenceManagerCOM" />
+    <ProjectCapability Remove="AssemblyReferences" />
+    <ProjectCapability Remove="ReferenceManagerAssemblies" />
+  </ItemGroup>
+</Project>
