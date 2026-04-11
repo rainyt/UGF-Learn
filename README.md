@@ -1,14 +1,14 @@
-# 个人学习UnityGameFramework计划项目
+# 个人学习UnityGameFramework计划项目 
 - [x] 熟悉UnityGameFramework框架架构
   - [x] 类入口实现
   - [x] 显示对象显示
   - [x] 资源加载
-- [x] 熟悉yooasset与项目集成
+- [x] 熟悉yooasset与项目集成 [学习地址](https://www.yooasset.com/docs/guide-editor/QuickStart)
   - [x] 资源管理 (Resource)
   - [x] 热更资源部分 (Update)
   - [x] 运行模式切换（离线/联机/单机测试）
   - [x] 资源引用计数与自动释放策略
-- [ ] 熟悉HybridCLR与项目集成
+- [ ] 熟悉HybridCLR与项目集成 [学习地址](https://www.hybridclr.com/docs/guide-editor/QuickStart)
   - [ ] 集成HybridCLR到项目中，实现跨平台的代码运行环境
   - [ ] 测试HybridCLR的基本功能
 - [ ] 核心流程与逻辑解耦

@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Assets/Src/ProcedureLaunch.cs" />
     <Compile Include="Assets/Src/Game.cs" />
+    <Compile Include="Assets/Src/Utils/System.cs" />
     <Compile Include="Assets/Src/Futures/IFuture.cs" />
     <Compile Include="Assets/Src/Futures/PackageFuture.cs" />
     <Compile Include="Assets/Src/Displays/Image.cs" />

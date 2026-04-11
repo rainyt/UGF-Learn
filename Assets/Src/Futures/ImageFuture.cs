@@ -61,7 +61,7 @@ namespace Futures
                 {
                     Debug.Log($"Load image asset success: {assetName}, duration: {duration}, asset: {asset}");
                     var texture2DData = new Texture2DData();
-                    texture2DData.Name = this.GetAssetName();
+                    texture2DData.Name = assetName;
                     texture2DData.Texture = asset as Texture2D;
                     this.CompleteValue(texture2DData);
                 },

@@ -21,6 +21,8 @@ namespace UnityGameFramework.Runtime
 
         public static EntityComponent Entity => GetComponent<EntityComponent>();
 
+        public static ResourceComponent Resource => GetComponent<ResourceComponent>();
+
 
         private static readonly GameFrameworkLinkedList<GameFrameworkComponent> s_GameFrameworkComponents = new GameFrameworkLinkedList<GameFrameworkComponent>();
 

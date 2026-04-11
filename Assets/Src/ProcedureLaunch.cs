@@ -5,18 +5,19 @@ namespace Game
     using GameFramework.Procedure;
     using UnityEngine;
     using UnityGameFramework.Runtime;
+    using Utils;
     public class ProcedureLaunch : ProcedureBase
     {
         protected override void OnEnter(IFsm<IProcedureManager> procedureOwner)
         {
             base.OnEnter(procedureOwner);
-            Debug.Log("ProcedureLaunch OnEnter");
+            Debug.Log($"ProcedureLaunch OnEnter, IL2CPP: {System.IsIL2CPP}");
 
             // 开始加载图片
             AssetsManager assetsManager = new AssetsManager();
             assetsManager.LoadFile("Assets/Images/loading.jpeg");
             assetsManager.LoadFile("Assets/Images/logo.png");
-            assetsManager.LoadPackage("DefaultPackage");
+            // assetsManager.LoadPackage("DefaultPackage");
             assetsManager.OnProgress((progress) =>
             {
                 Debug.Log($"AssetsManager OnProgress: {progress}");

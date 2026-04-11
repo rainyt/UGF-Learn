@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityGameFramework.Runtime;
 
 namespace Futures
 {
@@ -24,7 +25,7 @@ namespace Futures
         /// </summary>
         virtual public void Dispose()
         {
-            Object.Destroy(Texture);
+            GameEntry.Resource.UnloadAsset(Texture);
             Texture = null;
         }
     }
