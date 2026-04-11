@@ -9,6 +9,7 @@ using GameFramework.FileSystem;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using YooAsset;
 
 namespace GameFramework.Resource
 {
