@@ -294,7 +294,7 @@ namespace Game
             isLoading = false;
             if (isFail && loadAssetCallbacks != null)
             {
-                loadAssetCallbacks(isFail, "Assets loading stopped");
+                loadAssetCallbacks(false, "Assets loading stopped");
             }
         }
 
