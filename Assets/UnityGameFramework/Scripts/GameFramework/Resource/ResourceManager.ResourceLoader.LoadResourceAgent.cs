@@ -166,7 +166,16 @@ namespace GameFramework.Resource
                         return StartTaskStatus.HasToWait;
                     }
 
-                    Debug.Log($"YooAssets.Initialized: {YooAssets.Initialized}");
+                    if (!m_Task.IsScene)
+                    {
+                        AssetObject assetObject = m_ResourceLoader.m_AssetPool.Spawn(m_Task.AssetName);
+                        if (assetObject != null)
+                        {
+                            OnAssetObjectReady(assetObject);
+                            return StartTaskStatus.Done;
+                        }
+                    }
+
                     if (YooAssets.Initialized)
                     {
                         bool isYooResourceExist = YooAssets.CheckLocationValid(m_Task.AssetName);
@@ -177,6 +186,7 @@ namespace GameFramework.Resource
                             if (m_Task.IsScene)
                             {
                                 Debug.Log($"Load scene {m_Task.AssetName} from YooAssets.");
+                                s_LoadingAssetNames.Add(m_Task.AssetName);
                                 var handle = YooAssets.LoadSceneAsync(m_Task.AssetName);
                                 handle.Completed += (result) =>
                                 {
@@ -185,17 +195,22 @@ namespace GameFramework.Resource
                                         // 场景加载逻辑
                                         Debug.Log($"Load scene {m_Task.AssetName} from YooAssets success.");
                                         // 加载成功
-                                        ResourceObject resourceObject = ResourceObject.Create(m_Task.AssetName, result, m_ResourceHelper, m_ResourceLoader, handle);
-                                        m_ResourceLoader.m_ResourcePool.Register(resourceObject, true);
+                                        ResourceObject resourceObject = m_ResourceLoader.m_ResourcePool.Spawn(m_Task.AssetName) as ResourceObject;
+                                        if (resourceObject == null)
+                                        {
+                                            resourceObject = ResourceObject.Create(m_Task.AssetName, result, m_ResourceHelper, m_ResourceLoader, handle);
+                                            m_ResourceLoader.m_ResourcePool.Register(resourceObject, true);
+                                        }
+                                        s_LoadingAssetNames.Remove(m_Task.AssetName);
                                         OnResourceObjectReady(resourceObject);
                                     }
                                     else
                                     {
                                         // 加载失败
-                                        // 加载失败
                                         string errorMessage = $"Load scene failure: {m_Task.AssetName}";
                                         Debug.LogError(errorMessage);
                                         // 关键：通知框架失败，否则任务池会卡死
+                                        s_LoadingAssetNames.Remove(m_Task.AssetName);
                                         OnLoadResourceAgentHelperError(LoadResourceStatus.AssetError, new LoadResourceAgentHelperErrorEventArgs());
                                     }
                                 };
@@ -203,7 +218,14 @@ namespace GameFramework.Resource
                             }
                             else
                             {
+                                ResourceObject resourceObject2 = m_ResourceLoader.m_ResourcePool.Spawn(m_Task.AssetName) as ResourceObject;
+                                if (resourceObject2 != null)
+                                {
+                                    OnResourceObjectReady(resourceObject2);
+                                    return StartTaskStatus.CanResume;
+                                }
                                 Debug.Log($"Load asset {m_Task.AssetName} from YooAssets.");
+                                s_LoadingAssetNames.Add(m_Task.AssetName);
                                 var handle = YooAssets.LoadAssetAsync(m_Task.AssetName);
                                 handle.Completed += (result) =>
                                 {
@@ -213,27 +235,19 @@ namespace GameFramework.Resource
                                         // 加载成功
                                         ResourceObject resourceObject = ResourceObject.Create(m_Task.AssetName, result.AssetObject, m_ResourceHelper, m_ResourceLoader, handle);
                                         m_ResourceLoader.m_ResourcePool.Register(resourceObject, true);
+                                        s_LoadingAssetNames.Remove(m_Task.AssetName);
                                         OnResourceObjectReady(resourceObject);
                                     }
                                     else
                                     {
                                         Debug.LogError($"Load asset {m_Task.AssetName} from YooAssets failure.");
                                         // 加载失败
+                                        s_LoadingAssetNames.Remove(m_Task.AssetName);
                                         OnLoadResourceAgentHelperError(LoadResourceStatus.AssetError, new LoadResourceAgentHelperErrorEventArgs());
                                     }
                                 };
                                 return StartTaskStatus.CanResume;
                             }
-                        }
-                    }
-
-                    if (!m_Task.IsScene)
-                    {
-                        AssetObject assetObject = m_ResourceLoader.m_AssetPool.Spawn(m_Task.AssetName);
-                        if (assetObject != null)
-                        {
-                            OnAssetObjectReady(assetObject);
-                            return StartTaskStatus.Done;
                         }
                     }
 
@@ -339,6 +353,10 @@ namespace GameFramework.Resource
                 private void OnResourceObjectReady(ResourceObject resourceObject)
                 {
                     m_Task.LoadMain(this, resourceObject);
+                    if (resourceObject.YooHandle != null)
+                    {
+                        m_Task.Done = true;
+                    }
                 }
 
                 private void OnError(LoadResourceStatus status, string errorMessage)
