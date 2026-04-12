@@ -71,10 +71,9 @@
     <Compile Include="Assets/Src/Futures/PackageFuture.cs" />
     <Compile Include="Assets/Src/Displays/Image.cs" />
     <Compile Include="Assets/Src/Futures/Future.cs" />
-    <Compile Include="Assets/Src/Futures/HandleTexture2DData.cs" />
-    <Compile Include="Assets/Src/Futures/ImageFuture.cs" />
-    <Compile Include="Assets/Src/Futures/Texture2DData.cs" />
+    <Compile Include="Assets/Src/Futures/AssetsData.cs" />
     <Compile Include="Assets/Src/Futures/BytesFuture.cs" />
+    <Compile Include="Assets/Src/Futures/AssetFuture.cs" />
     <Compile Include="Assets/Src/AssetsManager.cs" />
     <Compile Include="Assets/Src/Futures/StringFuture.cs" />
     <Compile Include="Assets/Src/Futures/FutureError.cs" />

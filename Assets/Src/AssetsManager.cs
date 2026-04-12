@@ -33,7 +33,8 @@ namespace Game
 
         private bool isLoading = false;
 
-        public Dictionary<string, Texture2DData> Texture2ds = new Dictionary<string, Texture2DData>();
+        public Dictionary<string, AssetsData> Assets = new Dictionary<string, AssetsData>();
+        public Dictionary<string, Texture2D> Texture2ds = new Dictionary<string, Texture2D>();
         public Dictionary<string, string> Strings = new Dictionary<string, string>();
         public Dictionary<string, byte[]> Binaries = new Dictionary<string, byte[]>();
         public Dictionary<string, ResourcePackage> Packages = new Dictionary<string, ResourcePackage>();
@@ -60,7 +61,7 @@ namespace Game
         {
             if (Texture2ds.ContainsKey(assetName))
             {
-                return Texture2ds[assetName].Texture;
+                return Texture2ds[assetName];
             }
             else
             {
@@ -118,7 +119,7 @@ namespace Game
         public void LoadFile(string filePath)
         {
             Debug.Log("resource LoadAsset:" + filePath + " resource:" + (resource != null ? "true" : "false"));
-            futures.Add(new ImageFuture(filePath));
+            futures.Add(new AssetFuture(filePath));
         }
 
 
@@ -157,10 +158,13 @@ namespace Game
         {
             loadedCount++;
             Debug.Log($"AssetsManager OnNewObject: {assetName}, asset: {asset}");
-            if (asset is Texture2DData texture2D)
+            if (asset is AssetsData assetsData)
             {
-                Debug.Log($"AssetsManager OnNewObject: {assetName}, texture2D: {texture2D}");
-                Texture2ds[assetName] = texture2D;
+                if (assetsData.Asset is Texture2D texture2D)
+                {
+                    Debug.Log($"AssetsManager OnNewObject: {assetName}, texture2D: {texture2D}");
+                    Texture2ds[assetName] = texture2D;
+                }
             }
             else if (asset is ResourcePackage package)
             {
@@ -304,10 +308,11 @@ namespace Game
             Stop();
             loadAssetCallbacks = null;
             progressCallback = null;
-            foreach (var texture in Texture2ds.Values)
+            foreach (var asset in Assets.Values)
             {
-                texture.Dispose();
+                asset.Dispose();
             }
+            Assets.Clear();
             Texture2ds.Clear();
             Strings.Clear();
             foreach (var package in Packages.Values)

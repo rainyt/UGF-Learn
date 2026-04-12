@@ -5,11 +5,11 @@ using UnityGameFramework.Runtime;
 namespace Futures
 {
     /**
-     * 图片异步操作的结果，可以包含成功的结果数据或者失败的错误信息。
+     * 资源(图片、音频、预制体等)异步操作的结果，可以包含成功的结果数据或者失败的错误信息。
      */
-    public class ImageFuture : Future<Texture2DData, string>
+    public class AssetFuture : Future<AssetsData, string>
     {
-        public ImageFuture(object requestData) : base(requestData)
+        public AssetFuture(object requestData) : base(requestData)
         {
 
         }
@@ -21,10 +21,10 @@ namespace Futures
                 (assetName, asset, duration, userData) =>
                 {
                     Debug.Log($"Load image asset success: {assetName}, duration: {duration}, asset: {asset}");
-                    var texture2DData = new Texture2DData();
-                    texture2DData.Name = assetName;
-                    texture2DData.Texture = asset as Texture2D;
-                    this.CompleteValue(texture2DData);
+                    var assetsData = new AssetsData();
+                    assetsData.Name = assetName;
+                    assetsData.Asset = asset;
+                    this.CompleteValue(assetsData);
                 },
                 (assetName, status, errorMessage, userData) =>
                 {
