@@ -16,8 +16,9 @@ namespace Game
             // 开始加载图片
             AssetsManager assetsManager = new AssetsManager();
             assetsManager.LoadPackage("DefaultPackage", true);
-            // assetsManager.LoadFile("Assets/Images/loading.jpeg");
-            // assetsManager.LoadFile("Assets/Images/logo.png");
+            assetsManager.LoadFile("Assets/Images/loading.jpeg");
+            assetsManager.LoadFile("Assets/Images/logo.png");
+            assetsManager.LoadFile("Assets/Displays/BaseImage.prefab");
             assetsManager.OnProgress((progress) =>
             {
                 Debug.Log($"AssetsManager OnProgress: {progress}");
@@ -28,23 +29,8 @@ namespace Game
                 {
                     Debug.Log("Assets loaded successfully: " + message);
                     // 新增一张图片到舞台上
-
-                    // 尝试加载
-                    GameEntry.Resource.LoadAsset("Assets/Images/loading.jpeg", new GameFramework.Resource.LoadAssetCallbacks(
-                        (assetName, asset, duration, userData) =>
-                        {
-                            Debug.Log($"Load image asset success: {assetName}, duration: {duration}, asset: {asset}");
-                            GameEntry.Entity.ShowEntity<Image>(1, "Assets/Displays/BaseImage.prefab", "Stage", asset);
-                        },
-                        (assetName, status, errorMessage, userData) =>
-                        {
-                            Debug.LogError($"Load image asset failure: {assetName}, status: {status}, error message: {errorMessage}");
-                        }
-                    ));
-
-
-                    // GameEntry.Entity.ShowEntity<Image>(1, "Assets/Displays/BaseImage.prefab", "Stage", assetsManager.GetTexture2D("loading"));
-                    // GameEntry.Entity.ShowEntity<Image>(2, "Assets/Displays/BaseImage.prefab", "Stage", assetsManager.GetTexture2D("logo"));
+                    GameEntry.Entity.ShowEntity<Image>(1, "Assets/Displays/BaseImage.prefab", "Stage", assetsManager.GetTexture2D("loading"));
+                    GameEntry.Entity.ShowEntity<Image>(2, "Assets/Displays/BaseImage.prefab", "Stage", assetsManager.GetTexture2D("logo"));
                 }
                 else
                 {
