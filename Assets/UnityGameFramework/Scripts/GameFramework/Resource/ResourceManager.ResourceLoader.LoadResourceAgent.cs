@@ -182,16 +182,21 @@ namespace GameFramework.Resource
                                 {
                                     if (result.Status == EOperationStatus.Succeed)
                                     {
-                                        // TODO 等待实现场景加载逻辑
+                                        // 场景加载逻辑
+                                        Debug.Log($"Load scene {m_Task.AssetName} from YooAssets success.");
                                         // 加载成功
-                                        // result.SceneObject;
-                                        // ResourceObject resourceObject = new ResourceObject(m_Task.AssetName, result.AssetObject, h, m_ResourceLoader.m_ResourceManager.m_ResourceHelper);
-                                        // OnResourceObjectReady(resourceObject);
+                                        ResourceObject resourceObject = ResourceObject.Create(m_Task.AssetName, result, m_ResourceHelper, m_ResourceLoader, handle);
+                                        m_ResourceLoader.m_ResourcePool.Register(resourceObject, true);
+                                        OnResourceObjectReady(resourceObject);
                                     }
                                     else
                                     {
                                         // 加载失败
-                                        // TODO 加载失败的时候应该做点什么？
+                                        // 加载失败
+                                        string errorMessage = $"Load scene failure: {m_Task.AssetName}";
+                                        Debug.LogError(errorMessage);
+                                        // 关键：通知框架失败，否则任务池会卡死
+                                        OnLoadResourceAgentHelperError(LoadResourceStatus.AssetError, new LoadResourceAgentHelperErrorEventArgs());
                                     }
                                 };
                                 return StartTaskStatus.CanResume;
@@ -214,7 +219,7 @@ namespace GameFramework.Resource
                                     {
                                         Debug.LogError($"Load asset {m_Task.AssetName} from YooAssets failure.");
                                         // 加载失败
-                                        // TODO 加载失败的时候应该做点什么？
+                                        OnLoadResourceAgentHelperError(LoadResourceStatus.AssetError, new LoadResourceAgentHelperErrorEventArgs());
                                     }
                                 };
                                 return StartTaskStatus.CanResume;
