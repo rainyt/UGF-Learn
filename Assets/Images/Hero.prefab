@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2355887538469019299}
   - component: {fileID: 4156959714237635182}
-  - component: {fileID: 2928381504476860664}
+  - component: {fileID: 6374163231426613084}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Untagged
@@ -85,21 +85,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!111 &2928381504476860664
-Animation:
+--- !u!95 &6374163231426613084
+Animator:
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 93958514648654458}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 5e622cc6ccce647cf8393f16b3f9b870, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 5e622cc6ccce647cf8393f16b3f9b870, type: 2}
-  - {fileID: 7400000, guid: 6129e1123074c42068ae3f5a7baeaf4e, type: 2}
-  - {fileID: 7400000, guid: d0093dd069f4c40b4bfb74b450ae7378, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e6f4b06e1af83452882a2382dbbf5ff5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
