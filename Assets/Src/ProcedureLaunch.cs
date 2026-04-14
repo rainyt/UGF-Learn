@@ -9,16 +9,19 @@ namespace Game
     using Utils;
     public class ProcedureLaunch : ProcedureBase
     {
+        private AssetsManager assetsManager;
+
         protected override void OnEnter(IFsm<IProcedureManager> procedureOwner)
         {
             base.OnEnter(procedureOwner);
             Debug.Log($"ProcedureLaunch OnEnter, IL2CPP: {System.IsIL2CPP}");
 
             // 开始加载图片
-            AssetsManager assetsManager = new AssetsManager();
+            assetsManager = new AssetsManager();
             assetsManager.LoadPackage("DefaultPackage", true);
             assetsManager.LoadFile("Assets/Images/loading.jpeg");
             assetsManager.LoadFile("Assets/Images/logo.png");
+            assetsManager.LoadFile("Assets/Images/Background/Background1.png");
             assetsManager.LoadFile("Assets/Displays/BaseImage.prefab");
             assetsManager.OnProgress((progress) =>
             {
@@ -48,6 +51,8 @@ namespace Game
             System.UpdateScreen();
 
             GameEntry.Event.Subscribe(ShowEntitySuccessEventArgs.EventId, onShowEntitySuccess);
+
+            GameEntry.Entity.ShowEntity<Background>(10000, "Assets/Displays/BaseImage.prefab", "Background", assetsManager.GetTexture2D("Background1"));
 
             GameEntry.Entity.ShowEntity<Hero>(1, "Assets/Images/Hero.prefab", "Stage");
 

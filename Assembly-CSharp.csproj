@@ -70,6 +70,7 @@
     <Compile Include="Assets/Src/Futures/IFuture.cs" />
     <Compile Include="Assets/Src/Futures/PackageFuture.cs" />
     <Compile Include="Assets/Src/Displays/Image.cs" />
+    <Compile Include="Assets/Src/Displays/Background.cs" />
     <Compile Include="Assets/Src/Futures/Future.cs" />
     <Compile Include="Assets/Src/Futures/AssetsData.cs" />
     <Compile Include="Assets/Src/Displays/BaseBullet.cs" />
