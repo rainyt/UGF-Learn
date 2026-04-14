@@ -45,6 +45,7 @@ namespace Game
 
         public void onStartGame()
         {
+            System.UpdateScreen();
 
             GameEntry.Event.Subscribe(ShowEntitySuccessEventArgs.EventId, onShowEntitySuccess);
 

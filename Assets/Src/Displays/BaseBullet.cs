@@ -1,4 +1,6 @@
 using Data;
+using UnityEngine;
+using UnityGameFramework.Runtime;
 
 namespace Displays
 {
@@ -29,6 +31,13 @@ namespace Displays
         {
             base.OnUpdate(elapseSeconds, realElapseSeconds);
             AddVelocity(0, Speed * elapseSeconds);
+            // 超出屏幕范围，销毁子弹
+            var position = transform.position;
+            if (position.x < Utils.System.LEFT_BOUNDARY || position.x > Utils.System.RIGHT_BOUNDARY
+                || position.y > Utils.System.BOTTOM_BOUNDARY || position.y < Utils.System.TOP_BOUNDARY)
+            {
+                GameEntry.Entity.HideEntity(this.Entity.Id);
+            }
         }
     }
 }
