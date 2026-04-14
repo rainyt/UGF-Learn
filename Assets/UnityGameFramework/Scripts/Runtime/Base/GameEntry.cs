@@ -19,6 +19,7 @@ namespace UnityGameFramework.Runtime
     public static class GameEntry
     {
 
+        public static EventComponent Event => GetComponent<EventComponent>();
 
         public static EntityComponent Entity => GetComponent<EntityComponent>();
 

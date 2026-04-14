@@ -1,6 +1,7 @@
 namespace Game
 {
     using Displays;
+    using GameFramework.Event;
     using GameFramework.Fsm;
     using GameFramework.Procedure;
     using UnityEngine;
@@ -44,10 +45,18 @@ namespace Game
 
         public void onStartGame()
         {
+
+            GameEntry.Event.Subscribe(ShowEntitySuccessEventArgs.EventId, onShowEntitySuccess);
+
             GameEntry.Entity.ShowEntity<Hero>(1, "Assets/Images/Hero.prefab", "Stage");
 
             isGameStarted = true;
 
+        }
+
+        private void onShowEntitySuccess(object sender, GameEventArgs e)
+        {
+            Debug.Log($"onShowEntitySuccess: {e}");
         }
 
         protected override void OnUpdate(IFsm<IProcedureManager> procedureOwner, float elapseSeconds, float realElapseSeconds)
