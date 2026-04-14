@@ -3,7 +3,7 @@ namespace Displays
     using Unity.VisualScripting;
     using UnityEngine;
     using UnityGameFramework.Runtime;
-    public class Image : EntityLogic
+    public class Image : BaseDisplay
     {
 
         public void SetTexture(Texture2D texture)

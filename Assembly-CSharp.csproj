@@ -80,6 +80,7 @@
     <Compile Include="Assets/Src/Data/BulletData.cs" />
     <Compile Include="Assets/Src/Futures/StringFuture.cs" />
     <Compile Include="Assets/Src/Futures/FutureError.cs" />
+    <Compile Include="Assets/Src/Data/BackgroundData.cs" />
     <Compile Include="Assets/Src/Displays/Hero.cs" />
     <Compile Include="Assets/Src/Displays/BaseDisplay.cs" />
   </ItemGroup>

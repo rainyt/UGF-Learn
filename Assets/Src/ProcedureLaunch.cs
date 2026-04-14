@@ -1,5 +1,6 @@
 namespace Game
 {
+    using Data;
     using Displays;
     using GameFramework.Event;
     using GameFramework.Fsm;
@@ -46,15 +47,19 @@ namespace Game
 
         private bool isGameStarted = false;
 
+        public int HeroId = -1;
+
         public void onStartGame()
         {
             System.UpdateScreen();
 
+
             GameEntry.Event.Subscribe(ShowEntitySuccessEventArgs.EventId, onShowEntitySuccess);
 
-            GameEntry.Entity.ShowEntity<Background>(10000, "Assets/Displays/BaseImage.prefab", "Background", assetsManager.GetTexture2D("Background1"));
+            GameEntry.Entity.ShowEntity<Background>("Assets/Displays/BaseImage.prefab", "Background", new BackgroundData { Texture = assetsManager.GetTexture2D("Background1"), Speed = 30, Index = 0 });
+            GameEntry.Entity.ShowEntity<Background>("Assets/Displays/BaseImage.prefab", "Background", new BackgroundData { Texture = assetsManager.GetTexture2D("Background1"), Speed = 30, Index = 1 });
 
-            GameEntry.Entity.ShowEntity<Hero>(1, "Assets/Images/Hero.prefab", "Stage");
+            HeroId = GameEntry.Entity.ShowEntity<Hero>("Assets/Images/Hero.prefab", "Stage");
 
             isGameStarted = true;
 
@@ -62,7 +67,7 @@ namespace Game
 
         private void onShowEntitySuccess(object sender, GameEventArgs e)
         {
-            Debug.Log($"onShowEntitySuccess: {e}");
+            // Debug.Log($"onShowEntitySuccess: {e}");
         }
 
         protected override void OnUpdate(IFsm<IProcedureManager> procedureOwner, float elapseSeconds, float realElapseSeconds)
@@ -76,8 +81,9 @@ namespace Game
 
             if (Input.GetMouseButton(0))
             {
+                Debug.Log("Click: " + Input.mousePosition);
                 Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                Entity entity = GameEntry.Entity.GetEntity(1);
+                Entity entity = GameEntry.Entity.GetEntity(HeroId);
                 if (entity != null)
                 {
                     Debug.Log("entity.Handle: " + entity.Handle + " hero: " + entity);
