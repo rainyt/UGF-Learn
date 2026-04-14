@@ -19,7 +19,7 @@
   - [ ] UI 窗体 (UI Form)：管理界面的生命周期、层级与遮罩
   - [ ] 实体 (Entity)：管理游戏内动态物体的生成与回收
   - [ ] 对象池 (Object Pool)：优化频繁创建销毁带来的性能开销
-- [ ] 数据驱动开发
+- [ ] 数据驱动开发 [学习地址](https://www.datable.cn/docs/intro)
   - [ ] 配置表 (DataTable)：实现从 Excel 到游戏内数据的自动化解析
   - [ ] 本地化 (Localization)：实现多语言文字与资产的动态切换
   - [ ] 游戏配置 (Setting)：处理玩家本地数据的持久化存储
