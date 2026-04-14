@@ -8,7 +8,7 @@ namespace Displays
     /// <summary>
     /// 飞机英雄实体
     /// </summary>
-    public class Hero : EntityLogic
+    public class Hero : BaseDisplay
     {
 
         Animator _animation;
@@ -35,17 +35,10 @@ namespace Displays
             _y = y;
         }
 
-        public void SetToPosition(float x, float y)
+        override public void SetToPosition(float x, float y)
         {
             MoveTo(x, y);
-            transform.position = new Vector3(x, y, 0);
-        }
-
-        public void SetToLocation(float x, float y)
-        {
-            Vector3 location = new Vector3(x, y, 0);
-            location = Camera.main.ScreenToWorldPoint(location);
-            SetToPosition(location.x, location.y);
+            base.SetToPosition(x, y);
         }
 
         protected override void OnShow(object userData)
