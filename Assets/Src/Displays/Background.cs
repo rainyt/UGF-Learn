@@ -20,7 +20,7 @@ namespace Displays
             SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
             spriteRenderer.sortingOrder = -10;
             resetY = spriteRenderer.size.y * 100 - 1;
-            outScreenY = -spriteRenderer.size.y;
+            outScreenY = -(spriteRenderer.size.y - 0.01f);
             this.AddVelocity(0, resetY * Data.Index);
         }
 
