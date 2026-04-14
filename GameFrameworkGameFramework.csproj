@@ -100,8 +100,8 @@
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Scene/ISceneManager.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceLoader.LoadAssetTask.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceUpdater.UpdateInfo.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceVerifyFailureEventArgs.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/Version/Version.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceVerifyFailureEventArgs.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/IPacketHandler.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/WebRequest/WebRequestStartEventArgs.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Download/DownloadManager.DownloadTask.cs" />
@@ -123,8 +123,8 @@
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/UpdateVersionListCallbacks.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/NetworkErrorCode.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Utility/Utility.Verifier.Crc32.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/ISoundManager.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceLoader.AssetObject.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/ISoundManager.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/UpdateVersionListFailureCallback.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadResourceAgentHelperUpdateEventArgs.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/UpdateResourcesCompleteCallback.cs" />
@@ -149,8 +149,8 @@
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Fsm/IFsm.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/TaskPool/TaskPool.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadResourceProgress.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Debugger/IDebuggerWindow.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/DataProvider/ReadDataDependencyAssetEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Debugger/IDebuggerWindow.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/DataNode/IDataNode.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/ISoundGroup.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/NetworkCustomErrorEventArgs.cs" />
@@ -229,8 +229,8 @@
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/UnloadSceneSuccessCallback.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/UpdatableVersionList.ResourceGroup.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Utility/Utility.Path.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/TaskPool/TaskStatus.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/DataProvider/ReadDataUpdateEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/TaskPool/TaskStatus.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Download/IDownloadManager.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/UI/IUIFormHelper.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/Version/Version.IVersionHelper.cs" />
@@ -256,8 +256,8 @@
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Event/GameEventArgs.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/UI/UIManager.OpenUIFormInfo.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/EventPool/BaseEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/DataProvider/IDataProviderHelper.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceChecker.CheckInfo.LocalVersionInfo.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/DataProvider/IDataProviderHelper.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceMode.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadAssetDependencyAssetCallback.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Config/IConfigHelper.cs" />
@@ -269,8 +269,8 @@
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceVerifySuccessEventArgs.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Entity/EntityManager.ShowEntityInfo.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/DataTable/DataTableManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/PlaySoundFailureEventArgs.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/PackageVersionList.Asset.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/PlaySoundFailureEventArgs.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Event/IEventManager.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceUpdateChangedEventArgs.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/IResourceGroup.cs" />
@@ -295,8 +295,8 @@
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/FileSystem/FileInfo.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/UI/CloseUIFormCompleteEventArgs.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Entity/IEntityManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/UpdatableVersionListSerializer.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/UpdatableVersionList.Resource.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/UpdatableVersionListSerializer.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceGroupCollection.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/IResourceGroupCollection.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadBytesFailureCallback.cs" />
@@ -306,8 +306,8 @@
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/NetworkManager.SendState.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/PlaySoundSuccessEventArgs.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/DataTable/IDataTableManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/ReferencePool/ReferencePool.ReferenceCollection.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ReadWriteVersionListSerializer.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/ReferencePool/ReferencePool.ReferenceCollection.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Properties/AssemblyInfo.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/SoundManager.PlaySoundInfo.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceChecker.CheckInfo.cs" />
@@ -340,8 +340,8 @@
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/PackageVersionList.FileSystem.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/GameFrameworkMultiDictionary.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/EventPool/EventPoolMode.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/TaskPool/StartTaskStatus.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/WebRequest/WebRequestManager.WebRequestTaskStatus.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/TaskPool/StartTaskStatus.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/IResourceManager.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/ObjectPool/ObjectPoolManager.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/PlaySoundDependencyAssetEventArgs.cs" />
@@ -775,6 +775,10 @@
       <HintPath>Library/PackageCache/com.unity.visualscripting@1.9.4/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>Assets/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="unityplastic">
       <HintPath>Library/PackageCache/com.unity.collab-proxy@2.12.4/Lib/Editor/unityplastic.dll</HintPath>
       <Private>False</Private>
@@ -785,10 +789,6 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.TextureAssets">
       <HintPath>Library/PackageCache/com.unity.visualscripting@1.9.4/Editor/VisualScripting.Core/EditorAssetResources/Unity.VisualScripting.TextureAssets.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="ICSharpCode.SharpZipLib">
-      <HintPath>Assets/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">

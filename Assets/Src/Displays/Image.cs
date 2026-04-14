@@ -15,7 +15,7 @@ namespace Displays
 
         protected override void OnShow(object userData)
         {
-            Debug.Log("Image OnShow");
+            Debug.Log("Image OnShow " + userData);
             base.OnShow(userData);
             SetTexture(userData as Texture2D);
         }

@@ -29,14 +29,50 @@ namespace Game
                 {
                     Debug.Log("Assets loaded successfully: " + message);
                     // 新增一张图片到舞台上
-                    GameEntry.Entity.ShowEntity<Image>(1, "Assets/Displays/BaseImage.prefab", "Stage", assetsManager.GetTexture2D("loading"));
-                    GameEntry.Entity.ShowEntity<Image>(2, "Assets/Displays/BaseImage.prefab", "Stage", assetsManager.GetTexture2D("logo"));
+                    this.onStartGame();
+                    // GameEntry.Entity.ShowEntity<Image>(1, "Assets/Displays/BaseImage.prefab", "Stage", assetsManager.GetTexture2D("loading"));
+                    // GameEntry.Entity.ShowEntity<Image>(2, "Assets/Displays/BaseImage.prefab", "Stage", assetsManager.GetTexture2D("logo"));
                 }
                 else
                 {
                     Debug.LogError("Failed to load assets: " + message);
                 }
             });
+        }
+
+        private bool isGameStarted = false;
+
+        public void onStartGame()
+        {
+            GameEntry.Entity.ShowEntity<Hero>(1, "Assets/Images/Hero.prefab", "Stage");
+
+            isGameStarted = true;
+
+        }
+
+        protected override void OnUpdate(IFsm<IProcedureManager> procedureOwner, float elapseSeconds, float realElapseSeconds)
+        {
+            base.OnUpdate(procedureOwner, elapseSeconds, realElapseSeconds);
+
+            if (!isGameStarted)
+            {
+                return;
+            }
+
+            if (Input.GetMouseButton(0))
+            {
+                Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                Entity entity = GameEntry.Entity.GetEntity(1);
+                if (entity != null)
+                {
+                    Debug.Log("entity.Handle: " + entity.Handle + " hero: " + entity);
+                    Hero hero = entity.Logic as Hero;
+                    if (hero != null)
+                    {
+                        hero.MoveTo(worldPos.x, worldPos.y);
+                    }
+                }
+            }
         }
     }
 
