@@ -35,6 +35,25 @@ namespace Displays
             _y = y;
         }
 
+        public void SetToPosition(float x, float y)
+        {
+            MoveTo(x, y);
+            transform.position = new Vector3(x, y, 0);
+        }
+
+        public void SetToLocation(float x, float y)
+        {
+            Vector3 location = new Vector3(x, y, 0);
+            location = Camera.main.ScreenToWorldPoint(location);
+            SetToPosition(location.x, location.y);
+        }
+
+        protected override void OnShow(object userData)
+        {
+            base.OnShow(userData);
+            SetToLocation(Screen.width * 0.5f, Screen.height * 0.15f);
+        }
+
         protected override void OnUpdate(float elapseSeconds, float realElapseSeconds)
         {
             base.OnUpdate(elapseSeconds, realElapseSeconds);
