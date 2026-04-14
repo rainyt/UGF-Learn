@@ -1,5 +1,6 @@
 
 using System;
+using Data;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 
@@ -23,6 +24,10 @@ namespace Displays
         private float _y = 0;
 
         private float _resumeTime = 0;
+
+        public float FireInterval = 0.2f;
+
+        private float _fireTime = 0;
 
         /// <summary>
         /// 移动到指定位置。
@@ -84,6 +89,21 @@ namespace Displays
                 // Debug.Log("Blend: " + _animation.GetFloat("Blend"));
             }
 
+            /// 间隔发射子弹
+            _fireTime += elapseSeconds;
+            if (_fireTime >= FireInterval)
+            {
+                _fireTime = 0;
+                FireBullet();
+            }
+        }
+
+        /// <summary>
+        /// 发射子弹。
+        /// </summary>
+        public void FireBullet()
+        {
+            GameEntry.Entity.ShowEntity<BaseBullet>("Assets/Images/Bullet.prefab", "Stage", new BulletData { ParentHero = this, Id = "b1001" });
         }
     }
 }

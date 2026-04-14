@@ -27,5 +27,15 @@ namespace Displays
             SetToPosition(location.x, location.y);
         }
 
+        /// <summary>
+        /// 添加显示速度
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        virtual public void AddVelocity(float x, float y)
+        {
+            transform.Translate(new Vector3(x / 100f, y / 100f, 0), Space.World);
+        }
+
     }
 }

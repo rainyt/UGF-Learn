@@ -194,6 +194,7 @@
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Entity/Entity.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Utility/Helper.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Config/LoadConfigUpdateEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Entity/EntityIdGenerator.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/ReferencePool/ReferenceStrictCheckType.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Debugger/DebuggerComponent.ObjectPoolInformationWindow.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/UI/UIForm.cs" />

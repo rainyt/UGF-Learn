@@ -385,6 +385,33 @@ namespace UnityGameFramework.Runtime
         }
 
         /// <summary>
+        /// 显示实体，并自动生成实体编号。
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="entityAssetName"></param>
+        /// <param name="entityGroupName"></param>
+        /// <returns></returns>
+        public int ShowEntity<T>(string entityAssetName, string entityGroupName) where T : EntityLogic
+        {
+            return ShowEntity<T>(entityAssetName, entityGroupName, null);
+        }
+
+        /// <summary>
+        /// 显示实体，并自动生成实体编号。
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="entityAssetName"></param>
+        /// <param name="entityGroupName"></param>
+        /// <param name="userData"></param>
+        /// <returns></returns>
+        public int ShowEntity<T>(string entityAssetName, string entityGroupName, object userData) where T : EntityLogic
+        {
+            int entityId = EntityIdGenerator.GenerateId();
+            ShowEntity(entityId, typeof(T), entityAssetName, entityGroupName, DefaultPriority, userData);
+            return entityId;
+        }
+
+        /// <summary>
         /// 显示实体。
         /// </summary>
         /// <typeparam name="T">实体逻辑类型。</typeparam>
