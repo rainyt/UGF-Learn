@@ -19,8 +19,8 @@ namespace Displays
             base.OnShow(Data.Texture);
             SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
             spriteRenderer.sortingOrder = -10;
-            resetY = spriteRenderer.size.y * 100 - 1;
-            outScreenY = -(spriteRenderer.size.y - 0.01f);
+            resetY = spriteRenderer.size.y * 100 - 2;
+            outScreenY = -(spriteRenderer.size.y - 0.02f);
             this.AddVelocity(0, resetY * Data.Index);
         }
 

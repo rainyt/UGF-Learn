@@ -49,6 +49,10 @@ namespace Game
 
         public int HeroId = -1;
 
+        private float createEnemyInterval = 1;
+
+        private float lastCreateEnemyTime = 0;
+
         public void onStartGame()
         {
             System.UpdateScreen();
@@ -93,6 +97,13 @@ namespace Game
                         hero.MoveTo(worldPos.x, worldPos.y);
                     }
                 }
+            }
+
+            lastCreateEnemyTime += elapseSeconds;
+            if (lastCreateEnemyTime >= createEnemyInterval)
+            {
+                lastCreateEnemyTime = 0;
+                GameEntry.Entity.ShowEntity<Enemy>("Assets/Images/Enemys/Golem.prefab", "Stage");
             }
         }
     }
