@@ -11,14 +11,14 @@
 - [ ] 熟悉HybridCLR与项目集成 [学习地址](https://www.hybridclr.com/docs/guide-editor/QuickStart)
   - [ ] 集成HybridCLR到项目中，实现跨平台的代码运行环境
   - [ ] 测试HybridCLR的基本功能
-- [ ] 核心流程与逻辑解耦
-  - [ ] 流程控制 (Procedure)：理清游戏启动到运行的状态机切换
-  - [ ] 全局事件系统 (Event)：实现模块间的低耦合通讯
-  - [ ] 有限状态机 (FSM)：用于处理复杂的对象行为逻辑
-- [ ] UI 与实体系统实践
-  - [ ] UI 窗体 (UI Form)：管理界面的生命周期、层级与遮罩
-  - [ ] 实体 (Entity)：管理游戏内动态物体的生成与回收
-  - [ ] 对象池 (Object Pool)：优化频繁创建销毁带来的性能开销
+- [x] 核心流程与逻辑解耦
+  - [x] 流程控制 (Procedure)：理清游戏启动到运行的状态机切换
+  - [x] 全局事件系统 (Event)：实现模块间的低耦合通讯
+  - [x] 有限状态机 (FSM)：用于处理复杂的对象行为逻辑
+- [x] UI 与实体系统实践
+  - [x] UI 窗体 (UI Form)：管理界面的生命周期、层级与遮罩
+  - [x] 实体 (Entity)：管理游戏内动态物体的生成与回收
+  - [x] 对象池 (Object Pool)：优化频繁创建销毁带来的性能开销
 - [ ] 数据驱动开发 [学习地址](https://www.datable.cn/docs/intro)
   - [ ] 配置表 (DataTable)：实现从 Excel 到游戏内数据的自动化解析
   - [ ] 本地化 (Localization)：实现多语言文字与资产的动态切换
