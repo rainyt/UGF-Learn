@@ -21,6 +21,24 @@ namespace Game
     public class AssetsManager
     {
 
+        private static AssetsManager __instance;
+
+        /// <summary>
+        /// 获取资源管理器实例。
+        /// </summary>
+        public static AssetsManager Instance
+        {
+            get
+            {
+                if (__instance == null)
+                {
+                    __instance = new AssetsManager();
+                }
+                return __instance;
+            }
+        }
+
+
         public ResourceComponent resource;
 
         private ProgressCallback progressCallback;

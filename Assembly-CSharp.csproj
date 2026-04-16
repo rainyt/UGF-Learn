@@ -69,6 +69,7 @@
     <Compile Include="Assets/Src/Utils/System.cs" />
     <Compile Include="Assets/Src/Futures/IFuture.cs" />
     <Compile Include="Assets/Src/Futures/PackageFuture.cs" />
+    <Compile Include="Assets/Src/Events/UIEvent.cs" />
     <Compile Include="Assets/Src/Displays/Image.cs" />
     <Compile Include="Assets/Src/Displays/Enemy.cs" />
     <Compile Include="Assets/Src/Displays/Background.cs" />

@@ -19,7 +19,6 @@ namespace Game
 
             // 开始加载图片
             assetsManager = new AssetsManager();
-            assetsManager.LoadPackage("DefaultPackage", true);
             assetsManager.LoadFile("Assets/Images/loading.jpeg");
             assetsManager.LoadFile("Assets/Images/logo.png");
             assetsManager.LoadFile("Assets/Images/Background/Background1.png");

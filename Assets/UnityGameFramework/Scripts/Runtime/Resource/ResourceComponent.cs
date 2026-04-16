@@ -585,13 +585,11 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         protected override void Awake()
         {
-            Debug.Log("ResourceComponent Awake?");
             base.Awake();
         }
 
         private void Start()
         {
-            Debug.Log("ResourceComponent Start?");
             BaseComponent baseComponent = GameEntry.GetComponent<BaseComponent>();
             if (baseComponent == null)
             {
