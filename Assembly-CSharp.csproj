@@ -73,6 +73,7 @@
     <Compile Include="Assets/Src/Displays/Enemy.cs" />
     <Compile Include="Assets/Src/Displays/Background.cs" />
     <Compile Include="Assets/Src/Futures/Future.cs" />
+    <Compile Include="Assets/Src/Scenes/StartGame.cs" />
     <Compile Include="Assets/Src/Futures/AssetsData.cs" />
     <Compile Include="Assets/Src/Displays/BaseBullet.cs" />
     <Compile Include="Assets/Src/Futures/BytesFuture.cs" />
@@ -82,6 +83,7 @@
     <Compile Include="Assets/Src/Futures/StringFuture.cs" />
     <Compile Include="Assets/Src/Futures/FutureError.cs" />
     <Compile Include="Assets/Src/Data/BackgroundData.cs" />
+    <Compile Include="Assets/Src/ProcedureGame.cs" />
     <Compile Include="Assets/Src/Displays/Hero.cs" />
     <Compile Include="Assets/Src/Displays/BaseDisplay.cs" />
   </ItemGroup>

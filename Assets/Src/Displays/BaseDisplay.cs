@@ -38,5 +38,29 @@ namespace Displays
             transform.position = transform.position + new Vector3(x / 100f, y / 100f, y / 100f);
         }
 
+        protected override void OnUpdate(float elapseSeconds, float realElapseSeconds)
+        {
+            base.OnUpdate(elapseSeconds, realElapseSeconds);
+            _fixedDeltaTime += elapseSeconds;
+            if (_fixedDeltaTime >= FixedDeltaTime)
+            {
+                _fixedDeltaTime -= FixedDeltaTime;
+                OnFixedUpdate(FixedDeltaTime);
+            }
+        }
+
+        public float FixedDeltaTime = 1f / 30f;
+
+        private float _fixedDeltaTime = 0f;
+
+        /// <summary>
+        /// 固定更新，可以设置FixedDeltaTime的固定频率处理
+        /// </summary>
+        /// <param name="elapseSeconds"></param>
+        virtual public void OnFixedUpdate(float elapseSeconds)
+        {
+
+        }
+
     }
 }
