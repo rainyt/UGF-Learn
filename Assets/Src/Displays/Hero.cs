@@ -61,7 +61,7 @@ namespace Displays
             float moveX = moveXDistance * 0.5f;
             float moveY = (_y - current.y) * 0.5f;
 
-            transform.position = new Vector3(current.x + moveX, current.y + moveY, 0);
+            this.SetToPosition(current.x + moveX, current.y + moveY);
 
             if (_animation != null)
             {

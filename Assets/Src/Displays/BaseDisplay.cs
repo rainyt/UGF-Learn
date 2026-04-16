@@ -5,6 +5,7 @@ namespace Displays
 {
     public class BaseDisplay : EntityLogic
     {
+
         /// <summary>
         /// 设置显示位置，基于世界坐标。
         /// </summary>
@@ -12,7 +13,7 @@ namespace Displays
         /// <param name="y"></param>
         virtual public void SetToPosition(float x, float y)
         {
-            transform.position = new Vector3(x, y, 0);
+            transform.position = new Vector3(x, y, y);
         }
 
         /// <summary>
@@ -22,7 +23,7 @@ namespace Displays
         /// <param name="y"></param>
         virtual public void SetToLocation(float x, float y)
         {
-            Vector3 location = new Vector3(x, y, 0);
+            Vector3 location = new Vector3(x, y, y);
             location = Camera.main.ScreenToWorldPoint(location);
             SetToPosition(location.x, location.y);
         }
@@ -34,7 +35,7 @@ namespace Displays
         /// <param name="y"></param>
         virtual public void AddVelocity(float x, float y)
         {
-            transform.Translate(new Vector3(x / 100f, y / 100f, 0), Space.World);
+            transform.position = transform.position + new Vector3(x / 100f, y / 100f, y / 100f);
         }
 
     }
