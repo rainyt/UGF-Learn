@@ -169,6 +169,16 @@ namespace Game
             futures.Add(new PackageFuture(packageName, isDefault));
         }
 
+
+        /// <summary>
+        /// 加载FairyUI资源包，传递资源包的路径。
+        /// </summary>
+        /// <param name="path"></param>
+        public void LoadFairyUI(string path)
+        {
+            futures.Add(new FairyUIFuture(path));
+        }
+
         /**
          * 当加载成功新的资源时，会调用这个方法，传递资源的名称和资源对象。
          */

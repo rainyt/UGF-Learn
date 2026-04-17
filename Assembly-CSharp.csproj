@@ -68,6 +68,7 @@
     <Compile Include="Assets/Src/Game.cs" />
     <Compile Include="Assets/Src/Displays/HitEffect.cs" />
     <Compile Include="Assets/Src/Utils/System.cs" />
+    <Compile Include="Assets/Src/Futures/FairyUIFuture.cs" />
     <Compile Include="Assets/Src/Futures/IFuture.cs" />
     <Compile Include="Assets/Src/Futures/PackageFuture.cs" />
     <Compile Include="Assets/Src/Events/UIEvent.cs" />
@@ -1171,6 +1172,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UnityGameFramework.Runtime.csproj" />
+    <ProjectReference Include="FairyGUI-Editor.csproj" />
     <ProjectReference Include="UnityGameFramework.Editor.csproj" />
     <ProjectReference Include="FairyGUI.csproj" />
     <ProjectReference Include="GameFrameworkGameFramework.csproj" />

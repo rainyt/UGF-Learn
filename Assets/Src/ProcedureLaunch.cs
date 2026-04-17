@@ -21,6 +21,7 @@ namespace Game
             FGUI.Init(1920, 1080);
 
             AssetsManager.Instance.LoadPackage("DefaultPackage", true);
+            AssetsManager.Instance.LoadFairyUI("Assets/FGUI/Package1");
             AssetsManager.Instance.Start((success, message) =>
             {
                 if (success)
@@ -54,8 +55,11 @@ namespace Game
         private void onAssetsLoaded()
         {
             Debug.Log("ProcedureLaunch onAssetsLoaded");
-            GameEntry.UI.OpenUIForm("Assets/Images/UI/StartGame.prefab", "Stage");
+
+            // GameEntry.UI.OpenUIForm("Assets/Images/UI/StartGame.prefab", "Stage");
             // GameEntry.Entity.<StartGame>("Assets/Images/UI/StartGame.prefab", "Stage");
+            GObject startView = UIPackage.CreateObject("Package1", "StartView");
+            GRoot.inst.AddChild(startView);
         }
 
         protected override void OnUpdate(IFsm<IProcedureManager> procedureOwner, float elapseSeconds, float realElapseSeconds)

@@ -64,17 +64,17 @@
     <Analyzer Include="/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/Plugins/FairyGUI-unity-5.2.0/Assets/Editor/UIConfigEditor.cs" />
-    <Compile Include="Assets/Plugins/FairyGUI-unity-5.2.0/Assets/Editor/PackagesWindow.cs" />
-    <Compile Include="Assets/Plugins/FairyGUI-unity-5.2.0/Assets/Editor/UIContentScalerEditor.cs" />
-    <Compile Include="Assets/Plugins/FairyGUI-unity-5.2.0/Assets/Editor/UIPanelEditor.cs" />
-    <Compile Include="Assets/Plugins/FairyGUI-unity-5.2.0/Assets/Editor/StageCameraEditor.cs" />
-    <Compile Include="Assets/Plugins/FairyGUI-unity-5.2.0/Assets/Editor/DisplayObjectEditor.cs" />
-    <Compile Include="Assets/Plugins/FairyGUI-unity-5.2.0/Assets/Editor/EditorToolSet.cs" />
-    <Compile Include="Assets/Plugins/FairyGUI-unity-5.2.0/Assets/Editor/UIPainterEditor.cs" />
+    <Compile Include="Assets/Plugins/FairyGUI/Assets/Editor/UIConfigEditor.cs" />
+    <Compile Include="Assets/Plugins/FairyGUI/Assets/Editor/EditorToolSet.cs" />
+    <Compile Include="Assets/Plugins/FairyGUI/Assets/Editor/DisplayObjectEditor.cs" />
+    <Compile Include="Assets/Plugins/FairyGUI/Assets/Editor/PackagesWindow.cs" />
+    <Compile Include="Assets/Plugins/FairyGUI/Assets/Editor/UIContentScalerEditor.cs" />
+    <Compile Include="Assets/Plugins/FairyGUI/Assets/Editor/StageCameraEditor.cs" />
+    <Compile Include="Assets/Plugins/FairyGUI/Assets/Editor/UIPanelEditor.cs" />
+    <Compile Include="Assets/Plugins/FairyGUI/Assets/Editor/UIPainterEditor.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets/Plugins/FairyGUI-unity-5.2.0/Assets/Editor/FairyGUI-Editor.asmdef" />
+    <None Include="Assets/Plugins/FairyGUI/Assets/Editor/FairyGUI-Editor.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

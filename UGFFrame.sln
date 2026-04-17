@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FairyGUI", "FairyGUI.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{5A201FA2-B89E-6B63-73BF-491648FB7310}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FairyGUI-Editor", "FairyGUI-Editor.csproj", "{81C1DFEF-F5A0-3132-080F-0D1E0F6FF141}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{5A201FA2-B89E-6B63-73BF-491648FB7310}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A201FA2-B89E-6B63-73BF-491648FB7310}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A201FA2-B89E-6B63-73BF-491648FB7310}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81C1DFEF-F5A0-3132-080F-0D1E0F6FF141}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81C1DFEF-F5A0-3132-080F-0D1E0F6FF141}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81C1DFEF-F5A0-3132-080F-0D1E0F6FF141}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81C1DFEF-F5A0-3132-080F-0D1E0F6FF141}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
