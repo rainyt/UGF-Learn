@@ -1,5 +1,7 @@
 
+using Data;
 using UnityEngine;
+using UnityGameFramework.Runtime;
 
 namespace Displays
 {
@@ -9,6 +11,8 @@ namespace Displays
     /// </summary>
     public class Enemy : BaseDisplay
     {
+
+        public int Health = 5;
 
         protected override void OnShow(object userData)
         {
@@ -21,6 +25,21 @@ namespace Displays
         {
             base.OnUpdate(elapseSeconds, realElapseSeconds);
             this.AddVelocity(0, -10 * elapseSeconds);
+            if (this.transform.position.y < Utils.System.TOP_BOUNDARY)
+            {
+                GameEntry.Entity.HideEntity(this.Entity.Id);
+            }
+        }
+
+        public void Hurt(int damage)
+        {
+            this.Health -= damage;
+            if (this.Health <= 0)
+            {
+                // 产生一个自身的爆炸效果
+                GameEntry.Entity.ShowEntity<HitEffect>("Assets/Images/BoomEffect.prefab", "Stage", new HitEffectData { X = this.transform.position.x, Y = this.transform.position.y, Scale = 1.5f });
+                GameEntry.Entity.HideEntity(this.Entity.Id);
+            }
         }
     }
 }

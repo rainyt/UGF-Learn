@@ -62,5 +62,10 @@ namespace Displays
 
         }
 
+        public float DistanceTo(BaseDisplay other)
+        {
+            return Vector3.Distance(transform.position, other.transform.position);
+        }
+
     }
 }

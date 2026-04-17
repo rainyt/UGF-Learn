@@ -84,7 +84,6 @@ namespace Game
 
             if (Input.GetMouseButton(0))
             {
-                Debug.Log("Click: " + Input.mousePosition);
                 Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 Entity entity = GameEntry.Entity.GetEntity(HeroId);
                 if (entity != null)
@@ -104,6 +103,29 @@ namespace Game
                 lastCreateEnemyTime = 0;
                 GameEntry.Entity.ShowEntity<Enemy>("Assets/Images/Enemys/Golem.prefab", "Enemys");
             }
+
+            // 子弹之间的碰撞
+            var bullets = GameEntry.Entity.GetEntityGroup("Bullets").GetAllEntities();
+            var enemys = GameEntry.Entity.GetEntityGroup("Enemys").GetAllEntities();
+            for (int i = bullets.Length - 1; i >= 0; i--)
+            {
+                Entity entity = bullets[i] as Entity;
+                var bullet = entity.Logic as BaseDisplay;
+                for (int j = 0; j < enemys.Length; j++)
+                {
+                    Entity enemyEntity = enemys[j] as Entity;
+                    var enemy = enemyEntity.Logic as Enemy;
+                    if (bullet.DistanceTo(enemy) < 0.16)
+                    {
+                        // 这里应该要产生击中效果
+                        GameEntry.Entity.ShowEntity<HitEffect>("Assets/Images/BoomEffect.prefab", "Stage", new HitEffectData { X = entity.transform.position.x, Y = entity.transform.position.y, Scale = 1f });
+                        enemy.Hurt(1);
+                        GameEntry.Entity.HideEntity(entity.Id);
+                        break;
+                    }
+                }
+            }
+
         }
     }
 
