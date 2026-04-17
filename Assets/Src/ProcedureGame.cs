@@ -19,8 +19,6 @@ namespace Game
 
             // 开始加载图片
             assetsManager = new AssetsManager();
-            assetsManager.LoadFile("Assets/Images/loading.jpeg");
-            assetsManager.LoadFile("Assets/Images/logo.png");
             assetsManager.LoadFile("Assets/Images/Background/Background1.png");
             assetsManager.LoadFile("Assets/Displays/BaseImage.prefab");
             assetsManager.OnProgress((progress) =>
@@ -88,7 +86,6 @@ namespace Game
                 Entity entity = GameEntry.Entity.GetEntity(HeroId);
                 if (entity != null)
                 {
-                    Debug.Log("entity.Handle: " + entity.Handle + " hero: " + entity);
                     Hero hero = entity.Logic as Hero;
                     if (hero != null)
                     {

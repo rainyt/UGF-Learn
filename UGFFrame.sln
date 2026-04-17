@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameFrameworkGameFramework"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityGameFramework.Editor", "UnityGameFramework.Editor.csproj", "{D013461D-A000-FCFE-3AD9-672D6B60857F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FairyGUI", "FairyGUI.csproj", "{7494D326-9F1B-D5CF-3519-039FCE3D6B67}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{5A201FA2-B89E-6B63-73BF-491648FB7310}"
 EndProject
 Global
@@ -27,6 +29,10 @@ Global
 		{D013461D-A000-FCFE-3AD9-672D6B60857F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D013461D-A000-FCFE-3AD9-672D6B60857F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D013461D-A000-FCFE-3AD9-672D6B60857F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7494D326-9F1B-D5CF-3519-039FCE3D6B67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7494D326-9F1B-D5CF-3519-039FCE3D6B67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7494D326-9F1B-D5CF-3519-039FCE3D6B67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7494D326-9F1B-D5CF-3519-039FCE3D6B67}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5A201FA2-B89E-6B63-73BF-491648FB7310}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5A201FA2-B89E-6B63-73BF-491648FB7310}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A201FA2-B89E-6B63-73BF-491648FB7310}.Release|Any CPU.ActiveCfg = Release|Any CPU

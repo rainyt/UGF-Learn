@@ -2,18 +2,24 @@ namespace Game
 {
     using Data;
     using Events;
+    using FairyGUI;
     using GameFramework.Event;
     using GameFramework.Fsm;
     using GameFramework.Procedure;
     using Scenes;
     using UnityEngine;
     using UnityGameFramework.Runtime;
+    using Utils;
 
     public class ProcedureLaunch : ProcedureBase
     {
         protected override void OnEnter(IFsm<IProcedureManager> procedureOwner)
         {
             base.OnEnter(procedureOwner);
+
+            // 初始化项目的分辨率处理
+            FGUI.Init(1920, 1080);
+
             AssetsManager.Instance.LoadPackage("DefaultPackage", true);
             AssetsManager.Instance.Start((success, message) =>
             {
