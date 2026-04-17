@@ -18,7 +18,7 @@ namespace Game
             base.OnEnter(procedureOwner);
 
             // 初始化项目的分辨率处理
-            FGUI.Init(1920, 1080);
+            FGUI.Init(180, 320);
 
             AssetsManager.Instance.LoadPackage("DefaultPackage", true);
             AssetsManager.Instance.LoadFairyUI("Assets/FGUI/Package1");
