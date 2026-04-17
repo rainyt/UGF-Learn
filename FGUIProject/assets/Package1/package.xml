@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="k6kbwxob">
+  <resources>
+    <component id="h5of0" name="StartView.xml" path="/" exported="true"/>
+    <image id="m3bh1" name="start_bg.png" path="/"/>
+    <image id="m3bh2" name="start.png" path="/"/>
+    <component id="m3bh3" name="Button1.xml" path="/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

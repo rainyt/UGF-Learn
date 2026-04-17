@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1080,1920">
+  <displayList>
+    <image id="n1_m3bh" name="n1" src="m3bh1" fileName="start_bg.png" xy="164,286" scale="1.01,1"/>
+    <component id="n3_m3bh" name="n3" src="m3bh3" fileName="Button1.xml" xy="449,1364"/>
+  </displayList>
+</component>
