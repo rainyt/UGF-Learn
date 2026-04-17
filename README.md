@@ -23,6 +23,10 @@
   - [ ] 配置表 (DataTable)：实现从 Excel 到游戏内数据的自动化解析
   - [ ] 本地化 (Localization)：实现多语言文字与资产的动态切换
   - [ ] 游戏配置 (Setting)：处理玩家本地数据的持久化存储
+- [ ] FairyGUI 界面开发 [学习地址](https://www.fairygui.com/docs/guide-editor/QuickStart)
+  - [ ] 底层集成 (Integration)：将 FairyGUI 与 UnityGameFramework 集成，实现界面的动态更新与事件处理
+  - [ ] 界面布局 (Layout)：使用 FairyGUI 布局系统创建游戏界面
+  - [ ] 组件 (Component)：实现游戏内常用界面元素的自定义组件
 - [ ] 网络模块进阶
   - [ ] 网络组件 (Network)：实现 TCP/UDP/Websocket 的消息封包与解包
   - [ ] 心跳检测与自动断线重连机制
