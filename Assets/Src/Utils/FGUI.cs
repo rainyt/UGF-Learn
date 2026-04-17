@@ -17,6 +17,7 @@ namespace Utils
             stageCamera.clearFlags = CameraClearFlags.Depth;
 
             Debug.Log("FGUI.Init success.");
+
         }
     }
 }
