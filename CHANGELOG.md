@@ -1,4 +1,13 @@
-## 26.4.12~26.4.17
+## 26.4.17
+1、调研了摄像机Base/Overlay配置处理相关的内容，重叠渲染处理；
+2、新增FairyGUIFuture加载器，实现自定义的FairyGUI的资源包加载支持；          AssetsManager.Instance.LoadFairyUI("Assets/FGUI/Package1");
+3、实现FairyGUI的初始化流程处理；
+4、测试了界面展示：
+GObject startView = UIPackage.CreateObject("Package1", "StartView");
+GRoot.inst.AddChild(startView);
+（明天调研一下如何通过GameEntry.UI.OpenUIForm打开FairyGUI的界面）
+
+## 26.4.12~26.4.16
 1. 修复：修复【底层加载】的资源完成、失败流程，避免游戏资源发生阻塞的问题；
 2. 调研：调研【飞机】的资源动画处理，学习如何使用ShowEntity进行游戏逻辑构造处理；
     - 学习如何使用ShowEntity进行游戏逻辑构造处理，包括动画播放、事件触发等；
