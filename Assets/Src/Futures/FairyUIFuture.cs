@@ -63,7 +63,10 @@ namespace Futures
                     });
                     future.Post();
                 });
-                package.LoadAllAssets();
+                if (package != null)
+                    package.LoadAllAssets();
+                else
+                    CompleteValue(new FairyUIData(UIPackage.GetByName(fileName)));
             });
             bytesFuture.OnError((assetName, error) =>
             {

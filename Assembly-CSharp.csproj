@@ -69,6 +69,7 @@
     <Compile Include="Assets/Src/Displays/HitEffect.cs" />
     <Compile Include="Assets/Src/Utils/System.cs" />
     <Compile Include="Assets/Src/Futures/FairyUIFuture.cs" />
+    <Compile Include="Assets/Src/Data/FairyViewData.cs" />
     <Compile Include="Assets/Src/Futures/IFuture.cs" />
     <Compile Include="Assets/Src/Futures/PackageFuture.cs" />
     <Compile Include="Assets/Src/Events/UIEvent.cs" />
@@ -82,6 +83,7 @@
     <Compile Include="Assets/Src/Data/HitEffectData.cs" />
     <Compile Include="Assets/Src/Utils/FGUI.cs" />
     <Compile Include="Assets/Src/Futures/BytesFuture.cs" />
+    <Compile Include="Assets/Src/Scenes/FairyView.cs" />
     <Compile Include="Assets/Src/Futures/AssetFuture.cs" />
     <Compile Include="Assets/Src/AssetsManager.cs" />
     <Compile Include="Assets/Src/Data/BulletData.cs" />

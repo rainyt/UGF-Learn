@@ -288,7 +288,7 @@ namespace Game
                 OnNewObject(assetName, result);
             }).OnError((assetName, error) =>
             {
-                Debug.LogError($"AssetsManager OnError: {assetName}, error: {error}");
+                Debug.LogError($"AssetsManager OnError: {assetName}, error: {error.Message}");
                 Stop(true);
             });
             Debug.Log($"AssetsManager Start load: {future}");

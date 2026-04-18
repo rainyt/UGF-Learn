@@ -56,10 +56,14 @@ namespace Game
         {
             Debug.Log("ProcedureLaunch onAssetsLoaded");
 
-            // GameEntry.UI.OpenUIForm("Assets/Images/UI/StartGame.prefab", "Stage");
+            GameEntry.UI.OpenUIForm("Assets/FGUI/FairyGUI.prefab", "Stage", new FairyViewData
+            {
+                packageName = "Assets/FGUI/Package1",
+                componentName = "StartView",
+            });
             // GameEntry.Entity.<StartGame>("Assets/Images/UI/StartGame.prefab", "Stage");
-            GObject startView = UIPackage.CreateObject("Package1", "StartView");
-            GRoot.inst.AddChild(startView);
+            // GObject startView = UIPackage.CreateObject("Package1", "StartView");
+            // GRoot.inst.AddChild(startView);
         }
 
         protected override void OnUpdate(IFsm<IProcedureManager> procedureOwner, float elapseSeconds, float realElapseSeconds)

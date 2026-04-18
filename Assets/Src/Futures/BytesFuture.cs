@@ -21,6 +21,7 @@ namespace Futures
             this.resource.LoadBinary(this.requestData, new GameFramework.Resource.LoadBinaryCallbacks(
                 (assetName, bytes, duration, userData) =>
                 {
+                    Debug.Log($"Load bytes asset success1 {assetName}");
                     Debug.Log($"Load bytes asset success: {assetName}, duration: {duration}, bytes length: {bytes.Length}");
                     this.CompleteValue(bytes);
                 },
