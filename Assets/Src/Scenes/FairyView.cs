@@ -1,8 +1,10 @@
 
+using System;
 using System.IO;
 using Data;
 using FairyGUI;
 using Game;
+using GameFramework.UI;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 
@@ -14,11 +16,15 @@ namespace Scenes
     public class FairyView : UIFormLogic
     {
 
+        public FairyLogicData logicData;
+
         public FairyViewData viewData;
 
         public GObject viewObject;
 
         public AssetsManager assets;
+
+        public Component component;
 
         protected override void OnInit(object userData)
         {
@@ -28,9 +34,25 @@ namespace Scenes
 
         protected override void OnOpen(object userData)
         {
+            if (userData is FairyLogicData)
+            {
+                logicData = userData as FairyLogicData;
+                viewData = (FairyViewData)logicData.UserData;
+                // 绑定组件
+                var type = logicData.LogicInstance;
+                component = this.gameObject.AddComponent(type);
+                if (component is FairyUIFormLogic uiForm)
+                {
+                    uiForm.OnInitLogic(userData);
+                    uiForm.OnOpenLogic(userData);
+                }
+            }
+            else if (userData is FairyViewData)
+            {
+                viewData = (FairyViewData)userData;
+            }
             Debug.Log("FairyView OnOpen");
             base.OnOpen(userData);
-            viewData = (FairyViewData)userData;
             assets = new AssetsManager();
             assets.LoadFairyUI(viewData.packageName);
             assets.Start((success, message) =>
@@ -51,6 +73,10 @@ namespace Scenes
         protected override void OnClose(bool isShutdown, object userData)
         {
             base.OnClose(isShutdown, userData);
+            if (component is FairyUIFormLogic uiForm)
+            {
+                uiForm.OnCloseLogic(isShutdown, userData);
+            }
             if (viewObject != null)
                 viewObject.Dispose();
             viewObject = null;

@@ -277,6 +277,7 @@
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Resource/BuiltinVersionListSerializer.LocalVersionListDeserializeCallback.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Utility/DefaultJsonHelper.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/UI/DefaultUIGroupHelper.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/UI/FairyLogicData.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Download/DownloadFailureEventArgs.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Debugger/DebuggerComponent.ScreenInformationWindow.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Debugger/DebuggerComponent.InputGyroscopeInformationWindow.cs" />

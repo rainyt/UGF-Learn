@@ -56,7 +56,7 @@ namespace Game
         {
             Debug.Log("ProcedureLaunch onAssetsLoaded");
 
-            GameEntry.UI.OpenUIForm("Assets/FGUI/FairyGUI.prefab", "Stage", new FairyViewData
+            GameEntry.UI.OpenUIForm<StartGame>("Assets/FGUI/FairyGUI.prefab", "Stage", new FairyViewData
             {
                 packageName = "Assets/FGUI/Package1",
                 componentName = "StartView",

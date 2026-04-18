@@ -29,7 +29,10 @@ namespace Futures
         public FairyUIData(UIPackage package)
         {
             this.package = package;
-            packages_ref_count[this.name]++;
+            if (packages_ref_count.ContainsKey(this.name))
+                packages_ref_count[this.name]++;
+            else
+                packages_ref_count[this.name] = 1;
         }
 
         /// <summary>
@@ -37,7 +40,8 @@ namespace Futures
         /// </summary>
         virtual public void Dispose()
         {
-            packages_ref_count[this.name]--;
+            if (packages_ref_count.ContainsKey(this.name))
+                packages_ref_count[this.name]--;
             if (packages_ref_count[this.name] <= 0)
             {
                 package.GetItems().ForEach(item =>

@@ -484,6 +484,16 @@ namespace UnityGameFramework.Runtime
             return m_UIManager.IsValidUIForm(uiForm);
         }
 
+        public int OpenUIForm<T>(string uiFormAssetName, string uiGroupName, object userData) where T : new()
+        {
+            FairyLogicData data = new FairyLogicData
+            {
+                UserData = userData,
+                LogicInstance = typeof(T),
+            };
+            return OpenUIForm(uiFormAssetName, uiGroupName, data);
+        }
+
         /// <summary>
         /// 打开界面。
         /// </summary>

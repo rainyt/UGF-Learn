@@ -8,7 +8,7 @@ using UnityGameFramework.Runtime;
 namespace Scenes
 {
 
-    public class StartGame : UIFormLogic
+    public class StartGame : FairyUIFormLogic
     {
         [SerializeField] private Button btn_start = null;
 
