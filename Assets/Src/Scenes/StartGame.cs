@@ -1,5 +1,6 @@
 using Data;
 using Events;
+using FairyGUI;
 using GameFramework.Event;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,18 +11,19 @@ namespace Scenes
 
     public class StartGame : FairyUIFormLogic
     {
-        [SerializeField] private Button btn_start = null;
+        private GButton btn_start = null;
 
         protected override void OnOpen(object userData)
         {
             base.OnOpen(userData);
 
+            btn_start = viewObject.asCom.GetChild("n3").asButton;
             Debug.Log("StartGame OnOpen:" + btn_start);
 
             if (btn_start != null)
             {
                 Debug.Log("AddListener OnClickStartGame");
-                btn_start.onClick.AddListener(() =>
+                btn_start.onClick.Add(() =>
                 {
                     Debug.Log("StartGame OnClickStartGame");
                     GameEntry.Event.Fire(this, UIEvent.Create(UIEvent.START_GAME));

@@ -41,11 +41,6 @@ namespace Scenes
                 // 绑定组件
                 var type = logicData.LogicInstance;
                 component = this.gameObject.AddComponent(type);
-                if (component is FairyUIFormLogic uiForm)
-                {
-                    uiForm.OnInitLogic(userData);
-                    uiForm.OnOpenLogic(userData);
-                }
             }
             else if (userData is FairyViewData)
             {
@@ -61,6 +56,11 @@ namespace Scenes
                 {
                     viewObject = UIPackage.CreateObject(Path.GetFileName(viewData.packageName), viewData.componentName);
                     GRoot.inst.AddChild(viewObject);
+                    if (component is FairyUIFormLogic uiForm)
+                    {
+                        uiForm.OnInitLogic(userData, viewObject);
+                        uiForm.OnOpenLogic(userData);
+                    }
                 }
                 else
                 {

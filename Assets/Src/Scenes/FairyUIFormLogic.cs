@@ -1,3 +1,4 @@
+using FairyGUI;
 using UnityGameFramework.Runtime;
 
 namespace Scenes
@@ -7,13 +8,16 @@ namespace Scenes
     /// </summary>
     public class FairyUIFormLogic : UIFormLogic
     {
-        /// <summary>
-        /// FairyGUI逻辑实例
-        /// </summary>
-        public object LogicInstance;
 
-        public void OnInitLogic(object userData)
+        /// <summary>
+        /// FairyGUI视图对象
+        /// </summary>
+        public GObject viewObject;
+
+
+        public void OnInitLogic(object userData, GObject viewObject)
         {
+            this.viewObject = viewObject;
             this.OnInit(userData);
         }
 
