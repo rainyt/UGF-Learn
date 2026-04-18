@@ -75,7 +75,6 @@
     <Compile Include="Assets/Plugins/FrameworkCore/Futures/FairyUIData.cs" />
     <Compile Include="Assets/Plugins/FrameworkCore/Futures/BytesFuture.cs" />
     <Compile Include="Assets/Plugins/FrameworkCore/AssetsManager.cs" />
-    <Compile Include="Assets/Plugins/FrameworkCore/Data/FairyViewData.cs" />
     <Compile Include="Assets/Plugins/FrameworkCore/Futures/PackageFuture.cs" />
     <Compile Include="Assets/Plugins/FrameworkCore/Futures/FairyUIFuture.cs" />
   </ItemGroup>

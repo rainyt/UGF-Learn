@@ -507,7 +507,7 @@ namespace UnityGameFramework.Runtime
         public int OpenUIForm<T>(string packageName, string uiGroupName, object userData) where T : new()
         {
             var type = typeof(T);
-            return OpenUIForm<T>("Assets/FGUI/FairyGUI.prefab", packageName, type.Name, uiGroupName, userData);
+            return OpenUIForm<T>("Assets/FGUI/FairyGUI.prefab", uiGroupName, packageName, type.Name, userData);
         }
 
         /// <summary>

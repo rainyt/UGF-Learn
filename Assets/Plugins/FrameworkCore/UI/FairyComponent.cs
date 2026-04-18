@@ -3,7 +3,6 @@ using System.IO;
 using FairyGUI;
 using UnityEngine;
 using UnityGameFramework.Runtime;
-using FrameworkCore.Data;
 
 namespace FrameworkCore.UI
 {
@@ -15,7 +14,7 @@ namespace FrameworkCore.UI
 
         public FairyLogicData logicData;
 
-        public FairyViewData viewData;
+        public object userData;
 
         public GObject viewObject;
 
@@ -34,24 +33,24 @@ namespace FrameworkCore.UI
             if (userData is FairyLogicData)
             {
                 logicData = userData as FairyLogicData;
-                viewData = (FairyViewData)logicData.UserData;
+                this.userData = logicData.UserData;
                 // 绑定组件
                 var type = logicData.LogicInstance;
                 component = this.gameObject.AddComponent(type);
             }
-            else if (userData is FairyViewData)
+            else
             {
-                viewData = (FairyViewData)userData;
+                this.userData = userData;
             }
             Debug.Log("FairyView OnOpen");
             base.OnOpen(userData);
             assets = new AssetsManager();
-            assets.LoadFairyUI(viewData.packageName);
+            assets.LoadFairyUI(logicData.PackageName);
             assets.Start((success, message) =>
             {
                 if (success)
                 {
-                    viewObject = UIPackage.CreateObject(Path.GetFileName(viewData.packageName), viewData.componentName);
+                    viewObject = UIPackage.CreateObject(Path.GetFileName(logicData.PackageName), logicData.ComponentName);
                     GRoot.inst.AddChild(viewObject);
                     if (component is FairyUIFormLogic uiForm)
                     {
