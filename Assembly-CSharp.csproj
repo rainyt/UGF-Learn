@@ -68,12 +68,11 @@
     <Compile Include="Assets/Src/Game.cs" />
     <Compile Include="Assets/Src/Displays/HitEffect.cs" />
     <Compile Include="Assets/Src/Utils/System.cs" />
+    <Compile Include="Assets/Src/Scenes/StartView.cs" />
     <Compile Include="Assets/Src/Events/UIEvent.cs" />
     <Compile Include="Assets/Src/Displays/Image.cs" />
     <Compile Include="Assets/Src/Displays/Enemy.cs" />
     <Compile Include="Assets/Src/Displays/Background.cs" />
-    <Compile Include="Assets/Src/Scenes/FairyUIFormLogic.cs" />
-    <Compile Include="Assets/Src/Scenes/StartGame.cs" />
     <Compile Include="Assets/Src/Displays/BaseBullet.cs" />
     <Compile Include="Assets/Src/Data/HitEffectData.cs" />
     <Compile Include="Assets/Src/Utils/FGUI.cs" />

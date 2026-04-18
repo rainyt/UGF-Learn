@@ -1,6 +1,7 @@
 using Data;
 using Events;
 using FairyGUI;
+using FrameworkCore.UI;
 using GameFramework.Event;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,7 +10,7 @@ using UnityGameFramework.Runtime;
 namespace Scenes
 {
 
-    public class StartGame : FairyUIFormLogic
+    public class StartView : FairyUIFormLogic
     {
         private GButton btn_start = null;
 

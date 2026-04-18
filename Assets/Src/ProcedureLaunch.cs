@@ -63,7 +63,7 @@ namespace Game
             //     componentName = "StartView",
             // });
 
-            GameEntry.UI.OpenUIForm<StartGame>("Assets/FGUI/Package1", "Stage");
+            GameEntry.UI.OpenUIForm<StartView>("Assets/FGUI/Package1", "Stage");
 
             // GameEntry.Entity.<StartGame>("Assets/Images/UI/StartGame.prefab", "Stage");
             // GObject startView = UIPackage.CreateObject("Package1", "StartView");
