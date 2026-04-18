@@ -1,4 +1,4 @@
-namespace Data
+namespace FrameworkCore.Data
 {
     /// <summary>
     /// FairyGUI视图数据

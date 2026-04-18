@@ -3,7 +3,7 @@ using FairyGUI;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 
-namespace Futures
+namespace FrameworkCore.Futures
 {
     /// <summary>
     /// FairyUI加载异步任务类。

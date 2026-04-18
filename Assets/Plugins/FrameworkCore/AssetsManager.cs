@@ -1,13 +1,10 @@
-using System;
 using System.Collections.Generic;
-using Futures;
-using Unity.VisualScripting;
-using Unity.VisualScripting.Dependencies.NCalc;
+using FrameworkCore.Futures;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 using YooAsset;
 
-namespace Game
+namespace FrameworkCore
 {
 
     public delegate void ProgressCallback(float progress);

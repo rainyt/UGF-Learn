@@ -1,4 +1,4 @@
-namespace Futures
+namespace FrameworkCore.Futures
 {
     using System;
     using Unity.VisualScripting;

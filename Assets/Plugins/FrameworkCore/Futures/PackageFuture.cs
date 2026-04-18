@@ -1,7 +1,7 @@
 using UnityEngine;
 using YooAsset;
 
-namespace Futures
+namespace FrameworkCore.Futures
 {
 
     /**

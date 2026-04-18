@@ -16,10 +16,10 @@
     <Configurations>Debug;Release</Configurations>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>FrameworkCore</RootNamespace>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>GameFrameworkGameFramework</AssemblyName>
+    <AssemblyName>FrameworkCore</AssemblyName>
     <TargetFramework>netstandard2.1</TargetFramework>
     <BaseDirectory>.</BaseDirectory>
   </PropertyGroup>
@@ -32,7 +32,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169;USG0001</NoWarn>
-    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -41,7 +41,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169;USG0001</NoWarn>
-    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
     <NoStandardLibraries>true</NoStandardLibraries>
@@ -64,339 +64,23 @@
     <Analyzer Include="/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/WebRequest/Constant.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/IPacketHeader.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/ObjectPool/ObjectPoolManager.Object.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadAssetUpdateCallback.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LocalVersionList.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/DataNode/DataNodeManager.DataNode.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/ISoundGroupHelper.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/DataNode/DataNodeManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/UI/OpenUIFormSuccessEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/UI/UIManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/ObjectPool/IObjectPool.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/InitResourcesCompleteCallback.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ReadWriteResourceInfo.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Download/DownloadFailureEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/UI/IUIGroupHelper.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadResourceStatus.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/Log/GameFrameworkLog.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/ObjectPool/ObjectInfo.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/UI/UIManager.UIFormInstanceObject.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.VersionListProcessor.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceLoader.ResourceObject.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadBytesSuccessCallback.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/FileSystem/FileSystemStream.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ReadOnlyVersionListSerializer.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/GameFrameworkLinkedList.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadBytesCallbacks.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Fsm/FsmManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/ServiceType.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/HasAssetResult.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceApplySuccessEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceLoader.LoadBinaryInfo.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Download/DownloadManager.DownloadCounter.DownloadCounterNode.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/DataProvider/IDataProvider.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Scene/ISceneManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceLoader.LoadAssetTask.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceUpdater.UpdateInfo.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/Version/Version.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceVerifyFailureEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/IPacketHandler.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/WebRequest/WebRequestStartEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Download/DownloadManager.DownloadTask.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Config/ConfigManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/FileSystem/IFileSystemManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/VerifyResourcesCompleteCallback.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/NetworkManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Scene/SceneManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadSceneFailureCallback.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Fsm/IFsmManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Debugger/IDebuggerWindowGroup.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/AddressFamily.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LocalVersionList.FileSystem.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceNameComparer.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceChecker.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/PackageVersionList.ResourceGroup.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Scene/UnloadSceneFailureEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Procedure/ProcedureBase.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/UpdateVersionListCallbacks.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/NetworkErrorCode.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Utility/Utility.Verifier.Crc32.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceLoader.AssetObject.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/ISoundManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/UpdateVersionListFailureCallback.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadResourceAgentHelperUpdateEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/UpdateResourcesCompleteCallback.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/CheckResourcesCompleteCallback.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceChecker.CheckInfo.CheckStatus.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceVerifyStartEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Fsm/FsmState.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/FileSystem/IFileSystemHelper.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Utility/Utility.Marshal.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Entity/EntityManager.EntityStatus.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Utility/Utility.Json.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Scene/LoadSceneFailureEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/WebRequest/WebRequestManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Scene/LoadSceneSuccessEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Download/DownloadStartEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/WebRequest/WebRequestAgentHelperCompleteEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/WebRequest/WebRequestManager.WebRequestAgent.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/Constant.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Utility/Utility.Converter.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceVerifier.VerifyInfo.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadResourceAgentHelperReadBytesCompleteEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Fsm/IFsm.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/TaskPool/TaskPool.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadResourceProgress.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/DataProvider/ReadDataDependencyAssetEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Debugger/IDebuggerWindow.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/DataNode/IDataNode.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/ISoundGroup.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/NetworkCustomErrorEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadResourceAgentHelperLoadCompleteEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Setting/SettingManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Scene/LoadSceneDependencyAssetEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ILoadResourceAgentHelper.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/UI/OpenUIFormUpdateEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadResourceAgentHelperParseBytesCompleteEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/NetworkManager.TcpNetworkChannel.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceUpdateSuccessEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/GameFrameworkEntry.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceLoader.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/UnloadSceneFailureCallback.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/NetworkClosedEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Utility/Utility.Encryption.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/WebRequest/WebRequestAgentHelperErrorEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadBinarySuccessCallback.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/INetworkChannel.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Debugger/DebuggerManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/TaskPool/ITaskAgent.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/DecryptResourceCallback.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/DataTable/IDataTableHelper.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/NetworkManager.ConnectState.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/FileSystem/FileSystemAccess.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Entity/IEntityHelper.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/Constant.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/DataProvider/ReadDataSuccessEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/SoundManager.SoundGroup.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/Log/GameFrameworkLog.ILogHelper.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/NetworkConnectedEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadBinaryCallbacks.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadResourceAgentHelperErrorEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/FileSystem/CommonFileSystemStream.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/IResourceHelper.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Download/Constant.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/PlaySoundParams.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadSceneDependencyAssetCallback.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/GameFrameworkException.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceLoader.LoadResourceTaskBase.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Entity/EntityManager.EntityInfo.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Entity/EntityManager.EntityInstanceObject.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/UnloadSceneCallbacks.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/UI/UIManager.UIGroup.UIFormInfo.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadAssetSuccessCallback.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourcePackVersionList.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/UI/IUIManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/ObjectPool/ObjectPoolBase.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/FileSystem/FileSystem.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/PackageVersionList.Resource.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/FileSystem/FileSystem.HeaderData.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceLoader.LoadSceneTask.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Fsm/FsmBase.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/INetworkManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Download/DownloadAgentHelperUpdateLengthEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceLoader.LoadDependencyAssetTask.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/DataProvider/ReadDataFailureEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.LoadType.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/Variable/GenericVariable.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Download/DownloadManager.DownloadCounter.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Download/DownloadSuccessEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Download/DownloadAgentHelperCompleteEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourcePackVersionListSerializer.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.AssetInfo.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceInfo.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadSceneSuccessCallback.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceIniter.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/DataTable/DataTableBase.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/NetworkManager.TcpWithSyncReceiveNetworkChannel.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadAssetCallbacks.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Localization/LocalizationManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Download/DownloadUpdateEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceUpdateAllCompleteEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Debugger/IDebuggerManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/SoundManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/UnloadSceneSuccessCallback.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/UpdatableVersionList.ResourceGroup.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Utility/Utility.Path.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/DataProvider/ReadDataUpdateEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/TaskPool/TaskStatus.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Download/IDownloadManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/UI/IUIFormHelper.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/Version/Version.IVersionHelper.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Entity/IEntityGroupHelper.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Scene/LoadSceneUpdateEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceLoader.LoadResourceAgent.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ApplyResourcesCompleteCallback.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/UpdatableVersionList.Asset.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/SoundManager.SoundAgent.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/DataProvider/DataProviderCreator.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/DataTable/DataTableManager.DataTable.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadSceneUpdateCallback.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Utility/Utility.Random.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Event/EventManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Download/DownloadManager.DownloadTaskStatus.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/NetworkManager.HeartBeatState.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/ObjectPool/ReleaseObjectFilterCallback.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/UI/OpenUIFormDependencyAssetEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/PackageVersionList.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/FileSystem/IFileSystem.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Entity/ShowEntitySuccessEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/ObjectPool/ObjectBase.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Event/GameEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/UI/UIManager.OpenUIFormInfo.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/EventPool/BaseEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceChecker.CheckInfo.LocalVersionInfo.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/DataProvider/IDataProviderHelper.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceMode.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadAssetDependencyAssetCallback.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Config/IConfigHelper.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Entity/ShowEntityDependencyAssetEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/ResetSoundAgentEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/WebRequest/IWebRequestAgentHelper.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceApplyStartEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourcePackVersionList.Resource.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceVerifySuccessEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Entity/EntityManager.ShowEntityInfo.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/DataTable/DataTableManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/PackageVersionList.Asset.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/PlaySoundFailureEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Event/IEventManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceUpdateChangedEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/IResourceGroup.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/UpdatableVersionList.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Entity/ShowEntityFailureEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Entity/ShowEntityUpdateEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/UpdatableVersionList.FileSystem.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/DataNode/IDataNodeManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/Log/GameFrameworkLogLevel.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Localization/ILocalizationHelper.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Procedure/ProcedureManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadResourceAgentHelperReadFileCompleteEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/NetworkManager.NetworkChannelBase.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceUpdateStartEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/GameFrameworkModule.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/UI/UIManager.UIGroup.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/INetworkChannelHelper.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/GameFrameworkEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/ReferencePool/IReference.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceName.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Procedure/IProcedureManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/FileSystem/FileInfo.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/UI/CloseUIFormCompleteEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Entity/IEntityManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/UpdatableVersionList.Resource.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/UpdatableVersionListSerializer.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceGroupCollection.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/IResourceGroupCollection.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadBytesFailureCallback.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Download/DownloadAgentHelperUpdateBytesEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Download/DownloadAgentHelperErrorEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/EventPool/EventPool.Event.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/NetworkManager.SendState.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/PlaySoundSuccessEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/DataTable/IDataTableManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ReadWriteVersionListSerializer.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/ReferencePool/ReferencePool.ReferenceCollection.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Properties/AssemblyInfo.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/SoundManager.PlaySoundInfo.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceChecker.CheckInfo.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/UI/IUIGroup.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/NetworkErrorEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/UpdateVersionListSuccessCallback.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Entity/IEntity.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/UI/OpenUIFormFailureEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/DataProvider/DataProvider.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Download/DownloadManager.DownloadAgent.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Entity/IEntityGroup.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/FileSystem/FileSystem.StringData.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadSceneCallbacks.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Download/IDownloadAgentHelper.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceVerifier.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Utility/Utility.Text.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/EventPool/EventPool.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/TaskPool/TaskBase.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/PlaySoundUpdateEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Utility/Utility.Assembly.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Utility/Utility.Json.IJsonHelper.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/NetworkManager.ReceiveState.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/PlaySoundErrorCode.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/ISoundAgent.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Setting/ISettingManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/WebRequest/WebRequestSuccessEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Scene/UnloadSceneSuccessEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Entity/HideEntityCompleteEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Entity/EntityManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/PackageVersionList.FileSystem.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/GameFrameworkMultiDictionary.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/EventPool/EventPoolMode.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/WebRequest/WebRequestManager.WebRequestTaskStatus.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/TaskPool/StartTaskStatus.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/IResourceManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/ObjectPool/ObjectPoolManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/PlaySoundDependencyAssetEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/GameFrameworkAction.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/TaskPool/TaskInfo.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadAssetFailureCallback.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/ISoundAgentHelper.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/NetworkMissHeartBeatEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LoadBinaryFailureCallback.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Utility/Utility.Text.ITextHelper.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/GameFrameworkSerializer.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Utility/Utility.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Setting/ISettingHelper.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Config/IConfigManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/FileSystem/FileSystemManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Utility/Utility.Compression.ICompressionHelper.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceUpdater.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Config/ConfigManager.ConfigData.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/ObjectPool/ObjectPoolManager.ObjectPool.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/LocalVersionList.Resource.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Sound/ISoundHelper.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/WebRequest/WebRequestManager.WebRequestTask.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Fsm/Fsm.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Debugger/DebuggerManager.DebuggerWindowGroup.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceApplyFailureEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/ObjectPool/IObjectPoolManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/FileSystem/FileSystem.BlockData.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/DataTable/IDataTable.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/ReferencePool/ReferencePool.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/GameFrameworkFunc.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/CheckVersionListResult.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/ReferencePool/ReferencePoolInfo.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Download/DownloadManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceGroup.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Utility/Utility.Compression.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceUpdateFailureEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/DataTable/IDataRow.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/DataStruct/TypeNamePair.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceUpdater.ApplyInfo.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/WebRequest/IWebRequestManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/Variable/Variable.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/PackageVersionListSerializer.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Entity/EntityManager.EntityGroup.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Localization/ILocalizationManager.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Utility/Utility.Verifier.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Resource/ResourceManager.ResourceChecker.CheckInfo.RemoteVersionInfo.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Network/Packet.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Base/GameFrameworkLinkedListRange.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/WebRequest/WebRequestFailureEventArgs.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/UI/IUIForm.cs" />
-    <Compile Include="Assets/UnityGameFramework/Scripts/GameFramework/Localization/Language.cs" />
+    <Compile Include="Assets/Plugins/FrameworkCore/UI/FairyComponent.cs" />
+    <Compile Include="Assets/Plugins/FrameworkCore/Futures/AssetsData.cs" />
+    <Compile Include="Assets/Plugins/FrameworkCore/Futures/AssetFuture.cs" />
+    <Compile Include="Assets/Plugins/FrameworkCore/UI/FairyUIFormLogic.cs" />
+    <Compile Include="Assets/Plugins/FrameworkCore/Futures/StringFuture.cs" />
+    <Compile Include="Assets/Plugins/FrameworkCore/Futures/FutureError.cs" />
+    <Compile Include="Assets/Plugins/FrameworkCore/Futures/Future.cs" />
+    <Compile Include="Assets/Plugins/FrameworkCore/Futures/IFuture.cs" />
+    <Compile Include="Assets/Plugins/FrameworkCore/Futures/FairyUIData.cs" />
+    <Compile Include="Assets/Plugins/FrameworkCore/Futures/BytesFuture.cs" />
+    <Compile Include="Assets/Plugins/FrameworkCore/AssetsManager.cs" />
+    <Compile Include="Assets/Plugins/FrameworkCore/Data/FairyViewData.cs" />
+    <Compile Include="Assets/Plugins/FrameworkCore/Futures/PackageFuture.cs" />
+    <Compile Include="Assets/Plugins/FrameworkCore/Futures/FairyUIFuture.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets/UnityGameFramework/Scripts/GameFramework/GameFrameworkGameFramework.asmdef" />
+    <None Include="Assets/Plugins/FrameworkCore/FrameworkCore.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -1297,7 +981,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="UnityGameFramework.Runtime.csproj" />
     <ProjectReference Include="FairyGUI.csproj" />
+    <ProjectReference Include="GameFrameworkGameFramework.csproj" />
   </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
   <ItemGroup>

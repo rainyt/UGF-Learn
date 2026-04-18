@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using Game;
+using FrameworkCore;
 using UnityGameFramework.Runtime;
 
-namespace Futures
+namespace FrameworkCore.Futures
 {
 
     public delegate void FutureCompleteCallback(string assetName, object result);

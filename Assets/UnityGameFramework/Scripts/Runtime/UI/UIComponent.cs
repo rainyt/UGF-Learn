@@ -484,12 +484,48 @@ namespace UnityGameFramework.Runtime
             return m_UIManager.IsValidUIForm(uiForm);
         }
 
-        public int OpenUIForm<T>(string uiFormAssetName, string uiGroupName, object userData) where T : new()
+        /// <summary>
+        /// 打开界面。
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="uiFormAssetName"></param>
+        /// <param name="uiGroupName"></param>
+        /// <returns></returns>
+        public int OpenUIForm<T>(string packageName, string uiGroupName) where T : new()
+        {
+            return OpenUIForm<T>(packageName, uiGroupName, null);
+        }
+
+        /// <summary>
+        /// 打开界面，使用默认的界面资源名称。
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="packageName">界面资源包名称。</param>
+        /// <param name="uiGroupName">界面组名称。</param>
+        /// <param name="userData">用户数据。</param>
+        /// <returns></returns>
+        public int OpenUIForm<T>(string packageName, string uiGroupName, object userData) where T : new()
+        {
+            var type = typeof(T);
+            return OpenUIForm<T>("Assets/FGUI/FairyGUI.prefab", packageName, type.Name, uiGroupName, userData);
+        }
+
+        /// <summary>
+        /// 打开界面。
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="uiFormAssetName"></param>
+        /// <param name="uiGroupName"></param>
+        /// <param name="userData"></param>
+        /// <returns></returns>
+        public int OpenUIForm<T>(string uiFormAssetName, string uiGroupName, string packageName, string componentName, object userData) where T : new()
         {
             FairyLogicData data = new FairyLogicData
             {
                 UserData = userData,
                 LogicInstance = typeof(T),
+                PackageName = packageName,
+                ComponentName = componentName,
             };
             return OpenUIForm(uiFormAssetName, uiGroupName, data);
         }

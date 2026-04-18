@@ -2,9 +2,11 @@ namespace Game
 {
     using Data;
     using Displays;
+    using FrameworkCore;
     using GameFramework.Event;
     using GameFramework.Fsm;
     using GameFramework.Procedure;
+    using Scenes;
     using UnityEngine;
     using UnityGameFramework.Runtime;
     using Utils;
@@ -63,6 +65,8 @@ namespace Game
             HeroId = GameEntry.Entity.ShowEntity<Hero>("Assets/Images/Hero.prefab", "Stage");
 
             isGameStarted = true;
+
+            GameEntry.UI.OpenUIForm<FightState>("Assets/FGUI/Package1", "Stage");
 
         }
 

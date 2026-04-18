@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using FairyGUI;
 using UnityEngine;
 
-namespace Futures
+namespace FrameworkCore.Futures
 {
     /// <summary>
     /// FairyGUI资源包数据类

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityGameFramework.Runtime;
 
-namespace Futures
+namespace FrameworkCore.Futures
 {
     /// <summary>
     /// 资源数据类，在使用不同的资源管理加载器去进行加载时，在使用`Dispose`方法释放对应方式加载的资源。

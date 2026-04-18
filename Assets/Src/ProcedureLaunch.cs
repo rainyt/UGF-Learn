@@ -3,6 +3,7 @@ namespace Game
     using Data;
     using Events;
     using FairyGUI;
+    using FrameworkCore;
     using GameFramework.Event;
     using GameFramework.Fsm;
     using GameFramework.Procedure;
@@ -56,11 +57,14 @@ namespace Game
         {
             Debug.Log("ProcedureLaunch onAssetsLoaded");
 
-            GameEntry.UI.OpenUIForm<StartGame>("Assets/FGUI/FairyGUI.prefab", "Stage", new FairyViewData
-            {
-                packageName = "Assets/FGUI/Package1",
-                componentName = "StartView",
-            });
+            // GameEntry.UI.OpenUIForm<StartGame>("Assets/FGUI/FairyGUI.prefab", "Stage", new FairyViewData
+            // {
+            //     packageName = "Assets/FGUI/Package1",
+            //     componentName = "StartView",
+            // });
+
+            GameEntry.UI.OpenUIForm<FightState>("Assets/FGUI/Package1", "Stage");
+
             // GameEntry.Entity.<StartGame>("Assets/Images/UI/StartGame.prefab", "Stage");
             // GObject startView = UIPackage.CreateObject("Package1", "StartView");
             // GRoot.inst.AddChild(startView);

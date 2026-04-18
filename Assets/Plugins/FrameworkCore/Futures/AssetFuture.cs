@@ -1,8 +1,7 @@
-using System;
 using UnityEngine;
-using UnityGameFramework.Runtime;
 
-namespace Futures
+
+namespace FrameworkCore.Futures
 {
     /**
      * 资源(图片、音频、预制体等)异步操作的结果，可以包含成功的结果数据或者失败的错误信息。

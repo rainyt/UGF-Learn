@@ -5,6 +5,9 @@
     <image id="m3bh1" name="start_bg.png" path="/"/>
     <image id="m3bh2" name="start.png" path="/"/>
     <component id="m3bh3" name="Button1.xml" path="/"/>
+    <component id="m3bh4" name="FightState.xml" path="/" exported="true"/>
+    <image id="m3bha" name="sans-serif.png" path="/" exported="true"/>
+    <font id="m3bh9" name="sans-serif.fnt" path="/" exported="true" texture="m3bha"/>
   </resources>
   <publish name=""/>
 </packageDescription>

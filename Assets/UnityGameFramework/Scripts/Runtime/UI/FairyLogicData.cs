@@ -14,6 +14,16 @@ namespace UnityGameFramework.Runtime
         public Type LogicInstance;
 
         /// <summary>
+        /// 界面资源包名称。
+        /// </summary>
+        public string PackageName;
+
+        /// <summary>
+        /// 组件名称。
+        /// </summary>
+        public string ComponentName;
+
+        /// <summary>
         /// 用户数据
         /// </summary>
         public object UserData;

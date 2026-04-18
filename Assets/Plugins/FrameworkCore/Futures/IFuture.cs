@@ -1,6 +1,6 @@
-using Game;
+using FrameworkCore;
 
-namespace Futures
+namespace FrameworkCore.Futures
 {
     public interface IFuture
     {

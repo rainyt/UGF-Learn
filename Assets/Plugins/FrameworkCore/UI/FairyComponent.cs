@@ -1,19 +1,16 @@
 
-using System;
 using System.IO;
-using Data;
 using FairyGUI;
-using Game;
-using GameFramework.UI;
 using UnityEngine;
 using UnityGameFramework.Runtime;
+using FrameworkCore.Data;
 
-namespace Scenes
+namespace FrameworkCore.UI
 {
     /// <summary>
     /// FairyUI视图
     /// </summary>
-    public class FairyView : UIFormLogic
+    public class FairyComponent : UIFormLogic
     {
 
         public FairyLogicData logicData;

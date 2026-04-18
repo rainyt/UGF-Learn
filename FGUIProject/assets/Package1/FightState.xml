@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="180,320">
+  <displayList>
+    <text id="n4_m3bh" name="n4" xy="7,5" size="613,94" scale="0.2,0.2" font="ui://k6kbwxobm3bh9" fontSize="12" color="#ffffff" autoSize="none" text="Scrore:1234"/>
+  </displayList>
+</component>
