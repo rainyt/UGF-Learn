@@ -56,6 +56,7 @@ namespace Game
         public Dictionary<string, string> Strings = new Dictionary<string, string>();
         public Dictionary<string, byte[]> Binaries = new Dictionary<string, byte[]>();
         public Dictionary<string, ResourcePackage> Packages = new Dictionary<string, ResourcePackage>();
+        public Dictionary<string, FairyUIData> FairyUIDatas = new Dictionary<string, FairyUIData>();
 
         public ResourcePackage GetPackage(string packageName)
         {
@@ -186,7 +187,12 @@ namespace Game
         {
             loadedCount++;
             Debug.Log($"AssetsManager OnNewObject: {assetName}, asset: {asset}");
-            if (asset is AssetsData assetsData)
+            if (asset is FairyUIData fairyUIData)
+            {
+                Debug.Log($"AssetsManager OnNewObject: {assetName}, fairyUIData: {fairyUIData}");
+                FairyUIDatas[fairyUIData.name] = fairyUIData;
+            }
+            else if (asset is AssetsData assetsData)
             {
                 if (assetsData.Asset is Texture2D texture2D)
                 {
@@ -340,6 +346,11 @@ namespace Game
             {
                 asset.Dispose();
             }
+            foreach (var fairyUIData in FairyUIDatas.Values)
+            {
+                fairyUIData.Dispose();
+            }
+            FairyUIDatas.Clear();
             Assets.Clear();
             Texture2ds.Clear();
             Strings.Clear();

@@ -37,7 +37,8 @@ namespace Futures
                 int count = 0;
                 int loadedCount = 0;
                 var fileName = Path.GetFileName(requestData);
-                UIPackage.AddPackage(fuiBytes, fileName, (string name, string extension, System.Type type, PackageItem item) =>
+                UIPackage package = null;
+                package = UIPackage.AddPackage(fuiBytes, fileName, (string name, string extension, System.Type type, PackageItem item) =>
                 {
                     count++;
                     Debug.Log($"FairyUI.bytes 所需资源加载处理：{name}");
@@ -53,7 +54,7 @@ namespace Futures
                         loadedCount++;
                         if (loadedCount == count)
                         {
-                            CompleteValue(null);
+                            CompleteValue(new FairyUIData(package));
                         }
                     });
                     future.OnError((assetName, error) =>
@@ -61,7 +62,8 @@ namespace Futures
                         ErrorValue(error.Message);
                     });
                     future.Post();
-                }).LoadAllAssets();
+                });
+                package.LoadAllAssets();
             });
             bytesFuture.OnError((assetName, error) =>
             {

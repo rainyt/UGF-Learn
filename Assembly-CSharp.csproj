@@ -90,6 +90,7 @@
     <Compile Include="Assets/Src/Data/BackgroundData.cs" />
     <Compile Include="Assets/Src/ProcedureGame.cs" />
     <Compile Include="Assets/Src/Displays/Hero.cs" />
+    <Compile Include="Assets/Src/Futures/FairyUIData.cs" />
     <Compile Include="Assets/Src/Displays/BaseDisplay.cs" />
   </ItemGroup>
   <ItemGroup>
