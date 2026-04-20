@@ -1,3 +1,6 @@
+## 26.4.20
+1、新增：为`FairyUIFormLogic`组件添加了一个自动绑定字段的方法，用于自动绑定FairyGUI的字段，比如布局里存在一个btn_start按钮，自动绑定到对应逻辑类的`btn_start`字段上；
+
 ## 26.4.17
 1、调研了摄像机Base/Overlay配置处理相关的内容，重叠渲染处理；
 2、新增FairyGUIFuture加载器，实现自定义的FairyGUI的资源包加载支持；          AssetsManager.Instance.LoadFairyUI("Assets/FGUI/Package1");
