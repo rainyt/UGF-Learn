@@ -8,22 +8,21 @@
 //------------------------------------------------------------------------------
 
 using Luban;
-using Luban.SimpleJSON;
 
 
 namespace cfg.config
 {
 public sealed partial class prop : Luban.BeanBase
 {
-    public prop(JSONNode _buf) 
+    public prop(ByteBuf _buf) 
     {
-        { if(!_buf["id"].IsNumber) { throw new SerializationException(); }  Id = _buf["id"]; }
-        { if(!_buf["name"].IsString) { throw new SerializationException(); }  Name = _buf["name"]; }
-        { if(!_buf["desc"].IsString) { throw new SerializationException(); }  Desc = _buf["desc"]; }
-        { if(!_buf["count"].IsNumber) { throw new SerializationException(); }  Count = _buf["count"]; }
+        Id = _buf.ReadInt();
+        Name = _buf.ReadString();
+        Desc = _buf.ReadString();
+        Count = _buf.ReadInt();
     }
 
-    public static prop Deserializeprop(JSONNode _buf)
+    public static prop Deserializeprop(ByteBuf _buf)
     {
         return new config.prop(_buf);
     }

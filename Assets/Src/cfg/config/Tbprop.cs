@@ -8,7 +8,6 @@
 //------------------------------------------------------------------------------
 
 using Luban;
-using Luban.SimpleJSON;
 
 
 namespace cfg.config
@@ -18,16 +17,15 @@ public partial class Tbprop
     private readonly System.Collections.Generic.Dictionary<int, config.prop> _dataMap;
     private readonly System.Collections.Generic.List<config.prop> _dataList;
     
-    public Tbprop(JSONNode _buf)
+    public Tbprop(ByteBuf _buf)
     {
-        int count = _buf.Count;
-        _dataMap = new System.Collections.Generic.Dictionary<int, config.prop>(count);
-        _dataList = new System.Collections.Generic.List<config.prop>(count);
-        
-        foreach(JSONNode _ele in _buf.Children)
+        int n = _buf.ReadSize();
+        _dataMap = new System.Collections.Generic.Dictionary<int, config.prop>(n);
+        _dataList = new System.Collections.Generic.List<config.prop>(n);
+        for(int i = n ; i > 0 ; --i)
         {
             config.prop _v;
-            { if(!_ele.IsObject) { throw new SerializationException(); }  _v = global::cfg.config.prop.Deserializeprop(_ele);  }
+            _v = global::cfg.config.prop.Deserializeprop(_buf);
             _dataList.Add(_v);
             _dataMap.Add(_v.Id, _v);
         }

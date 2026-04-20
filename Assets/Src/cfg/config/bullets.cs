@@ -8,21 +8,20 @@
 //------------------------------------------------------------------------------
 
 using Luban;
-using Luban.SimpleJSON;
 
 
 namespace cfg.config
 {
 public sealed partial class bullets : Luban.BeanBase
 {
-    public bullets(JSONNode _buf) 
+    public bullets(ByteBuf _buf) 
     {
-        { if(!_buf["id"].IsNumber) { throw new SerializationException(); }  Id = _buf["id"]; }
-        { if(!_buf["name"].IsString) { throw new SerializationException(); }  Name = _buf["name"]; }
-        { if(!_buf["desc"].IsString) { throw new SerializationException(); }  Desc = _buf["desc"]; }
+        Id = _buf.ReadInt();
+        Name = _buf.ReadString();
+        Desc = _buf.ReadString();
     }
 
-    public static bullets Deserializebullets(JSONNode _buf)
+    public static bullets Deserializebullets(ByteBuf _buf)
     {
         return new config.bullets(_buf);
     }

@@ -8,7 +8,6 @@
 //------------------------------------------------------------------------------
 
 using Luban;
-using Luban.SimpleJSON;
 
 namespace cfg
 {
@@ -17,7 +16,7 @@ public partial class Tables
     public config.Tbprop Tbprop {get; }
     public config.Tbbullets Tbbullets {get; }
 
-    public Tables(System.Func<string, JSONNode> loader)
+    public Tables(System.Func<string, ByteBuf> loader)
     {
         Tbprop = new config.Tbprop(loader("config_tbprop"));
         Tbbullets = new config.Tbbullets(loader("config_tbbullets"));
@@ -32,4 +31,3 @@ public partial class Tables
 }
 
 }
-

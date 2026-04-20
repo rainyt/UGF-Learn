@@ -8,7 +8,6 @@
 //------------------------------------------------------------------------------
 
 using Luban;
-using Luban.SimpleJSON;
 
 
 namespace cfg.config
@@ -18,16 +17,15 @@ public partial class Tbbullets
     private readonly System.Collections.Generic.Dictionary<int, config.bullets> _dataMap;
     private readonly System.Collections.Generic.List<config.bullets> _dataList;
     
-    public Tbbullets(JSONNode _buf)
+    public Tbbullets(ByteBuf _buf)
     {
-        int count = _buf.Count;
-        _dataMap = new System.Collections.Generic.Dictionary<int, config.bullets>(count);
-        _dataList = new System.Collections.Generic.List<config.bullets>(count);
-        
-        foreach(JSONNode _ele in _buf.Children)
+        int n = _buf.ReadSize();
+        _dataMap = new System.Collections.Generic.Dictionary<int, config.bullets>(n);
+        _dataList = new System.Collections.Generic.List<config.bullets>(n);
+        for(int i = n ; i > 0 ; --i)
         {
             config.bullets _v;
-            { if(!_ele.IsObject) { throw new SerializationException(); }  _v = global::cfg.config.bullets.Deserializebullets(_ele);  }
+            _v = global::cfg.config.bullets.Deserializebullets(_buf);
             _dataList.Add(_v);
             _dataMap.Add(_v.Id, _v);
         }
