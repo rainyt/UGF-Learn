@@ -35,7 +35,7 @@ namespace Game
                 }
 
             });
-            GameEntry.Event.Subscribe(UIEvent.START_GAME, OnClickStartGame);
+            GameEntry.Event.Subscribe(GameUIEvent.START_GAME, OnClickStartGame);
             Debug.Log("ProcedureLaunch OnEnter");
         }
         protected override void OnLeave(IFsm<IProcedureManager> procedureOwner, bool isShutdown)
@@ -43,7 +43,7 @@ namespace Game
             base.OnLeave(procedureOwner, isShutdown);
             GameEntry.UI.CloseAllLoadedUIForms();
             GameEntry.Entity.HideAllLoadedEntities();
-            GameEntry.Event.Unsubscribe(UIEvent.START_GAME, OnClickStartGame);
+            GameEntry.Event.Unsubscribe(GameUIEvent.START_GAME, OnClickStartGame);
         }
 
         private bool isStartGame = false;

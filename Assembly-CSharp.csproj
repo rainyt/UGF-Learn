@@ -69,12 +69,12 @@
     <Compile Include="Assets/Src/Displays/HitEffect.cs" />
     <Compile Include="Assets/Src/Utils/System.cs" />
     <Compile Include="Assets/Src/Scenes/StartView.cs" />
-    <Compile Include="Assets/Src/Events/UIEvent.cs" />
     <Compile Include="Assets/Src/Displays/Image.cs" />
     <Compile Include="Assets/Src/Displays/Enemy.cs" />
     <Compile Include="Assets/Src/Displays/Background.cs" />
     <Compile Include="Assets/Src/Displays/BaseBullet.cs" />
     <Compile Include="Assets/Src/Data/HitEffectData.cs" />
+    <Compile Include="Assets/Src/Events/GameUIEvent.cs" />
     <Compile Include="Assets/Src/Utils/FGUI.cs" />
     <Compile Include="Assets/Src/Data/BulletData.cs" />
     <Compile Include="Assets/Src/Scenes/FightState.cs" />

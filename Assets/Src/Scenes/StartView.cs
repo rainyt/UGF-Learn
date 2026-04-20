@@ -26,7 +26,7 @@ namespace Scenes
                 btn_start.onClick.Add(() =>
                 {
                     Debug.Log("StartGame OnClickStartGame");
-                    GameEntry.Event.Fire(this, UIEvent.Create(UIEvent.START_GAME));
+                    GameEntry.Event.Fire(this, GameUIEvent.Create(GameUIEvent.START_GAME));
                 });
             }
             else
