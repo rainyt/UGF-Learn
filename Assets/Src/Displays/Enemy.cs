@@ -39,6 +39,7 @@ namespace Displays
                 // 产生一个自身的爆炸效果
                 GameEntry.Entity.ShowEntity<HitEffect>("Assets/Images/BoomEffect.prefab", "Stage", new HitEffectData { X = this.transform.position.x, Y = this.transform.position.y, Scale = 1.5f });
                 GameEntry.Entity.HideEntity(this.Entity.Id);
+                // 发送一个死亡事件
             }
         }
     }

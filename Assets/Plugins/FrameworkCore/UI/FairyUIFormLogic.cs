@@ -22,27 +22,26 @@ namespace FrameworkCore.UI
         {
             this.viewObject = viewObject;
             Type type = this.GetType();
+            // 获取所有公开和非公开实例字段
             FieldInfo[] fields = type.GetFields(BindingFlags.Public
                                  | BindingFlags.NonPublic
                                  | BindingFlags.Instance);
-            Debug.Log("OnInitLogic:" + type.Name + " fields.length=" + fields.Length);
             Debug.Log(this);
             foreach (FieldInfo field in fields)
             {
                 if (field.Name == "viewObject")
                     continue;
-                Debug.Log("Field " + field.Name + ":" + field.FieldType.Namespace + "." + field.FieldType.Name);
+                // 判断是否是变量
                 if (!field.IsLiteral && !field.IsInitOnly && !field.IsStatic)
                 {
-                    Debug.Log("Auto Field Bind:" + field.Name);
+                    // 判断是否继承自GObject
                     if (typeof(GObject).IsAssignableFrom(field.FieldType))
                     {
                         // 如果是属于变量
                         GObject obj = viewObject.asCom.GetChild(field.Name);
-                        Debug.Log("Auto Field Bind Obj:" + obj);
-                        if (obj != null)
+                        // 判断是否来自字段的类型
+                        if (obj != null && obj.GetType().IsAssignableFrom(field.FieldType))
                         {
-                            Debug.Log("Auto Field Bind:s" + field.Name + ":" + field.FieldType.Namespace + "." + field.FieldType.Name);
                             field.SetValue(this, obj);
                         }
                     }

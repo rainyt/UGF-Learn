@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="180,320">
   <displayList>
-    <text id="n4_m3bh" name="n4" xy="36,7" size="108,19" font="ui://k6kbwxobm3bh9" fontSize="12" color="#ffffff" align="center" autoSize="none" text="Score:1234">
+    <text id="n4_m3bh" name="score" xy="36,7" size="108,19" font="ui://k6kbwxobm3bh9" fontSize="12" color="#ffffff" align="center" autoSize="none" text="Score:1234">
       <relation target="" sidePair="center-center%"/>
     </text>
   </displayList>
