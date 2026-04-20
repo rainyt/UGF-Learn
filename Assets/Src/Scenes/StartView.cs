@@ -18,7 +18,6 @@ namespace Scenes
         {
             base.OnOpen(userData);
 
-            btn_start = viewObject.asCom.GetChild("n3").asButton;
             Debug.Log("StartGame OnOpen:" + btn_start);
 
             if (btn_start != null)

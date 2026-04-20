@@ -4,7 +4,7 @@
     <image id="n1_m3bh" name="n1" src="m3bh1" fileName="start_bg.png" xy="-35,-80" size="193,341" aspect="true" scale="1.3,1.3">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
-    <component id="n3_m3bh" name="n3" src="m3bh3" fileName="Button1.xml" xy="65,221">
+    <component id="n3_m3bh" name="btn_start" src="m3bh3" fileName="Button1.xml" xy="65,221">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
   </displayList>

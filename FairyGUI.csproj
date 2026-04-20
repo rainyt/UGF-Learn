@@ -156,15 +156,15 @@
     <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/Core/MaterialManager.cs" />
     <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/Core/Mesh/StraightLineMesh.cs" />
     <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/UI/Gears/GearFontSize.cs" />
-    <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/Utils/Timers.cs" />
     <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/UI/DragDropManager.cs" />
+    <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/Utils/Timers.cs" />
     <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/Core/NGraphics.cs" />
     <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/UI/Window.cs" />
     <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/UI/Gears/GearText.cs" />
     <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/UI/GLoader3D.cs" />
     <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/Event/EventDispatcher.cs" />
-    <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/Tween/EaseManager.cs" />
     <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/Core/Mesh/FillMesh.cs" />
+    <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/Tween/EaseManager.cs" />
     <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/Core/Mesh/LineMesh.cs" />
     <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/Event/EventListener.cs" />
     <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/Core/Text/DynamicFont.cs" />
@@ -178,8 +178,8 @@
     <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/Core/HitTest/HitTestContext.cs" />
     <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/Utils/Html/HtmlParser.cs" />
     <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/Utils/Html/IHtmlPageContext.cs" />
-    <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/Utils/Html/HtmlParseOptions.cs" />
     <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/Core/Image.cs" />
+    <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/Utils/Html/HtmlParseOptions.cs" />
     <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/UI/UIObjectFactory.cs" />
     <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/Utils/ToolSet.cs" />
     <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/Core/Text/TypingEffect.cs" />
@@ -188,8 +188,8 @@
     <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/Core/NAudioClip.cs" />
     <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/Utils/ZipReader.cs" />
     <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/UI/FieldTypes.cs" />
-    <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/Filter/ColorFilter.cs" />
     <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/Core/Text/BitmapFont.cs" />
+    <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/Filter/ColorFilter.cs" />
     <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/Core/Text/RTLSupport.cs" />
     <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/Core/Mesh/CompositeMesh.cs" />
     <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/Core/Text/TextField.cs" />
@@ -201,8 +201,8 @@
     <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/Core/Mesh/PlaneMesh.cs" />
     <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/Core/Mesh/RoundedRectMesh.cs" />
     <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/Tween/EaseType.cs" />
-    <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/Core/Text/Emoji.cs" />
     <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/UI/Gears/GearAnimation.cs" />
+    <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/Core/Text/Emoji.cs" />
     <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/Core/DisplayObject.cs" />
     <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/UI/Transition.cs" />
     <Compile Include="Assets/Plugins/FairyGUI/Assets/Scripts/UI/Controller.cs" />
