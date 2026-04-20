@@ -64,7 +64,10 @@
     <Analyzer Include="/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Src/cfg/config/prop.cs" />
+    <Compile Include="Assets/Src/cfg/config/Tbprop.cs" />
     <Compile Include="Assets/Src/ProcedureLaunch.cs" />
+    <Compile Include="Assets/Src/cfg/config/bullets.cs" />
     <Compile Include="Assets/Src/Game.cs" />
     <Compile Include="Assets/Src/Displays/HitEffect.cs" />
     <Compile Include="Assets/Src/Utils/System.cs" />
@@ -72,14 +75,19 @@
     <Compile Include="Assets/Src/Displays/Image.cs" />
     <Compile Include="Assets/Src/Displays/Enemy.cs" />
     <Compile Include="Assets/Src/Displays/Background.cs" />
+    <Compile Include="Assets/Src/cfg/vector3.cs" />
     <Compile Include="Assets/Src/Displays/BaseBullet.cs" />
     <Compile Include="Assets/Src/Data/HitEffectData.cs" />
     <Compile Include="Assets/Src/Events/GameUIEvent.cs" />
     <Compile Include="Assets/Src/Utils/FGUI.cs" />
     <Compile Include="Assets/Src/Data/BulletData.cs" />
+    <Compile Include="Assets/Src/cfg/vector4.cs" />
+    <Compile Include="Assets/Src/cfg/config/Tbbullets.cs" />
+    <Compile Include="Assets/Src/cfg/vector2.cs" />
     <Compile Include="Assets/Src/Scenes/FightState.cs" />
     <Compile Include="Assets/Src/Data/BackgroundData.cs" />
     <Compile Include="Assets/Src/ProcedureGame.cs" />
+    <Compile Include="Assets/Src/cfg/Tables.cs" />
     <Compile Include="Assets/Src/Displays/Hero.cs" />
     <Compile Include="Assets/Src/Displays/BaseDisplay.cs" />
   </ItemGroup>
@@ -1012,6 +1020,10 @@
       <HintPath>Library/ScriptAssemblies/Unity.2D.Aseprite.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Luban.Editor">
+      <HintPath>Library/ScriptAssemblies/Luban.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
       <Private>False</Private>
@@ -1030,6 +1042,10 @@
     </Reference>
     <Reference Include="Unity.Burst">
       <HintPath>Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Luban.Runtime">
+      <HintPath>Library/ScriptAssemblies/Luban.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">

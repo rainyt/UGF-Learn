@@ -18,7 +18,7 @@ namespace FrameworkCore.Futures
         {
             base.Post();
             var bytesFuture = new BytesFuture(requestData + "_fui.bytes");
-            bytesFuture.OnComplete((assetName, bytes) =>
+            bytesFuture.OnComplete((assetName, bytes) =>    
             {
 
                 var fuiBytes = (byte[])bytes;

@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Assets/Plugins/FrameworkCore/UI/FairyComponent.cs" />
     <Compile Include="Assets/Plugins/FrameworkCore/Futures/AssetsData.cs" />
+    <Compile Include="Assets/Plugins/FrameworkCore/Futures/LuBanFuture.cs" />
     <Compile Include="Assets/Plugins/FrameworkCore/Futures/AssetFuture.cs" />
     <Compile Include="Assets/Plugins/FrameworkCore/UI/FairyUIFormLogic.cs" />
     <Compile Include="Assets/Plugins/FrameworkCore/Futures/StringFuture.cs" />
@@ -968,6 +969,10 @@
     </Reference>
     <Reference Include="YooAsset">
       <HintPath>Library/ScriptAssemblies/YooAsset.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Luban.Runtime">
+      <HintPath>Library/ScriptAssemblies/Luban.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.UI">
