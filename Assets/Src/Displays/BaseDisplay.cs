@@ -7,6 +7,11 @@ namespace Displays
     {
 
         /// <summary>
+        /// 当前显示时间。
+        /// </summary>
+        public float NowTime = 0;
+
+        /// <summary>
         /// 设置显示位置，基于世界坐标。
         /// </summary>
         /// <param name="x"></param>
@@ -40,6 +45,7 @@ namespace Displays
 
         protected override void OnUpdate(float elapseSeconds, float realElapseSeconds)
         {
+            NowTime += elapseSeconds;
             base.OnUpdate(elapseSeconds, realElapseSeconds);
             _fixedDeltaTime += elapseSeconds;
             if (_fixedDeltaTime >= FixedDeltaTime)
@@ -47,6 +53,12 @@ namespace Displays
                 _fixedDeltaTime -= FixedDeltaTime;
                 OnFixedUpdate(FixedDeltaTime);
             }
+        }
+
+        protected override void OnShow(object userData)
+        {
+            base.OnShow(userData);
+            NowTime = 0;
         }
 
         public float FixedDeltaTime = 1f / 30f;

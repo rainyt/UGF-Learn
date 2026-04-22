@@ -31,8 +31,8 @@ namespace Game
                 if (success)
                 {
                     // 初始化表格测试
-                    Game.tables = new cfg.Tables(AssetsManager.Instance.GetLuBanData("AllConfigs").LoadData);
-                    var bulletData = Game.tables.Tbbullets.Get(1001);
+                    GameData.tables = new cfg.Tables(AssetsManager.Instance.GetLuBanData("AllConfigs").LoadData);
+                    var bulletData = GameData.tables.Tbbullets.Get(1001);
                     Debug.Log($"子弹数据: {bulletData.Name} {bulletData.Desc}");
                     onAssetsLoaded();
                 }

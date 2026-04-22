@@ -3,7 +3,7 @@ namespace Game
 {
     using UnityGameFramework.Runtime;
 
-    public class Game
+    public class GameData
     {
         /// <summary>
         /// 表格数据
