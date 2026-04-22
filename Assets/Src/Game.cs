@@ -5,9 +5,9 @@ namespace Game
 
     public class Game
     {
-        /**
-         * 资源管理器
-         */
-        public static ResourceComponent resource;
+        /// <summary>
+        /// 表格数据
+        /// </summary>
+        public static cfg.Tables tables;
     }
 }
