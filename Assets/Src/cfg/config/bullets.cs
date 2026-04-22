@@ -19,6 +19,7 @@ public sealed partial class bullets : Luban.BeanBase
         Id = _buf.ReadInt();
         Name = _buf.ReadString();
         Desc = _buf.ReadString();
+        Imageid = _buf.ReadString();
     }
 
     public static bullets Deserializebullets(ByteBuf _buf)
@@ -38,6 +39,10 @@ public sealed partial class bullets : Luban.BeanBase
     /// 描述
     /// </summary>
     public readonly string Desc;
+    /// <summary>
+    /// 子弹形象
+    /// </summary>
+    public readonly string Imageid;
    
     public const int __ID__ = -149590779;
     public override int GetTypeId() => __ID__;
@@ -52,6 +57,7 @@ public sealed partial class bullets : Luban.BeanBase
         + "id:" + Id + ","
         + "name:" + Name + ","
         + "desc:" + Desc + ","
+        + "imageid:" + Imageid + ","
         + "}";
     }
 }

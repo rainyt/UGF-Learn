@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using FrameworkCore.Futures;
 using UnityEngine;
+using UnityEngine.U2D;
 using UnityGameFramework.Runtime;
 using YooAsset;
 
@@ -55,6 +56,7 @@ namespace FrameworkCore
         public Dictionary<string, ResourcePackage> Packages = new Dictionary<string, ResourcePackage>();
         public Dictionary<string, FairyUIData> FairyUIDatas = new Dictionary<string, FairyUIData>();
         public Dictionary<string, LuBanData> LuBanDatas = new Dictionary<string, LuBanData>();
+        public Dictionary<string, SpriteAtlas> SpriteAtlases = new Dictionary<string, SpriteAtlas>();
 
         public ResourcePackage GetPackage(string packageName)
         {
@@ -229,6 +231,12 @@ namespace FrameworkCore
                     Debug.Log($"AssetsManager OnNewObject: {assetName}, texture2D: {texture2D}");
                     Texture2ds[assetName] = texture2D;
                 }
+                else if (assetsData.Asset is SpriteAtlas spriteAtlas)
+                {
+                    Debug.Log($"AssetsManager OnNewObject: {assetName}, spriteAtlas: {spriteAtlas}");
+                    SpriteAtlases[assetName] = spriteAtlas;
+                }
+                Assets[assetName] = assetsData;
             }
             else if (asset is ResourcePackage package)
             {

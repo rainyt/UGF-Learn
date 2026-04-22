@@ -25,6 +25,7 @@ namespace Game
             AssetsManager.Instance.LoadPackage("DefaultPackage", true);
             AssetsManager.Instance.LoadFairyUI("Assets/FGUI/Package1");
             AssetsManager.Instance.LoadLuBanData("Assets/AllConfigs.bytes");
+            AssetsManager.Instance.LoadFile("Assets/Bullets/Bullets.spriteatlasv2");
             AssetsManager.Instance.Start((success, message) =>
             {
                 if (success)
