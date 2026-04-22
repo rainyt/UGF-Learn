@@ -54,16 +54,24 @@ namespace Displays
         {
             base.OnShow(userData);
             SetToLocation(Screen.width * 0.5f, Screen.height * 0.15f);
-            AddController(new BulletCreateController(1001));
+            AddController(new BulletCreateController(1001), true);
+            AddController(new BulletCreateController(1002));
+            AddController(new BulletCreateController(1003));
         }
 
         /// <summary>
         /// 添加控制器
         /// </summary>
         /// <param name="controller"></param>
-        public void AddController(BaseController controller)
+        public void AddController(BaseController controller, bool isMainController = false)
         {
+            controller.isMainController = isMainController;
             controller.ParentHero = this;
+            // 如果是主控制器，则需要将旧的主控制器删除
+            if (isMainController)
+            {
+                Controllers.Remove(Controllers.Find(c => c.isMainController));
+            }
             Controllers.Add(controller);
         }
 

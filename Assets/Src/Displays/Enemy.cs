@@ -20,6 +20,7 @@ namespace Displays
             base.OnShow(userData);
             this.SetToLocation(Screen.width * Random.value, Screen.height + 100);
             this.GetComponent<Animation>().Play();
+            isDead = false;
         }
 
         protected override void OnUpdate(float elapseSeconds, float realElapseSeconds)
@@ -32,8 +33,14 @@ namespace Displays
             }
         }
 
+        private bool isDead = false;
+
         public void Hurt(int damage)
         {
+            if (isDead)
+            {
+                return;
+            }
             this.Health -= damage;
             if (this.Health <= 0)
             {
@@ -42,6 +49,7 @@ namespace Displays
                 GameEntry.Entity.HideEntity(this.Entity.Id);
                 // 发送一个死亡事件
                 GameEntry.Event.Fire(this, GameUIEvent.Create(GameUIEvent.KILL_ENEMY));
+                isDead = true;
             }
         }
     }
