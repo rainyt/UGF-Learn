@@ -3,7 +3,7 @@ using UnityGameFramework.Runtime;
 
 namespace Displays
 {
-    public class BaseDisplay : EntityLogic
+    public class BaseLogic : EntityLogic
     {
 
         /// <summary>
@@ -74,7 +74,7 @@ namespace Displays
 
         }
 
-        public float DistanceTo(BaseDisplay other)
+        public float DistanceTo(BaseLogic other)
         {
             return Vector3.Distance(transform.position, other.transform.position);
         }

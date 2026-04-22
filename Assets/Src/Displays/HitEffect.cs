@@ -7,7 +7,7 @@ namespace Displays
     /// <summary>
     /// 击中特效显示
     /// </summary>
-    public class HitEffect : BaseDisplay
+    public class HitEffect : BaseLogic
     {
 
         private Animator __animator;

@@ -1,6 +1,9 @@
 
 using System;
+using System.Collections.Generic;
+using Controller;
 using Data;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 
@@ -9,7 +12,7 @@ namespace Displays
     /// <summary>
     /// 飞机英雄实体
     /// </summary>
-    public class Hero : BaseDisplay
+    public class Hero : BaseLogic
     {
 
         Animator _animation;
@@ -24,10 +27,6 @@ namespace Displays
         private float _y = 0;
 
         private float _resumeTime = 0;
-
-        public float FireInterval = 0.2f;
-
-        private float _fireTime = 0;
 
         /// <summary>
         /// 移动到指定位置。
@@ -46,10 +45,26 @@ namespace Displays
             base.SetToPosition(x, y);
         }
 
+        /// <summary>
+        /// 控制器列表
+        /// </summary>
+        public List<BaseController> Controllers = new List<BaseController>();
+
         protected override void OnShow(object userData)
         {
             base.OnShow(userData);
             SetToLocation(Screen.width * 0.5f, Screen.height * 0.15f);
+            AddController(new BulletCreateController(1001));
+        }
+
+        /// <summary>
+        /// 添加控制器
+        /// </summary>
+        /// <param name="controller"></param>
+        public void AddController(BaseController controller)
+        {
+            controller.ParentHero = this;
+            Controllers.Add(controller);
         }
 
         protected override void OnUpdate(float elapseSeconds, float realElapseSeconds)
@@ -89,21 +104,8 @@ namespace Displays
                 // Debug.Log("Blend: " + _animation.GetFloat("Blend"));
             }
 
-            /// 间隔发射子弹
-            _fireTime += elapseSeconds;
-            if (_fireTime >= FireInterval)
-            {
-                _fireTime = 0;
-                FireBullet();
-            }
+            Controllers.ForEach(controller => controller.OnUpdate(elapseSeconds));
         }
 
-        /// <summary>
-        /// 发射子弹。
-        /// </summary>
-        public void FireBullet()
-        {
-            GameEntry.Entity.ShowEntity<BaseBullet>("Assets/Images/Bullet.prefab", "Bullets", new BulletData { ParentHero = this, Id = 1002 });
-        }
     }
 }

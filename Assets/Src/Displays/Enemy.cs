@@ -10,7 +10,7 @@ namespace Displays
     /// <summary>
     /// 敌人显示对象
     /// </summary>
-    public class Enemy : BaseDisplay
+    public class Enemy : BaseLogic
     {
 
         public int Health = 5;

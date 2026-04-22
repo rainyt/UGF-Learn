@@ -111,7 +111,7 @@ namespace Game
             for (int i = bullets.Length - 1; i >= 0; i--)
             {
                 Entity entity = bullets[i] as Entity;
-                var bullet = entity.Logic as BaseDisplay;
+                var bullet = entity.Logic as BaseLogic;
                 for (int j = 0; j < enemys.Length; j++)
                 {
                     Entity enemyEntity = enemys[j] as Entity;

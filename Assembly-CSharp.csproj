@@ -68,7 +68,9 @@
     <Compile Include="Assets/Src/cfg/config/Tbprop.cs" />
     <Compile Include="Assets/Src/ProcedureLaunch.cs" />
     <Compile Include="Assets/Src/cfg/config/bullets.cs" />
+    <Compile Include="Assets/Src/Controller/BulletCreateController.cs" />
     <Compile Include="Assets/Src/Displays/HitEffect.cs" />
+    <Compile Include="Assets/Src/Controller/BaseController.cs" />
     <Compile Include="Assets/Src/Utils/System.cs" />
     <Compile Include="Assets/Src/Scenes/StartView.cs" />
     <Compile Include="Assets/Src/Displays/Image.cs" />
@@ -79,6 +81,7 @@
     <Compile Include="Assets/Src/Data/HitEffectData.cs" />
     <Compile Include="Assets/Src/Events/GameUIEvent.cs" />
     <Compile Include="Assets/Src/Utils/FGUI.cs" />
+    <Compile Include="Assets/Src/Displays/BaseLogic.cs" />
     <Compile Include="Assets/Src/Data/BulletData.cs" />
     <Compile Include="Assets/Src/GameData.cs" />
     <Compile Include="Assets/Src/cfg/vector4.cs" />
@@ -89,7 +92,6 @@
     <Compile Include="Assets/Src/ProcedureGame.cs" />
     <Compile Include="Assets/Src/cfg/Tables.cs" />
     <Compile Include="Assets/Src/Displays/Hero.cs" />
-    <Compile Include="Assets/Src/Displays/BaseDisplay.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

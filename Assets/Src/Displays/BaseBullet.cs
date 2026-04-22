@@ -11,7 +11,7 @@ namespace Displays
     /// <summary>
     /// 基础子弹显示。
     /// </summary>
-    public class BaseBullet : BaseDisplay
+    public class BaseBullet : BaseLogic
     {
 
         /// <summary>

@@ -16,5 +16,11 @@ namespace Data
         /// 父英雄。
         /// </summary>
         public Hero ParentHero;
+
+
+        /// <summary>
+        /// 子弹发射角度
+        /// </summary>
+        public float SendRotation;
     }
 }

@@ -22,6 +22,8 @@ public sealed partial class bullets : Luban.BeanBase
         Imageid = _buf.ReadString();
         Hurt = _buf.ReadInt();
         Speed = _buf.ReadInt();
+        Type = _buf.ReadInt();
+        Interval = _buf.ReadFloat();
     }
 
     public static bullets Deserializebullets(ByteBuf _buf)
@@ -53,6 +55,14 @@ public sealed partial class bullets : Luban.BeanBase
     /// 速度
     /// </summary>
     public readonly int Speed;
+    /// <summary>
+    /// 类型
+    /// </summary>
+    public readonly int Type;
+    /// <summary>
+    /// 触发间隔
+    /// </summary>
+    public readonly float Interval;
    
     public const int __ID__ = -149590779;
     public override int GetTypeId() => __ID__;
@@ -70,6 +80,8 @@ public sealed partial class bullets : Luban.BeanBase
         + "imageid:" + Imageid + ","
         + "hurt:" + Hurt + ","
         + "speed:" + Speed + ","
+        + "type:" + Type + ","
+        + "interval:" + Interval + ","
         + "}";
     }
 }
