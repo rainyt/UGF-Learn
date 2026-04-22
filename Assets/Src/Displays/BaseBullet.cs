@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Data;
 using FrameworkCore;
 using Game;
@@ -36,7 +37,7 @@ namespace Displays
         /// <summary>
         /// 子弹的渲染形象列表
         /// </summary>
-        private Sprite[] sprites;
+        private List<Sprite> sprites;
 
         protected override void OnShow(object userData)
         {
@@ -60,14 +61,13 @@ namespace Displays
         {
             get => __currentFrame; set
             {
-                if (sprites.Length > 0)
+                if (sprites.Count > 0)
                 {
-                    var newFrame = value % sprites.Length;
+                    var newFrame = value % sprites.Count;
                     if (__currentFrame != newFrame)
                     {
                         __currentFrame = newFrame;
-                        if (sprites.Length > __currentFrame)
-                            this.spriteRenderer.sprite = this.sprites[__currentFrame];
+                        this.spriteRenderer.sprite = this.sprites[__currentFrame];
                     }
                 }
                 else

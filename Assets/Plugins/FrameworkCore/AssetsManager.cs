@@ -113,7 +113,7 @@ namespace FrameworkCore
         /// </summary>
         /// <param name="assetName"></param>
         /// <returns></returns>
-        public Sprite[] GetSprites(string assetName)
+        public List<Sprite> GetSprites(string assetName)
         {
             if (assetName.Contains(":"))
             {
@@ -121,9 +121,15 @@ namespace FrameworkCore
                 var atlas = GetSpriteAtlas(assetNames[0]);
                 if (atlas != null)
                 {
-                    Sprite[] list = { };
-                    atlas.GetSprites(list, assetNames[1]);
-                    return list;
+                    List<Sprite> sprites = new List<Sprite>();
+                    Sprite[] list = new Sprite[atlas.spriteCount];
+                    atlas.GetSprites(list);
+                    foreach (var sprite in list)
+                    {
+                        if (sprite.name.IndexOf(assetNames[1]) == 0)
+                            sprites.Add(sprite);
+                    }
+                    return sprites;
                 }
             }
             return null;
