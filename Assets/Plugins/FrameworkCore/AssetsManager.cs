@@ -90,6 +90,47 @@ namespace FrameworkCore
         }
 
         /// <summary>
+        /// 获取加载成功的Sprite资源，传递资源的名称，如果资源存在，则返回Sprite对象，如果资源不存在，则返回null，并在控制台输出错误日志。
+        /// </summary>
+        /// <param name="assetName"></param>
+        /// <returns></returns>
+        public Sprite GetSprite(string assetName)
+        {
+            if (assetName.Contains(":"))
+            {
+                var assetNames = assetName.Split(':');
+                var atlas = GetSpriteAtlas(assetNames[0]);
+                if (atlas != null)
+                {
+                    return atlas.GetSprite(assetNames[1]);
+                }
+            }
+            return null;
+        }
+
+        /// <summary>
+        /// 获取加载成功的Sprite资源数组，传递资源的名称，如果资源存在，则返回Sprite对象数组，如果资源不存在，则返回null，并在控制台输出错误日志。
+        /// </summary>
+        /// <param name="assetName"></param>
+        /// <returns></returns>
+        public Sprite[] GetSprites(string assetName)
+        {
+            if (assetName.Contains(":"))
+            {
+                var assetNames = assetName.Split(':');
+                var atlas = GetSpriteAtlas(assetNames[0]);
+                if (atlas != null)
+                {
+                    Sprite[] list = { };
+                    atlas.GetSprites(list, assetNames[1]);
+                    return list;
+                }
+            }
+            return null;
+        }
+
+
+        /// <summary>
         /// 获取加载成功的Texture2D资源，传递资源的名称，如果资源存在，则返回Texture2D对象，如果资源不存在，则返回null，并在控制台输出错误日志。
         /// </summary>
         /// <param name="assetName"></param>
@@ -121,6 +162,24 @@ namespace FrameworkCore
             else
             {
                 Debug.LogError($"AssetsManager GetString: {assetName} not found");
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// 获取加载成功的SpriteAtlas资源，传递资源的名称，如果资源存在，则返回SpriteAtlas对象，如果资源不存在，则返回null，并在控制台输出错误日志。
+        /// </summary>
+        /// <param name="assetName"></param>
+        /// <returns></returns>
+        public SpriteAtlas GetSpriteAtlas(string assetName)
+        {
+            if (SpriteAtlases.ContainsKey(assetName))
+            {
+                return SpriteAtlases[assetName];
+            }
+            else
+            {
+                Debug.LogError($"AssetsManager GetSpriteAtlas: {assetName} not found");
                 return null;
             }
         }
