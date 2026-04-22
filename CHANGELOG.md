@@ -6,6 +6,7 @@
 3、新增SpriteAtlas资源加载的支持；
     - 新增GetSprite方法，用于获得SpriteAtlas中的Sprite资源；
     - 新增GetSprites方法，用于获得SpriteAtlas中的多个Sprite资源；
+4、为子弹实现数据读取逻辑，支持不同的ID，渲染对应的子弹形象；
 
 ## 26.4.20
 1、新增：为`FairyUIFormLogic`组件添加了一个自动绑定字段的方法，用于自动绑定FairyGUI的字段，比如布局里存在一个btn_start按钮，自动绑定到对应逻辑类的`btn_start`字段上；

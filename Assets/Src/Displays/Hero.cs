@@ -103,7 +103,7 @@ namespace Displays
         /// </summary>
         public void FireBullet()
         {
-            GameEntry.Entity.ShowEntity<BaseBullet>("Assets/Images/Bullet.prefab", "Bullets", new BulletData { ParentHero = this, Id = 1003 });
+            GameEntry.Entity.ShowEntity<BaseBullet>("Assets/Images/Bullet.prefab", "Bullets", new BulletData { ParentHero = this, Id = 1002 });
         }
     }
 }

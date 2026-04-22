@@ -47,6 +47,7 @@ namespace Displays
             this.spriteRenderer = GetComponent<SpriteRenderer>();
 
             var bulletData = GameData.tables.Tbbullets.Get(this.Data.Id);
+            this.Speed = bulletData.Speed;
             this.sprites = AssetsManager.Instance.GetSprites("Bullets:" + bulletData.Imageid);
 
             this.CurrentFrame = 0;
