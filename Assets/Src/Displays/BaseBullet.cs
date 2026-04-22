@@ -27,7 +27,7 @@ namespace Displays
         /// <summary>
         /// FPS。每秒更新的次数。
         /// </summary>
-        public int Fps = 30;
+        public int Fps = 12;
 
         /// <summary>
         /// 子弹渲染器。
