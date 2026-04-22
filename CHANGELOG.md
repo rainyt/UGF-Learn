@@ -1,3 +1,9 @@
+## 26.4.22
+1、改进LuBan升级二进制文件的合并逻辑，避免合并后原始文件被删除。（点击LuBan > Build Combined Binary）可自动执行LuBan编译流程，然后再将其合并到一个二进制文件中。
+2、新增LuBanFuture加载器，实现自定义的LuBan的资源包加载支持；
+    - 通过AssetsManager.Instance.LoadLuBan("Assets/AllConfigs.bytes")一次性加载所有LuBan数据资源；
+    - 内部会自动解析LuBan数据，生成对应的表格数据结构；二进制结构为（名字|数据长度|数据）
+
 ## 26.4.20
 1、新增：为`FairyUIFormLogic`组件添加了一个自动绑定字段的方法，用于自动绑定FairyGUI的字段，比如布局里存在一个btn_start按钮，自动绑定到对应逻辑类的`btn_start`字段上；
 2、新增：新增【敌人】死亡加分事件逻辑；

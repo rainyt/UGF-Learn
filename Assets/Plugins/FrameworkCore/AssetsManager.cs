@@ -54,6 +54,7 @@ namespace FrameworkCore
         public Dictionary<string, byte[]> Binaries = new Dictionary<string, byte[]>();
         public Dictionary<string, ResourcePackage> Packages = new Dictionary<string, ResourcePackage>();
         public Dictionary<string, FairyUIData> FairyUIDatas = new Dictionary<string, FairyUIData>();
+        public Dictionary<string, LuBanData> LuBanDatas = new Dictionary<string, LuBanData>();
 
         public ResourcePackage GetPackage(string packageName)
         {
@@ -64,6 +65,24 @@ namespace FrameworkCore
             else
             {
                 Debug.LogError($"AssetsManager GetPackage: {packageName} not found");
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// 获取加载成功的LuBanData资源，传递资源的名称，如果资源存在，则返回LuBanData对象，如果资源不存在，则返回null，并在控制台输出错误日志。
+        /// </summary>
+        /// <param name="packageName"></param>
+        /// <returns></returns>
+        public LuBanData GetLuBanData(string packageName)
+        {
+            if (LuBanDatas.ContainsKey(packageName))
+            {
+                return LuBanDatas[packageName];
+            }
+            else
+            {
+                Debug.LogError($"AssetsManager GetLuBanData: {packageName} not found");
                 return null;
             }
         }
@@ -177,6 +196,15 @@ namespace FrameworkCore
             futures.Add(new FairyUIFuture(path));
         }
 
+        /// <summary>
+        /// 加载LuBan生成的二进制文件，传递文件的路径。
+        /// </summary>
+        /// <param name="filePath"></param>
+        public void LoadLuBanData(string filePath)
+        {
+            futures.Add(new LuBanFuture(filePath));
+        }
+
         /**
          * 当加载成功新的资源时，会调用这个方法，传递资源的名称和资源对象。
          */
@@ -184,7 +212,12 @@ namespace FrameworkCore
         {
             loadedCount++;
             Debug.Log($"AssetsManager OnNewObject: {assetName}, asset: {asset}");
-            if (asset is FairyUIData fairyUIData)
+            if (asset is LuBanData luBanData)
+            {
+                Debug.Log($"AssetsManager OnNewObject: {assetName}, luBanData: {luBanData}");
+                LuBanDatas[assetName] = luBanData;
+            }
+            else if (asset is FairyUIData fairyUIData)
             {
                 Debug.Log($"AssetsManager OnNewObject: {assetName}, fairyUIData: {fairyUIData}");
                 FairyUIDatas[fairyUIData.name] = fairyUIData;

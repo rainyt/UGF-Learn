@@ -1,5 +1,6 @@
 namespace Game
 {
+    using System.Xml.Serialization;
     using Data;
     using Events;
     using FairyGUI;
@@ -23,15 +24,20 @@ namespace Game
 
             AssetsManager.Instance.LoadPackage("DefaultPackage", true);
             AssetsManager.Instance.LoadFairyUI("Assets/FGUI/Package1");
+            AssetsManager.Instance.LoadLuBanData("Assets/AllConfigs.bytes");
             AssetsManager.Instance.Start((success, message) =>
             {
                 if (success)
                 {
+                    // 初始化表格测试
+                    var t = new cfg.Tables(AssetsManager.Instance.GetLuBanData("AllConfigs").LoadData);
+                    var bulletData = t.Tbbullets.Get(1001);
+                    Debug.Log($"子弹数据: {bulletData.Name} {bulletData.Desc}");
                     onAssetsLoaded();
                 }
                 else
                 {
-                    Debug.LogError(message);
+                    Debug.LogError($"ProcedureLaunch OnEnter: {message}");
                 }
 
             });

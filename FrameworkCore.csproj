@@ -71,6 +71,7 @@
     <Compile Include="Assets/Plugins/FrameworkCore/UI/FairyUIFormLogic.cs" />
     <Compile Include="Assets/Plugins/FrameworkCore/Futures/StringFuture.cs" />
     <Compile Include="Assets/Plugins/FrameworkCore/Futures/FutureError.cs" />
+    <Compile Include="Assets/Plugins/FrameworkCore/Futures/LuBanData.cs" />
     <Compile Include="Assets/Plugins/FrameworkCore/Futures/Future.cs" />
     <Compile Include="Assets/Plugins/FrameworkCore/Futures/IFuture.cs" />
     <Compile Include="Assets/Plugins/FrameworkCore/Futures/FairyUIData.cs" />
