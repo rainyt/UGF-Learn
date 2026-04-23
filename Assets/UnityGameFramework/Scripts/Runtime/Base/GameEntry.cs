@@ -19,6 +19,8 @@ namespace UnityGameFramework.Runtime
     public static class GameEntry
     {
 
+        public static LubanComponent Luban => GetComponent<LubanComponent>();
+
         public static UIComponent UI => GetComponent<UIComponent>();
 
         public static EventComponent Event => GetComponent<EventComponent>();

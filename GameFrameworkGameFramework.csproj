@@ -1287,6 +1287,10 @@
       <HintPath>Library/ScriptAssemblies/YooAsset.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Luban.Runtime">
+      <HintPath>Library/ScriptAssemblies/Luban.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
       <Private>False</Private>

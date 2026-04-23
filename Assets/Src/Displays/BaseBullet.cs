@@ -46,7 +46,7 @@ namespace Displays
             this.transform.position = Data.ParentHero.transform.position;
             this.spriteRenderer = GetComponent<SpriteRenderer>();
 
-            var bulletData = GameData.tables.Tbbullets.Get(this.Data.Id);
+            var bulletData = GameEntry.Luban.Tables.Tbbullets.Get(this.Data.Id);
             this.Speed = bulletData.Speed;
             this.sprites = AssetsManager.Instance.GetSprites("Bullets:" + bulletData.Imageid);
 

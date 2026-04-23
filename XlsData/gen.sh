@@ -10,4 +10,4 @@ dotnet $LUBAN_DLL \
     -c cs-bin \
     --conf $CONF_ROOT/luban.conf \
     -x outputDataDir=$WORKSPACE/Assets/XlsData \
-    -x outputCodeDir=$WORKSPACE/Assets/Src/cfg
+    -x outputCodeDir=$WORKSPACE/Assets/UnityGameFramework/Scripts/Runtime/LuBan/cfg

@@ -80,6 +80,7 @@
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/DataTable/DefaultDataTableHelper.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Localization/LoadDictionaryDependencyAssetEventArgs.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/WebRequest/WebRequestFailureEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/LuBan/cfg/config/Tbprop.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Debugger/DebuggerComponent.RuntimeMemoryInformationWindow.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Entity/ShowEntityFailureEventArgs.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Variable/VarColor.cs" />
@@ -97,6 +98,7 @@
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/DataTable/LoadDataTableFailureEventArgs.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Localization/LoadDictionaryUpdateEventArgs.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Variable/VarSingle.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/LuBan/LubanComponent.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Resource/BuiltinVersionListSerializer.LocalVersionListSerializeCallback.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Setting/PlayerPrefsSettingHelper.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Utility/DefaultLogHelper.cs" />
@@ -134,6 +136,7 @@
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Entity/EntityComponent.EntityGroup.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Resource/ResourceApplySuccessEventArgs.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Network/NetworkErrorEventArgs.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/LuBan/cfg/vector3.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/DataTable/DataTableHelperBase.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Debugger/DebuggerComponent.ScrollableDebuggerWindowBase.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Utility/DefaultTextHelper.cs" />
@@ -152,11 +155,13 @@
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/UI/OpenUIFormUpdateEventArgs.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/WebRequest/WWWWebRequestAgentHelper.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Resource/ReadWritePathType.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/LuBan/cfg/vector2.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Debugger/DebuggerComponent.PathInformationWindow.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Variable/VarInt64.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Variable/VarString.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/ObjectPool/ObjectPoolComponent.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Fsm/FsmComponent.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/LuBan/cfg/config/Tbbullets.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Setting/DefaultSetting.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Debugger/DebuggerComponent.WebPlayerInformationWindow.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Entity/EntityLogic.cs" />
@@ -180,6 +185,7 @@
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Config/ConfigHelperBase.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Resource/ResourceVerifySuccessEventArgs.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Sound/SoundComponent.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/LuBan/cfg/config/bullets.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Utility/Log.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Entity/DefaultEntityHelper.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Scene/LoadSceneSuccessEventArgs.cs" />
@@ -213,6 +219,7 @@
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Debugger/DebuggerComponent.EnvironmentInformationWindow.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/DataNode/DataNodeComponent.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Sound/SoundComponent.SoundGroup.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/LuBan/cfg/Tables.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Debugger/DebuggerComponent.ReferencePoolInformationWindow.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Debugger/DebuggerComponent.InputSummaryInformationWindow.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Resource/BuiltinVersionListSerializer.PackageVersionListDeserializeCallback.cs" />
@@ -247,6 +254,7 @@
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Sound/DefaultSoundAgentHelper.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Config/LoadConfigDependencyAssetEventArgs.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Variable/VarGameObject.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/LuBan/cfg/vector4.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Variable/VarVector3.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Resource/ResourceUpdateFailureEventArgs.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/FileSystem/FileSystemHelperBase.cs" />
@@ -267,6 +275,7 @@
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/UI/UIGroupHelperBase.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Variable/VarQuaternion.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/FileSystem/FileSystemComponent.cs" />
+    <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/LuBan/cfg/config/prop.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/UI/UIIntKey.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Network/NetworkClosedEventArgs.cs" />
     <Compile Include="Assets/UnityGameFramework/Scripts/Runtime/Variable/VarRect.cs" />
@@ -1170,6 +1179,10 @@
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/mscorlib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Luban.Runtime">
+      <HintPath>Library/ScriptAssemblies/Luban.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.UI">

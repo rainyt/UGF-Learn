@@ -1,6 +1,7 @@
 ## 26.4.23
 1、改进：改进LuBan的模板，使用Lazy模式，只在需要时才会加载数据表；
 2、新增：新增LuBan的组件功能，在二进制数据加载完毕后，对它进行初始化处理；
+    访问方式：GameEntry.LuBan.Tables.Tbbullets.Get(1001);
 
 ## 26.4.22
 1、改进LuBan升级二进制文件的合并逻辑，避免合并后原始文件被删除。（点击LuBan > Build Combined Binary）可自动执行LuBan编译流程，然后再将其合并到一个二进制文件中。

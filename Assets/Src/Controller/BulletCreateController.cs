@@ -21,7 +21,7 @@ namespace Controller
         public BulletCreateController(int CreateBulletId)
         {
             this.CreateBulletId = CreateBulletId;
-            var bulletData = GameData.tables.Tbbullets.Get(CreateBulletId);
+            var bulletData = GameEntry.Luban.Tables.Tbbullets.Get(CreateBulletId);
             this.FixedDeltaTime = bulletData.Interval;
         }
 
