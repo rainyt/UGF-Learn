@@ -69,6 +69,7 @@
     <Compile Include="Assets/Src/ProcedureLaunch.cs" />
     <Compile Include="Assets/Src/cfg/config/bullets.cs" />
     <Compile Include="Assets/Src/Controller/BulletCreateController.cs" />
+    <Compile Include="Assets/Src/Components/LubanComponent.cs" />
     <Compile Include="Assets/Src/Displays/HitEffect.cs" />
     <Compile Include="Assets/Src/Controller/BaseController.cs" />
     <Compile Include="Assets/Src/Utils/System.cs" />
@@ -83,7 +84,6 @@
     <Compile Include="Assets/Src/Utils/FGUI.cs" />
     <Compile Include="Assets/Src/Displays/BaseLogic.cs" />
     <Compile Include="Assets/Src/Data/BulletData.cs" />
-    <Compile Include="Assets/Src/GameData.cs" />
     <Compile Include="Assets/Src/cfg/vector4.cs" />
     <Compile Include="Assets/Src/cfg/config/Tbbullets.cs" />
     <Compile Include="Assets/Src/cfg/vector2.cs" />

@@ -13,20 +13,53 @@ namespace cfg
 {
 public partial class Tables
 {
-    public config.Tbprop Tbprop {get; }
-    public config.Tbbullets Tbbullets {get; }
+    private readonly System.Func<string, ByteBuf> _loader;
+
+    private config.Tbprop _Tbprop;
+    public config.Tbprop Tbprop 
+    {
+        get 
+        {
+            if (_Tbprop == null)
+            {
+                _Tbprop = new config.Tbprop(_loader("config_tbprop"));
+                _Tbprop.ResolveRef(this);
+            }
+            return _Tbprop;
+        }
+    }
+    private config.Tbbullets _Tbbullets;
+    public config.Tbbullets Tbbullets 
+    {
+        get 
+        {
+            if (_Tbbullets == null)
+            {
+                _Tbbullets = new config.Tbbullets(_loader("config_tbbullets"));
+                _Tbbullets.ResolveRef(this);
+            }
+            return _Tbbullets;
+        }
+    }
 
     public Tables(System.Func<string, ByteBuf> loader)
     {
-        Tbprop = new config.Tbprop(loader("config_tbprop"));
-        Tbbullets = new config.Tbbullets(loader("config_tbbullets"));
-        ResolveRef();
+        _loader = loader;
+        // 构造函数不再执行立即加载
     }
     
+    /// <summary>
+    /// 手动全量预加载（可选，用于在进场等特定时机优化性能）
+    /// </summary>
+    public void PreloadAll()
+    {
+        _ = Tbprop;
+        _ = Tbbullets;
+    }
+
     private void ResolveRef()
     {
-        Tbprop.ResolveRef(this);
-        Tbbullets.ResolveRef(this);
+        // Lazy 模式下，ResolveRef 已移至属性 Getter 中按需执行
     }
 }
 
