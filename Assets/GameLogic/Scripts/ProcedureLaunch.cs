@@ -17,6 +17,8 @@ namespace Game
     {
         protected override void OnEnter(IFsm<IProcedureManager> procedureOwner)
         {
+
+            
             base.OnEnter(procedureOwner);
 
             // 初始化项目的分辨率处理

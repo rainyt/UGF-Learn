@@ -64,25 +64,25 @@
     <Analyzer Include="/Volumes/YuTian1TB/Applications/Unity/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/Src/ProcedureLaunch.cs" />
-    <Compile Include="Assets/Src/Controller/BulletCreateController.cs" />
-    <Compile Include="Assets/Src/Displays/HitEffect.cs" />
-    <Compile Include="Assets/Src/Controller/BaseController.cs" />
-    <Compile Include="Assets/Src/Utils/System.cs" />
-    <Compile Include="Assets/Src/Scenes/StartView.cs" />
-    <Compile Include="Assets/Src/Displays/Image.cs" />
-    <Compile Include="Assets/Src/Displays/Enemy.cs" />
-    <Compile Include="Assets/Src/Displays/Background.cs" />
-    <Compile Include="Assets/Src/Displays/BaseBullet.cs" />
-    <Compile Include="Assets/Src/Data/HitEffectData.cs" />
-    <Compile Include="Assets/Src/Events/GameUIEvent.cs" />
-    <Compile Include="Assets/Src/Utils/FGUI.cs" />
-    <Compile Include="Assets/Src/Displays/BaseLogic.cs" />
-    <Compile Include="Assets/Src/Data/BulletData.cs" />
-    <Compile Include="Assets/Src/Scenes/FightState.cs" />
-    <Compile Include="Assets/Src/Data/BackgroundData.cs" />
-    <Compile Include="Assets/Src/ProcedureGame.cs" />
-    <Compile Include="Assets/Src/Displays/Hero.cs" />
+    <Compile Include="Assets/GameLogic/Scripts/Displays/BaseLogic.cs" />
+    <Compile Include="Assets/GameLogic/Scripts/Displays/Hero.cs" />
+    <Compile Include="Assets/GameLogic/Scripts/Data/BulletData.cs" />
+    <Compile Include="Assets/GameLogic/Scripts/Events/GameUIEvent.cs" />
+    <Compile Include="Assets/GameLogic/Scripts/Displays/Background.cs" />
+    <Compile Include="Assets/GameLogic/Scripts/Displays/HitEffect.cs" />
+    <Compile Include="Assets/GameLogic/Scripts/Controller/BulletCreateController.cs" />
+    <Compile Include="Assets/GameLogic/Scripts/Displays/Enemy.cs" />
+    <Compile Include="Assets/GameLogic/Scripts/Scenes/StartView.cs" />
+    <Compile Include="Assets/GameLogic/Scripts/Utils/FGUI.cs" />
+    <Compile Include="Assets/GameLogic/Scripts/Controller/BaseController.cs" />
+    <Compile Include="Assets/GameLogic/Scripts/ProcedureGame.cs" />
+    <Compile Include="Assets/GameLogic/Scripts/Scenes/FightState.cs" />
+    <Compile Include="Assets/GameLogic/Scripts/Data/HitEffectData.cs" />
+    <Compile Include="Assets/GameLogic/Scripts/Displays/BaseBullet.cs" />
+    <Compile Include="Assets/GameLogic/Scripts/Displays/Image.cs" />
+    <Compile Include="Assets/GameLogic/Scripts/Utils/System.cs" />
+    <Compile Include="Assets/GameLogic/Scripts/Data/BackgroundData.cs" />
+    <Compile Include="Assets/GameLogic/Scripts/ProcedureLaunch.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -427,6 +427,14 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library/PackageCache/com.unity.visualscripting@1.9.4/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="dnlib">
+      <HintPath>Library/PackageCache/com.code-philosophy.hybridclr@4feac30cb2/Plugins/dnlib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LZ4">
+      <HintPath>Library/PackageCache/com.code-philosophy.hybridclr@4feac30cb2/Plugins/LZ4.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
@@ -925,6 +933,10 @@
       <HintPath>Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="HybridCLR.Runtime">
+      <HintPath>Library/ScriptAssemblies/HybridCLR.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
       <HintPath>Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
       <Private>False</Private>
@@ -943,6 +955,10 @@
     </Reference>
     <Reference Include="Unity.ScriptableBuildPipeline">
       <HintPath>Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="HybridCLR.Editor">
+      <HintPath>Library/ScriptAssemblies/HybridCLR.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.2D.PixelPerfect.Editor">

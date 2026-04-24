@@ -6,10 +6,10 @@ namespace Game
     using GameFramework.Event;
     using GameFramework.Fsm;
     using GameFramework.Procedure;
-    using Scenes;
     using UnityEngine;
     using UnityGameFramework.Runtime;
     using Utils;
+    using Scenes;
     public class ProcedureGame : ProcedureBase
     {
         private AssetsManager assetsManager;
